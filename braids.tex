@@ -493,9 +493,9 @@ We define the closure of a geometric \(n\)-braid as follows. Consider a geometri
 			[scale=0.6]
 
 			\begin{knot}[clip width=5]
-				\strand[thick, blue] (0,0) to[in angle=-90, out angle=90, curve through = {(1,1)}] (2,2);
-				\strand[thick, blue] (2,0) to[in angle=-90, out angle=90, curve through = {(1,1)}] (0,2);
-				\strand[thick, blue] (4,0) to (4,2);
+				\strand[very thick, blue] (0,0) to[in angle=-90, out angle=90, curve through = {(1,1)}] (2,2);
+				\strand[very thick, blue] (2,0) to[in angle=-90, out angle=90, curve through = {(1,1)}] (0,2);
+				\strand[very thick, blue] (4,0) to (4,2);
 				%\strand[thick, red] (6,0) to [in angle=-90, out angle=90, curve through = {(6,4)}] (4,6);
 			\end{knot}
 
@@ -506,12 +506,12 @@ We define the closure of a geometric \(n\)-braid as follows. Consider a geometri
 			[scale=0.6]
 
 			\begin{knot}[clip width=5]
-				\strand[thick, blue] (0,0) to[in angle=-90, out angle=90, curve through = {(1,1)}] (2,2);
-				\strand[thick, blue] (2,0) to[in angle=-90, out angle=90, curve through = {(1,1)}] (0,2);
-				\strand[thick, blue] (4,0) to (4,2);
-				\strand[thick, red] (4,2) to (4,3) to (6,3) to (6,-1) to (4,-1) to (4,0);
-				\strand[thick, red] (2,2) to (2,4) to (8,4) to (8,-2) to (2,-2) to (2,0);
-				\strand[thick, red] (0,2) to (0,5) to (10,5) to (10,-3) to (0,-3) to (0,0);
+				\strand[very thick, blue] (0,0) to[in angle=-90, out angle=90, curve through = {(1,1)}] (2,2);
+				\strand[very thick, blue] (2,0) to[in angle=-90, out angle=90, curve through = {(1,1)}] (0,2);
+				\strand[very thick, blue] (4,0) to (4,2);
+				\strand[thick, red] (4,2) to (4,3) to (5,3) to (5,-1) to (4,-1) to (4,0);
+				\strand[thick, red] (2,2) to (2,4) to (6,4) to (6,-2) to (2,-2) to (2,0);
+				\strand[thick, red] (0,2) to (0,5) to (7,5) to (7,-3) to (0,-3) to (0,0);
 				%\strand[thick, red] (0,4) t
 				%\flipcrossings{1,2}
 			\end{knot}
@@ -535,7 +535,7 @@ We define the closure of a geometric \(n\)-braid as follows. Consider a geometri
 
 \subsection{Alexander theorem}
 
-The theorems of James Alexander (insert reference) and Andrei Markov (insert reference) relate braids to knots.
+The theorems of James Alexander~\cite{alexander} and Andrei Markov Jr.~\cite{markov} relate braids to knots.
 
 \begin{thm}[Alexander]
 	Every link is ambient isotopic to the closure of a geometric braid, for some \(n \in \symbb{N}\).
@@ -626,6 +626,4 @@ We observe that if \(b \in \GB_n\), then \(b\), \(b \tau_n \in \GB_{n+1}\) and \
 		\item Markov moves.
 	\end{enumerate}
 \end{thm}
-\begin{proof}
-	Please refer to insert Birman citation.
-\end{proof}
+\noindent A proof of the above theorem can be found in the book of Joan Birman~\cite[chp.~2]{birman}.
