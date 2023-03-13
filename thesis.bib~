@@ -6,7 +6,7 @@
 	number = {53},
 	publisher = {World Scientific},
 	series = {Knots and Everything},
-	title = {Knots and physics},
+	title = {Knots and Physics},
 	year = {2013}
 }
 
@@ -15,7 +15,7 @@
 	isbn = {0-521-83947-5},
 	location = {Cambridge, UK},
 	publisher = {Cambridge University Press},
-	title = {Knots and links},
+	title = {Knots and Links},
 	year = {2004}
 }
 
@@ -63,7 +63,7 @@
 	journal = {Institute Letter},
 	location = {Princeton, NJ},
 	organization = {Institute for Advanced Study},
-	title = {Knots and quantum theory},
+	title = {Knots and Quantum Theory},
 	url = {https://www.ias.edu/ideas/2011/witten-knots-quantum-theory},
 	urldate = {2022-09-02},
 	year = {2011}
@@ -91,7 +91,7 @@
 	number = {1},
 	pages = {47--72},
 	publisher = {Springer Science and Business Media LLC},
-	title = {Theorie der z{\"o}pfe},
+	title = {Theorie der Z{\"o}pfe},
 	volume = {4},
 	x-fetchedfrom = {DOI},
 	year = {1925}
@@ -106,7 +106,7 @@
 	number = {1},
 	pages = {127},
 	publisher = {JSTOR},
-	title = {The algebraical braid group},
+	title = {The Algebraical Braid Group},
 	volume = {48},
 	x-fetchedfrom = {DOI},
 	year = {1947}
@@ -154,7 +154,7 @@
 	journal = {Recueil Math{\'e}matique. Nouvelle S{\'e}rie},
 	language = {German},
 	pages = {73--78},
-	title = {{\"U}ber die freie {\"a}quivalenz der geschlossenen {z{\"o}pfe}},
+	title = {{\"U}ber die freie {\"A}quivalenz der geschlossenen {Z{\"o}pfe}},
 	url = {https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=sm&paperid=5479&option_lang=eng},
 	volume = {1},
 	year = {1936},
@@ -170,18 +170,8 @@
 	number = {3},
 	pages = {93--95},
 	publisher = {Proceedings of the National Academy of Sciences},
-	title = {A lemma on systems of knotted curves},
+	title = {A Lemma on Systems of Knotted Curves},
 	volume = {9},
 	year = {1923}
-}
-
-@book{murasugibraids,
-	author = {Murasugi, Kunio and Kurpita, Bohdan I.},
-	isbn = {978-0-7923-5767-4},
-	pages = {277},
-	publisher = {Springer Science \& Business Media},
-	title = {A study of braids},
-	x-fetchedfrom = {Google Scholar},
-	year = {1999}
 }
 

@@ -471,15 +471,11 @@ Let \(w\) be a word of length \(m\) in \(\GB_n\); \(w = \prod_{j=1}^{m} \tauu^{\
 	\upPhi &\colon \prod_{j=1}^{m} \tauu^{\pm 1}_{\alpha_j} \mapsto \prod_{j=1}^{m} \upphi(\tauu^{\pm 1}_{\alpha_j}) \text{ for all } m \in \symbb{N}.
 \end{align*}
 
-Since \(\GB_n\) has the same number of generators as of \(\B_n\) and the relations are identical as well, we see that \(\upPhi(\GB_n)\) is a subgroup of \(\B_n\). We observe that the kernel is trivial, since for all \(1 \leq i \leq n-1\),
-\begin{align*}
-\upPhi^{-1}(\I^{\symrm{a}}_n) &= \upPhi^{-1}(\sigmaa_i \sigmaa_i^{-1}) \\
-&= \upPhi^{-1}(\upPhi(\tauu_i) \upPhi(\tauu_i^{-1}))\\
-&= \upPhi^{-1}(\upPhi(\tauu_i\tauu_i^{-1}))\\
-&= \upPhi^{-1}(\upPhi(\In)) \\
-\upPhi^{-1}(\I^{\symrm{a}}_n) &= \In.
-\end{align*}
-Thus, \(\upPhi\) is an isomorphism and we have successfully recovered the algebraically defined Artin braid group from our geometric construction, allowing us to forget the distinction between \(\B_n\) and \(\GB_n\).
+Since \(\GB_n\) has the same number of generators as of \(\B_n\) and the relations are identical as well, we see that \(\upPhi(\GB_n)\) is a subgroup of \(\B_n\).
+\begin{thm}
+    \(\upPhi\) is an isomorphism, i.e.\@ \(\B_n\) and \(\GB_n\) are isomorphic.
+\end{thm}
+A proof of the above theorem can be found in~\cite[chp.~2]{murasugibraids}. This allows us to forget the distinction between \(\B_n\) and \(\GB_n\).
 
 \section{Closure of braids}
 

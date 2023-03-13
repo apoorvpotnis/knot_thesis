@@ -1,0 +1,446 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{jones}{article}{}
+      \name{author}{1}{}{%
+        {{hash=16b5e5ec43fc5ac5fab69ddf617353cf}{%
+           family={Vaughan},
+           familyi={V\bibinitperiod},
+           given={F.\bibnamedelimi R.\bibnamedelimi Jones},
+           giveni={F\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{16b5e5ec43fc5ac5fab69ddf617353cf}
+      \strng{fullhash}{16b5e5ec43fc5ac5fab69ddf617353cf}
+      \strng{bibnamehash}{16b5e5ec43fc5ac5fab69ddf617353cf}
+      \strng{authorbibnamehash}{16b5e5ec43fc5ac5fab69ddf617353cf}
+      \strng{authornamehash}{16b5e5ec43fc5ac5fab69ddf617353cf}
+      \strng{authorfullhash}{16b5e5ec43fc5ac5fab69ddf617353cf}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bulletin of the American Mathematical Society}
+      \field{number}{1}
+      \field{title}{A polynomial invariant for knots via von Neumann algebras}
+      \field{volume}{12}
+      \field{year}{1985}
+      \field{pages}{103\bibrangedash 111}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1090/s0273-0979-1985-15304-2
+      \endverb
+    \endentry
+    \entry{cromwell}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3d8b49becde7758f8ba672da9e26d5b1}{%
+           family={Cromwell},
+           familyi={C\bibinitperiod},
+           given={Peter\bibnamedelima R.},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, UK}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{3d8b49becde7758f8ba672da9e26d5b1}
+      \strng{fullhash}{3d8b49becde7758f8ba672da9e26d5b1}
+      \strng{bibnamehash}{3d8b49becde7758f8ba672da9e26d5b1}
+      \strng{authorbibnamehash}{3d8b49becde7758f8ba672da9e26d5b1}
+      \strng{authornamehash}{3d8b49becde7758f8ba672da9e26d5b1}
+      \strng{authorfullhash}{3d8b49becde7758f8ba672da9e26d5b1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-521-83947-5}
+      \field{title}{Knots and links}
+      \field{year}{2004}
+    \endentry
+    \entry{kauffman}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0e5e64c859b123143b26143f983bd33b}{%
+           family={Kauffman},
+           familyi={K\bibinitperiod},
+           given={Louis\bibnamedelima H.},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Singapore}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific}%
+      }
+      \strng{namehash}{0e5e64c859b123143b26143f983bd33b}
+      \strng{fullhash}{0e5e64c859b123143b26143f983bd33b}
+      \strng{bibnamehash}{0e5e64c859b123143b26143f983bd33b}
+      \strng{authorbibnamehash}{0e5e64c859b123143b26143f983bd33b}
+      \strng{authornamehash}{0e5e64c859b123143b26143f983bd33b}
+      \strng{authorfullhash}{0e5e64c859b123143b26143f983bd33b}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4}
+      \field{isbn}{978-981-4383-00-4}
+      \field{number}{53}
+      \field{series}{Knots and Everything}
+      \field{title}{Knots and physics}
+      \field{year}{2013}
+    \endentry
+    \entry{temperley-lieb}{article}{}
+      \name{author}{2}{}{%
+        {{hash=39162fbe368ebe90d3011b4c5ba0f215}{%
+           family={Temperley},
+           familyi={T\bibinitperiod},
+           given={H.\bibnamedelimi Neville\bibnamedelima V.},
+           giveni={H\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=5d855242db56c9dce34498de32e2b2a8}{%
+           family={Lieb},
+           familyi={L\bibinitperiod},
+           given={Eliott\bibnamedelima H.},
+           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The Royal Society}%
+      }
+      \strng{namehash}{daef40b5392dfa9de3e8708f844f8c20}
+      \strng{fullhash}{daef40b5392dfa9de3e8708f844f8c20}
+      \strng{bibnamehash}{daef40b5392dfa9de3e8708f844f8c20}
+      \strng{authorbibnamehash}{daef40b5392dfa9de3e8708f844f8c20}
+      \strng{authornamehash}{daef40b5392dfa9de3e8708f844f8c20}
+      \strng{authorfullhash}{daef40b5392dfa9de3e8708f844f8c20}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the Royal Society of London. A. Mathematical and Physical Sciences}
+      \field{month}{4}
+      \field{number}{1549}
+      \field{title}{Relations between the `percolation' and `colouring' problem and other graph-theoretical problems associated with regular planar lattices: some exact results for the `percolation' problem}
+      \field{volume}{322}
+      \field{year}{1971}
+      \field{pages}{251\bibrangedash 280}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1098/rspa.1971.0067
+      \endverb
+    \endentry
+    \entry{partition-algebra}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e2ceeea38f8620383cfbd3e99c5c0cd8}{%
+           family={contributors},
+           familyi={c\bibinitperiod},
+           given={Wikipedia},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {{Wikipedia}{,} The Free Encyclopedia}%
+      }
+      \strng{namehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{fullhash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{bibnamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{authorbibnamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{authornamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{authorfullhash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Partition algebra}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Partition_algebra
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Partition_algebra
+      \endverb
+    \endentry
+    \entry{artinzopfe}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d5b16e394ff832b1cc37fbe2cab40240}{%
+           family={Artin},
+           familyi={A\bibinitperiod},
+           given={Emil},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{d5b16e394ff832b1cc37fbe2cab40240}
+      \strng{fullhash}{d5b16e394ff832b1cc37fbe2cab40240}
+      \strng{bibnamehash}{d5b16e394ff832b1cc37fbe2cab40240}
+      \strng{authorbibnamehash}{d5b16e394ff832b1cc37fbe2cab40240}
+      \strng{authornamehash}{d5b16e394ff832b1cc37fbe2cab40240}
+      \strng{authorfullhash}{d5b16e394ff832b1cc37fbe2cab40240}
+      \field{extraname}{1}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1865-8784}
+      \field{journaltitle}{Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg}
+      \field{month}{10}
+      \field{number}{1}
+      \field{title}{Theorie der zöpfe}
+      \field{volume}{4}
+      \field{year}{1925}
+      \field{pages}{47\bibrangedash 72}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1007/bf02950718
+      \endverb
+    \endentry
+    \entry{artin}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d5b16e394ff832b1cc37fbe2cab40240}{%
+           family={Artin},
+           familyi={A\bibinitperiod},
+           given={Emil},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{d5b16e394ff832b1cc37fbe2cab40240}
+      \strng{fullhash}{d5b16e394ff832b1cc37fbe2cab40240}
+      \strng{bibnamehash}{d5b16e394ff832b1cc37fbe2cab40240}
+      \strng{authorbibnamehash}{d5b16e394ff832b1cc37fbe2cab40240}
+      \strng{authornamehash}{d5b16e394ff832b1cc37fbe2cab40240}
+      \strng{authorfullhash}{d5b16e394ff832b1cc37fbe2cab40240}
+      \field{extraname}{2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0003486X}
+      \field{journaltitle}{Annals of Mathematics}
+      \field{number}{1}
+      \field{title}{Theory of braids}
+      \field{year}{1947}
+      \field{pages}{101\bibrangedash 126}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.2307/1969218
+      \endverb
+    \endentry
+    \entry{bohnenblust}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2583d631b2a4631564f035334b55b95e}{%
+           family={Bohnenblust},
+           familyi={B\bibinitperiod},
+           given={H.\bibnamedelimi Frederic},
+           giveni={H\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{2583d631b2a4631564f035334b55b95e}
+      \strng{fullhash}{2583d631b2a4631564f035334b55b95e}
+      \strng{bibnamehash}{2583d631b2a4631564f035334b55b95e}
+      \strng{authorbibnamehash}{2583d631b2a4631564f035334b55b95e}
+      \strng{authornamehash}{2583d631b2a4631564f035334b55b95e}
+      \strng{authorfullhash}{2583d631b2a4631564f035334b55b95e}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0003-486X}
+      \field{journaltitle}{The Annals of Mathematics}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{The algebraical braid group}
+      \field{volume}{48}
+      \field{year}{1947}
+      \field{pages}{127}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.2307/1969219
+      \endverb
+    \endentry
+    \entry{friedman}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f1d3f37756c0c44c598929e728a13f39}{%
+           family={Friedman},
+           familyi={F\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{f1d3f37756c0c44c598929e728a13f39}
+      \strng{fullhash}{f1d3f37756c0c44c598929e728a13f39}
+      \strng{bibnamehash}{f1d3f37756c0c44c598929e728a13f39}
+      \strng{authorbibnamehash}{f1d3f37756c0c44c598929e728a13f39}
+      \strng{authornamehash}{f1d3f37756c0c44c598929e728a13f39}
+      \strng{authorfullhash}{f1d3f37756c0c44c598929e728a13f39}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{British Journal for the History of Mathematics}
+      \field{number}{1}
+      \field{title}{Mathematical formalization and diagrammatic reasoning: the case study of the braid group between 1925 and 1950}
+      \field{volume}{34}
+      \field{year}{2019}
+      \field{pages}{43\bibrangedash 59}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1080/17498430.2018.1533298
+      \endverb
+    \endentry
+    \entry{murasugibraids}{book}{}
+      \name{author}{2}{}{%
+        {{hash=5c51c783a84faf5f6e5410e6d15bdd1a}{%
+           family={Murasugi},
+           familyi={M\bibinitperiod},
+           given={Kunio},
+           giveni={K\bibinitperiod}}}%
+        {{hash=a3dd64fbfffd313b801188a5756c9e0d}{%
+           family={Kurpita},
+           familyi={K\bibinitperiod},
+           given={Bohdan\bibnamedelima I.},
+           giveni={B\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{5cebaccd19f4e017669a849dcacfbe1e}
+      \strng{fullhash}{5cebaccd19f4e017669a849dcacfbe1e}
+      \strng{bibnamehash}{5cebaccd19f4e017669a849dcacfbe1e}
+      \strng{authorbibnamehash}{5cebaccd19f4e017669a849dcacfbe1e}
+      \strng{authornamehash}{5cebaccd19f4e017669a849dcacfbe1e}
+      \strng{authorfullhash}{5cebaccd19f4e017669a849dcacfbe1e}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-7923-5767-4}
+      \field{title}{A study of braids}
+      \field{year}{1999}
+      \field{pages}{277}
+      \range{pages}{1}
+    \endentry
+    \entry{alexander}{article}{}
+      \name{author}{1}{}{%
+        {{hash=571fe59ee1c7913036286c2c99b8f844}{%
+           family={Alexander},
+           familyi={A\bibinitperiod},
+           given={James\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Proceedings of the National Academy of Sciences}%
+      }
+      \strng{namehash}{571fe59ee1c7913036286c2c99b8f844}
+      \strng{fullhash}{571fe59ee1c7913036286c2c99b8f844}
+      \strng{bibnamehash}{571fe59ee1c7913036286c2c99b8f844}
+      \strng{authorbibnamehash}{571fe59ee1c7913036286c2c99b8f844}
+      \strng{authornamehash}{571fe59ee1c7913036286c2c99b8f844}
+      \strng{authorfullhash}{571fe59ee1c7913036286c2c99b8f844}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{month}{3}
+      \field{number}{3}
+      \field{title}{A lemma on systems of knotted curves}
+      \field{volume}{9}
+      \field{year}{1923}
+      \field{pages}{93\bibrangedash 95}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1073/pnas.9.3.93
+      \endverb
+    \endentry
+    \entry{markov}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d8ff669253b8f2e9441507d39423ae6e}{%
+           family={{Markov (Jr.)}},
+           familyi={M\bibinitperiod},
+           given={Andrei\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {German}%
+      }
+      \strng{namehash}{d8ff669253b8f2e9441507d39423ae6e}
+      \strng{fullhash}{d8ff669253b8f2e9441507d39423ae6e}
+      \strng{bibnamehash}{d8ff669253b8f2e9441507d39423ae6e}
+      \strng{authorbibnamehash}{d8ff669253b8f2e9441507d39423ae6e}
+      \strng{authornamehash}{d8ff669253b8f2e9441507d39423ae6e}
+      \strng{authorfullhash}{d8ff669253b8f2e9441507d39423ae6e}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Recueil Mathématique. Nouvelle Série}
+      \field{title}{Über die freie äquivalenz der geschlossenen {zöpfe}}
+      \field{volume}{1}
+      \field{year}{1936}
+      \field{pages}{73\bibrangedash 78}
+      \range{pages}{6}
+      \verb{urlraw}
+      \verb https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=sm&paperid=5479&option_lang=eng
+      \endverb
+      \verb{url}
+      \verb https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=sm&paperid=5479&option_lang=eng
+      \endverb
+    \endentry
+    \entry{birman}{book}{}
+      \name{author}{1}{}{%
+        {{hash=2106506ca36ccd78368a360ca0fb052a}{%
+           family={Birman},
+           familyi={B\bibinitperiod},
+           given={Joan\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{2106506ca36ccd78368a360ca0fb052a}
+      \strng{fullhash}{2106506ca36ccd78368a360ca0fb052a}
+      \strng{bibnamehash}{2106506ca36ccd78368a360ca0fb052a}
+      \strng{authorbibnamehash}{2106506ca36ccd78368a360ca0fb052a}
+      \strng{authornamehash}{2106506ca36ccd78368a360ca0fb052a}
+      \strng{authorfullhash}{2106506ca36ccd78368a360ca0fb052a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781400881420}
+      \field{number}{82}
+      \field{series}{Annals of Mathematics Studies}
+      \field{title}{Braids, links, and mapping class groups}
+      \field{year}{1974}
+      \field{pages}{ix+228}
+      \range{pages}{-1}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
