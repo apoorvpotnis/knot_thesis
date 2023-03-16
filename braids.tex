@@ -604,7 +604,7 @@ If \(b, g \in \GB_n\), we observe that \(\overline{g b g^{-1}}\) is ambient isot
 
 \subsection{Markov move}
 
-We observe that if \(b \in \GB_n\), then \(b \tauu_n \in \GB_{n+1}\), \(b \tauu_n^{-1} \in \GB_{n+1}\) and \(b\) have ambient isotopic closures, although \(b\), \(b\tauu_n\) and \(b\tauu_n^{-1}\) are not equivalent as braids. That is, we can add a strand and a crossing of that strand with another strand without changing the link type (of the closure). We can also remove a strand and a crossing if that strand does not cross any other strand. We visually see that adding the above mentioned strands anywhere between the existing strands is equivalent to adding the strands on the right.
+We observe that if \(b \in \GB_n\), then \(b \tauu_n \in \GB_{n+1}\), \(b \tauu_n^{-1} \in \GB_{n+1}\) and \(b\) have ambient isotopic closures (\cref{fig:markovmove}), although \(b\), \(b\tauu_n\) and \(b\tauu_n^{-1}\) are not equivalent as braids. That is, we can add a strand and a crossing of that strand with another strand without changing the link type (of the closure). We can also remove a strand and a crossing if that strand does not cross any other strand. We visually see that adding the above mentioned strands anywhere between the existing strands is equivalent to adding the strands on the right.
 
 \begin{figure}[H]
 	\centering
@@ -640,12 +640,64 @@ We observe that if \(b \in \GB_n\), then \(b \tauu_n \in \GB_{n+1}\), \(b \tauu_
 \begin{thm}[Markov]
 	Two braids whose closures are ambient isotopic to each other are related by a finite sequence of the following operations.
 	\begin{enumerate}
-		\item Braid equivalences.
+		\item Braid equivalences, i.e.\@ equivalences resulting due to the braid relations.
 		\item Conjugation.
 		\item Markov moves.
 	\end{enumerate}
 \end{thm}
 \noindent A proof of the above theorem can be found in the book of Joan Birman~\cite[chp.~2]{birman}. Markov gave a sketch of the proof in 1936~\cite{markov}.
 
+\subsection{Writhe}
+
+We see visually that the result of a Markov move on a braid is equivalent to performing a type I move on the braid closure. We know that a type I move increases or decreases the writhe of a link by a unit value. Since all the crossings in a braid closure occur only in the cube containing the braid strands, we can define the writhe of a braid equal to the writhe of the braid closure by assigning each braid crossing a value, either \(+1\) or \(-1\). Our assignment must be consistent with our earlier assignment for knots. But for this procedure, we need to assign an orientation to the braid. We assign all the strands (inside the braid cube) a downward orientation. Doing so, we see that \(\tauu_i\) inherits \(+1\) value while \(\tauu_i^{-1}\) inherits \(-1\). We could instead have assigned all the strands an upward orientation as well. This would not have changed the values of \(\tauu_i\) and \(\tauu_i^{-1}\) (\cref{fig:writhebraids}). What is not allowed is assigning arbitrary orientation to strands. If we assign the orientation arbitrarily, then the well-definedness of the orientation cannot be guaranteed. Two distinct strands in a braid could be connected via the closure strands and one would need to check the whole connected link component of the braid closure for a well-defined closure.
+
+\noindent Thus, the writhe \(w\) of the braid \(b\) with a word representation \(\prod_{j=1}^{m} \tauu^{\beta_j}_{\alpha_j}\) of length \(m\), where \(\beta_j \in \{+1, -1\}\) is \[w(b) = \sum_{j = 1}^{m}\beta_j.\] Note that the writhe of a braid is dependent on its word representation. We also see that \(w(b) = w(\overline{b})\).
+
+\begin{figure}[H]
+	\centering
+	\subcaptionbox{}{
+		\begin{tikzpicture}
+			\begin{knot}[clip width = 5]
+				\strand[{Straight Barb[angle'=85]}-, thick, red] (1,1) to (0,2);
+				\strand[{Straight Barb[angle'=85]}-, thick, red] (0,1) to (1,2);
+				\flipcrossings{1}
+			\end{knot}
+		\end{tikzpicture}}\label{a}
+	\subcaptionbox{}{
+		\begin{tikzpicture}
+			\begin{knot}[clip width = 5]
+				\strand[-{Straight Barb[angle'=85]}, thick, red] (1,1) to (0,2);
+				\strand[-{Straight Barb[angle'=85]}, thick, red] (0,1) to (1,2);
+				\flipcrossings{1}
+			\end{knot}
+		\end{tikzpicture}}\label{b}
+	\subcaptionbox{}{
+		\begin{tikzpicture}
+			\begin{knot}[clip width = 5]
+				\strand[{Straight Barb[angle'=85]}-, thick, red] (1,1) to (0,2);
+				\strand[{Straight Barb[angle'=85]}-, thick, red] (0,1) to (1,2);
+			\end{knot}
+		\end{tikzpicture}}\label{c}
+	\subcaptionbox{}{
+		\begin{tikzpicture}
+			\begin{knot}[clip width = 5]
+				\strand[{Straight Barb[angle'=85]}-, thick, red] (1,1) to (0,2);
+				\strand[{Straight Barb[angle'=85]}-, thick, red] (0,1) to (1,2);
+			\end{knot}
+		\end{tikzpicture}}\label{d}
+	\caption{Assignment of crossing values. (a) Downward orientation for \(\tauu_i\) corresponding to \(+1\). (b) Upward orientation for \(\tauu_i\) corresponding to \(+1\). (c) Downward orientation for \(\tauu_i^{-1}\) corresponding to \(-1\). (d) Upward orientation for \(\tauu_i^{-1}\) corresponding to \(-1\).}
+	\label{fig:writhebraids}
+\end{figure}
+
 \section{Markov trace}
+
+We won't distinguish between \(\B_n\) and \(\GB_n\) from now on. We can now move finally towards the Jones/bracket polynomial with the information we have. If we have a function \(J_n \colon \B_n \rightarrow R\), where \(R\) is a commutative ring, then using the Markov theorem we can construct link invariants from the family of functions \(\{J_n\}\) if the following conditions are satisfied.
+\begin{enumerate}
+    \item \(J_n\) is well defined. \(J_n(b)\) = \(J_n(b')\) if \(b = b'\).
+	\item \(J_n(b) = J_n(gbg^{-1})\) if \(g, b \in \B_n\).
+	\item If \(b \in \B_n\), then there exists a constant \(\alpha\in R\), independent of \(n\), such that \[J_{n+1} (b\sigma_n) = \alpha^{+1} J_n(b)\] and \[J_{n+1} (b\sigma_{n}^{-1}) = \alpha^{-1} J_n(b).\]
+\end{enumerate}
+\noindent The last condition reminds us of the normalisation needed in order to make the bracket polynomial invariant under the type I move. Its purpose here is the same.
+
+A family of functions \(\{J_n\}\) satisfying the above given three conditions is called a Markov trace on \(\{\B_n\}\). For any link \(L\) which is ambient isotopic to \(\overline{b}\), where \(b \in \B_n\), we define \(J(L) \in R\) as follows. \[J(L) \colon \alpha^{-w(b)}J_n(b).\] We call \(J(L)\) the link invariant for the Markov trace \(\{J_n\}\).
 
