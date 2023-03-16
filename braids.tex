@@ -699,5 +699,13 @@ We won't distinguish between \(\B_n\) and \(\GB_n\) from now on. We can now move
 \end{enumerate}
 \noindent The last condition reminds us of the normalisation needed in order to make the bracket polynomial invariant under the type I move. Its purpose here is the same.
 
-A family of functions \(\{J_n\}\) satisfying the above given three conditions is called a Markov trace on \(\{\B_n\}\). For any link \(L\) which is ambient isotopic to \(\overline{b}\), where \(b \in \B_n\), we define \(J(L) \in R\) as follows. \[J(L) \colon \alpha^{-w(b)}J_n(b).\] We call \(J(L)\) the link invariant for the Markov trace \(\{J_n\}\).
+A family of functions \(\{J_n\}\) satisfying the above given three conditions is called a Markov trace on \(\{\B_n\}\). For any link \(L\) which is ambient isotopic to \(\overline{b}\), where \(b \in \B_n\), we define \(J(L) \in R\) as follows. \[J(L) \coloneq \alpha^{-w(b)}J_n(b).\] We call \(J(L)\) the link invariant for the Markov trace \(\{J_n\}\).
+
+\begin{thm}
+    \(J\) is an invariant of ambient isotopy for oriented links.
+\end{thm}
+\begin{proof}
+	Suppose \(L \sim \overline{b}\) and \(L'' \sim \overline{b'}\), where \(\sim\) denotes the ambient isotopy relation. By the Markov theorem, we can obtain \(\overline{b'}\) via an application of a finite sequence of the moves mentioned in the Markov theorem  on \(\overline{b'}\). Each such move leaves \(J\) invariant. \(J_n\) is already invariant under braid equivalences and conjugation by definition. The \(\alpha^{-w(b)}\) factor cancels the effect of type I move.
+\end{proof}
+
 
