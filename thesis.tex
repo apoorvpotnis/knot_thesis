@@ -66,6 +66,7 @@
 \newcommand{\In}{\symbb{I}_n}
 \renewcommand{\I}{\symbb{I}}
 \newcommand{\rthree}{\symbb{R}^3}
+\newcommand{\z}{\symbb{Z}}
 
 
 %\usepackage{capt-of}
@@ -102,70 +103,70 @@
 	\end{tikzpicture}%
 }
 \newcommand{\KPA}{%
-	\KP{\filldraw[fill=none, thick] circle (0.3);}%
+	\KP{\filldraw[fill=none, line width=0.6pt] circle (0.3);}%
 }
 \newcommand{\KPB}{%
 	\KP{
-		\draw[thick] (-0.3,0.3) -- (0.3,-0.3);
-		\draw[thick] (-0.3,-0.3) -- (-0.05,-0.05);
-		\draw[thick] (0.05,0.05) -- (0.3,0.3);
+		\draw[line width=0.6pt] (-0.3,0.3) -- (0.3,-0.3);
+		\draw[line width=0.6pt] (-0.3,-0.3) -- (-0.05,-0.05);
+		\draw[line width=0.6pt] (0.05,0.05) -- (0.3,0.3);
 	}%
 }
 \newcommand{\KPC}{%
 	\KP{
-		\draw[thick] (-0.3,-0.3) -- (0.3,0.3);
-		\draw[thick] (-0.3,0.3) -- (-0.05,0.05);
-		\draw[thick] (0.05,-0.05) -- (0.3,-0.3);
+		\draw[line width=0.6pt] (-0.3,-0.3) -- (0.3,0.3);
+		\draw[line width=0.6pt] (-0.3,0.3) -- (-0.05,0.05);
+		\draw[line width=0.6pt] (0.05,-0.05) -- (0.3,-0.3);
 	}%
 }
 \newcommand{\KPD}{%
 	\KP{%
-		\draw[thick] (-0.3,0.3) .. controls (0,-0.05) .. (0.3,0.3);
-		\draw[thick] (-0.3,-0.3) .. controls (0,0.05) .. (0.3,-0.3);
+		\draw[line width=0.6pt] (-0.3,0.3) .. controls (0,-0.05) .. (0.3,0.3);
+		\draw[line width=0.6pt] (-0.3,-0.3) .. controls (0,0.05) .. (0.3,-0.3);
 	}%
 }
 \newcommand{\KPE}{%
 	\KP{%
-		\draw[thick] (-0.3,-0.3) .. controls (0.05,0) .. (-0.3,0.3);
-		\draw[thick] (0.3,-0.3) .. controls (-0.05,0) .. (0.3,0.3);
+		\draw[line width=0.6pt] (-0.3,-0.3) .. controls (0.05,0) .. (-0.3,0.3);
+		\draw[line width=0.6pt] (0.3,-0.3) .. controls (-0.05,0) .. (0.3,0.3);
 	}%
 }
 \newcommand{\KPF}{%
 	\KP{
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, thick] (-0.3,0.3) -- (0.3,-0.3);
-		\draw[thick] (-0.3,-0.3) -- (-0.05,-0.05);
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, thick] (0.05,0.05) -- (0.3,0.3);
+		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (-0.3,0.3) -- (0.3,-0.3);
+		\draw[line width=0.6pt] (-0.3,-0.3) -- (-0.05,-0.05);
+		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (0.05,0.05) -- (0.3,0.3);
 	}%
 }
 \newcommand{\KPG}{%
 	\KP{
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, thick] (-0.3,-0.3) -- (0.3,0.3);
-		\draw[thick] (-0.3,0.3) -- (-0.05,0.05);
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, thick] (0.05,-0.05) -- (0.3,-0.3);
+		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (-0.3,-0.3) -- (0.3,0.3);
+		\draw[line width=0.6pt] (-0.3,0.3) -- (-0.05,0.05);
+		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (0.05,-0.05) -- (0.3,-0.3);
 	}%
 }
 \newcommand{\KPH}{%
 	\KP{%
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, thick] (-0.3,0.3) .. controls (0,-0.05) .. (0.3,0.3);
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, thick] (-0.3,-0.3) .. controls (0,0.05) .. (0.3,-0.3);
+		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (-0.3,0.3) .. controls (0,-0.05) .. (0.3,0.3);
+		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (-0.3,-0.3) .. controls (0,0.05) .. (0.3,-0.3);
 	}%
 }
 \newcommand{\KPI}{%
 	\KP{%
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, thick] (-0.3,0.3) .. controls (0,-0.05) .. (0.3,0.3);
-		\draw[{Straight Barb[angle'=85, length=2.15]}-, thick] (-0.3,-0.3) .. controls (0,0.05) .. (0.3,-0.3);
+		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (-0.3,0.3) .. controls (0,-0.05) .. (0.3,0.3);
+		\draw[{Straight Barb[angle'=85, length=2.15]}-, line width=0.6pt] (-0.3,-0.3) .. controls (0,0.05) .. (0.3,-0.3);
 	}%
 }
 \newcommand{\KPJ}{%
 	\KP{%
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, thick] (-0.3,-0.3) .. controls (0.05,0) .. (-0.3,0.3);
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, thick] (0.3,-0.3) .. controls (-0.05,0) .. (0.3,0.3);
+		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (-0.3,-0.3) .. controls (0.05,0) .. (-0.3,0.3);
+		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (0.3,-0.3) .. controls (-0.05,0) .. (0.3,0.3);
 	}%
 }
 \newcommand{\KPK}{%
 	\KP{%
-		\draw[{Straight Barb[angle'=85, length=2.15]}-, thick] (-0.3,-0.3) .. controls (0.05,0) .. (-0.3,0.3);
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, thick] (0.3,-0.3) .. controls (-0.05,0) .. (0.3,0.3);
+		\draw[{Straight Barb[angle'=85, length=2.15]}-, line width=0.6pt] (-0.3,-0.3) .. controls (0.05,0) .. (-0.3,0.3);
+		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (0.3,-0.3) .. controls (-0.05,0) .. (0.3,0.3);
 	}%
 }
 \newcommand{\KPX}[1]{%
@@ -174,7 +175,7 @@
 	\end{tikzpicture}%
 }
 \newcommand{\KPL}{%
-	\kern -0.06em\KPX{\filldraw[fill=none, thick, decoration={markings, mark=at position 0.25 with {\arrow[xshift=1.5, yshift=0.1\pgflinewidth]{<}}}, postaction={decorate}] circle (0.3);}%
+	\kern -0.06em\KPX{\filldraw[fill=none, line width=0.6pt, decoration={markings, mark=at position 0.25 with {\arrow[xshift=1.5, yshift=0.1\pgflinewidth]{<}}}, postaction={decorate}] circle (0.3);}%
 }
 
 \newcommand{\KPS}[1]{%
@@ -189,76 +190,76 @@
 		\begin{knot}[consider self intersections=true, ignore endpoint intersections=false,%<- long compilation time, so two paths
 			clip width=4,
 			clip radius=5pt,looseness=2]
-			\strand[thick] (0, 0)  .. controls  +(3, -1) and +(-3,-1) .. (1,0);
+			\strand[line width=0.6pt] (0, 0)  .. controls  +(3, -1) and +(-3,-1) .. (1,0);
 		\end{knot}
 	}
 }
 
 \newcommand{\KPSA}{%
-	\kern -0.07em\KPS{\filldraw[fill=none, thick] circle (0.3);}%
+	\kern -0.07em\KPS{\filldraw[fill=none, line width=0.6pt] circle (0.3);}%
 }
 \newcommand{\KPSB}{%
 	\KPS{
-		\draw[thick] (-0.3,0.3) -- (0.3,-0.3);
-		\draw[thick] (-0.3,-0.3) -- (-0.08,-0.08);
-		\draw[thick] (0.08,0.08) -- (0.3,0.3);
+		\draw[line width=0.6pt] (-0.3,0.3) -- (0.3,-0.3);
+		\draw[line width=0.6pt] (-0.3,-0.3) -- (-0.08,-0.08);
+		\draw[line width=0.6pt] (0.08,0.08) -- (0.3,0.3);
 	}%
 }
 \newcommand{\KPSC}{%
 	\KPS{
-		\draw[thick] (-0.3,-0.3) -- (0.3,0.3);
-		\draw[thick] (-0.3,0.3) -- (-0.08,0.08);
-		\draw[thick] (0.08,-0.08) -- (0.3,-0.3);
+		\draw[line width=0.6pt] (-0.3,-0.3) -- (0.3,0.3);
+		\draw[line width=0.6pt] (-0.3,0.3) -- (-0.08,0.08);
+		\draw[line width=0.6pt] (0.08,-0.08) -- (0.3,-0.3);
 	}%
 }
 \newcommand{\KPSD}{%
 	\KPS{%
-		\draw[thick] (-0.3,0.3) .. controls (0,0) .. (0.3,0.3);
-		\draw[thick] (-0.3,-0.3) .. controls (0,0) .. (0.3,-0.3);
+		\draw[line width=0.6pt] (-0.3,0.3) .. controls (0,0) .. (0.3,0.3);
+		\draw[line width=0.6pt] (-0.3,-0.3) .. controls (0,0) .. (0.3,-0.3);
 	}%
 }
 \newcommand{\KPSE}{%
 	\KPS{%
-		\draw[thick] (-0.3,-0.3) .. controls (0,0) .. (-0.3,0.3);
-		\draw[thick] (0.3,-0.3) .. controls (0,0) .. (0.3,0.3);
+		\draw[line width=0.6pt] (-0.3,-0.3) .. controls (0,0) .. (-0.3,0.3);
+		\draw[line width=0.6pt] (0.3,-0.3) .. controls (0,0) .. (0.3,0.3);
 	}%
 }
 \newcommand{\KPSF}{%
 	\KPS{
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, thick] (-0.3,0.3) -- (0.3,-0.3);
-		\draw[thick] (-0.3,-0.3) -- (-0.08,-0.08);
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, thick] (0.08,0.08) -- (0.3,0.3);
+		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (-0.3,0.3) -- (0.3,-0.3);
+		\draw[line width=0.6pt] (-0.3,-0.3) -- (-0.08,-0.08);
+		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (0.08,0.08) -- (0.3,0.3);
 	}%
 }
 \newcommand{\KPSG}{%
 	\KPS{
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, thick] (-0.3,-0.3) -- (0.3,0.3);
-		\draw[thick] (-0.3,0.3) -- (-0.08,0.08);
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, thick] (0.08,-0.08) -- (0.3,-0.3);
+		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (-0.3,-0.3) -- (0.3,0.3);
+		\draw[line width=0.6pt] (-0.3,0.3) -- (-0.08,0.08);
+		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (0.08,-0.08) -- (0.3,-0.3);
 	}%
 }
 \newcommand{\KPSH}{%
 	\KPS{%
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, thick] (-0.3,0.3) .. controls (0,-0.0) .. (0.3,0.3);
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, thick] (-0.3,-0.3) .. controls (0,0.0) .. (0.3,-0.3);
+		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (-0.3,0.3) .. controls (0,-0.0) .. (0.3,0.3);
+		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (-0.3,-0.3) .. controls (0,0.0) .. (0.3,-0.3);
 	}%
 }
 \newcommand{\KPSI}{%
 	\KPS{%
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, thick] (-0.3,0.3) .. controls (0,-0.0) .. (0.3,0.3);
-		\draw[{Straight Barb[angle'=85, length=1.8]}-, thick] (-0.3,-0.3) .. controls (0,0.0) .. (0.3,-0.3);
+		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (-0.3,0.3) .. controls (0,-0.0) .. (0.3,0.3);
+		\draw[{Straight Barb[angle'=85, length=1.8]}-, line width=0.6pt] (-0.3,-0.3) .. controls (0,0.0) .. (0.3,-0.3);
 	}%
 }
 \newcommand{\KPSJ}{%
 	\KPS{%
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, thick] (-0.3,-0.3) .. controls (0.0,0) .. (-0.3,0.3);
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, thick] (0.3,-0.3) .. controls (-0.0,0) .. (0.3,0.3);
+		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (-0.3,-0.3) .. controls (0.0,0) .. (-0.3,0.3);
+		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (0.3,-0.3) .. controls (-0.0,0) .. (0.3,0.3);
 	}%
 }
 \newcommand{\KPSK}{%
 	\KPS{%
-		\draw[{Straight Barb[angle'=85, length=1.8]}-, thick] (-0.3,-0.3) .. controls (0.0,0) .. (-0.3,0.3);
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, thick] (0.3,-0.3) .. controls (-0.0,0) .. (0.3,0.3);
+		\draw[{Straight Barb[angle'=85, length=1.8]}-, line width=0.6pt] (-0.3,-0.3) .. controls (0.0,0) .. (-0.3,0.3);
+		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (0.3,-0.3) .. controls (-0.0,0) .. (0.3,0.3);
 	}%
 }
 \newcommand{\KPSS}[1]{%
@@ -267,18 +268,17 @@
 	\end{tikzpicture}%
 }
 \newcommand{\KPSL}{%
-	\kern -0.06em\KPSS{\filldraw[fill=none, thick, decoration={markings, mark=at position 0.25 with {\arrow[xshift=1.5, yshift=0.1\pgflinewidth]{<}}}, postaction={decorate}] circle (0.3);}%
+	\kern -0.06em\KPSS{\filldraw[fill=none, line width=0.6pt, decoration={markings, mark=at position 0.25 with {\arrow[xshift=1.5, yshift=0.1\pgflinewidth]{<}}}, postaction={decorate}] circle (0.3);}%
 }
 
 \newcommand{\KPSX}{%
 	\KPS{
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, thick] (-0.3,0) -- (0.3,0);
+		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (-0.3,0) -- (0.3,0);
 	}%
 }
-
-\newcommand{\KPSY}{%
+\newcommand{\KPSY}{% 5
 	\begin{tikzpicture}[baseline=-\dimexpr\fontdimen22\textfont2\relax, scale=0.45]
-		\draw[thick] circle (0.3);
+		\draw[line width=0.6pt] circle (0.3);
 	\end{tikzpicture}%
 }
 

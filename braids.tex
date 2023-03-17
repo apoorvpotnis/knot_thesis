@@ -705,7 +705,15 @@ A family of functions \(\{J_n\}\) satisfying the above given three conditions is
     \(J\) is an invariant of ambient isotopy for oriented links.
 \end{thm}
 \begin{proof}
-	Suppose \(L \sim \overline{b}\) and \(L'' \sim \overline{b'}\), where \(\sim\) denotes the ambient isotopy relation. By the Markov Theorem, we can obtain \(\overline{b'}\) via an application of a finite sequence of the moves mentioned in the Markov Theorem  on \(\overline{b'}\). Each such move leaves \(J\) invariant. \(J_n\) is already invariant under braid equivalences and conjugation by definition. The \(\alpha^{-w(b)}\) factor cancels the effect of type I move.
+	Suppose \(L \sim \overline{b}\) and \(L'' \sim \overline{b'}\), where \(\sim\) denotes the ambient isotopy relation. By the Markov Theorem, we can obtain \(\overline{b'}\) via an application of a finite sequence of the moves mentioned in the Markov Theorem  on \(\overline{b'}\). Each such move leaves \(J\) invariant. \(J_n\) is already invariant under braid equivalences and conjugation by definition. The \(\alpha^{-w(b)}\) factor cancels the effect of a type I move.
 \end{proof}
+
+We can define the bracket polynomial for braids in the same way as we did for links. Define
+\begin{align*}
+	\langle \cdot \rangle &\colon \B_n \rightarrow \z[A, A^{-1}]\\
+	\langle \cdot \rangle &\colon b \mapsto \langle \overline{b}\rangle.
+\end{align*}
+We simply evaluate the bracket on the closure of the braid. We observe that this function is a Markov trace with \(\alpha = -A^{3}\). We know that \[\BB = A\BD + B\BE.\]
+
 
 
