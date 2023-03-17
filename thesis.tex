@@ -16,13 +16,13 @@
 % \setmathfont[range={\mathcal,\mathbfcal},StylisticSet=1]{XITS Math}
 \usepackage{microtype, lipsum, comment, physics2, tikz, tikz-3dplot, float, subcaption, todonotes, tikz-cd}
 \usetikzlibrary{knots, hobby, braids}
-\usepackage{embedall}
+%\usepackage{embedall}
 
 \usepackage[bold=0.04]{xfakebold}
 \usepackage{xfp}
 
 %\usepackage{embedall}
-\embedfile{thesis.bib}
+%\embedfile{thesis.bib}
 %\embedfile{apoorv_potnis_synopsis.xmpdata}
 
 \usepackage{dsfont}
@@ -101,6 +101,43 @@
 	\begin{tikzpicture}[baseline=-\dimexpr\fontdimen22\textfont2\relax]
 		#1
 	\end{tikzpicture}%
+}
+\newcommand{\BPB}{
+	\KP{
+		\draw[line width=0.6pt] (-0.3,0.3) -- (0.3,-0.3);
+		\draw[line width=0.6pt] (-0.3,-0.3) -- (-0.05,-0.05);
+		\draw[line width=0.6pt] (0.05,0.05) -- (0.3,0.3);
+		\draw[line width=0.6pt] (-0.4,-0.31) -- (-0.4,0.31);
+		\node at (-0.6,0) {\(\cdots\)};
+		\draw[line width=0.6pt] (-0.8,-0.31) -- (-0.8,0.31);
+		\draw[line width=0.6pt] (0.4,-0.31) -- (0.4,0.31);
+		\node at (0.6,0) {\(\cdots\)};
+		\draw[line width=0.6pt] (0.8,-0.31) -- (0.8,0.31);
+	}
+}
+\newcommand{\BPD}{
+	\KP{
+		\draw[line width=0.6pt] (-0.3,0.3) .. controls (0,-0.05) .. (0.3,0.3);
+		\draw[line width=0.6pt] (-0.3,-0.3) .. controls (0,0.05) .. (0.3,-0.3);
+		\draw[line width=0.6pt] (-0.4,-0.31) -- (-0.4,0.31);
+		\node at (-0.6,0) {\(\cdots\)};
+		\draw[line width=0.6pt] (-0.8,-0.31) -- (-0.8,0.31);
+		\draw[line width=0.6pt] (0.4,-0.31) -- (0.4,0.31);
+		\node at (0.6,0) {\(\cdots\)};
+		\draw[line width=0.6pt] (0.8,-0.31) -- (0.8,0.31);
+	}
+}
+\newcommand{\BPE}{
+	\KP{
+		\draw[line width=0.6pt] (-0.3,-0.3) .. controls (0.05,0) .. (-0.3,0.3);
+		\draw[line width=0.6pt] (0.3,-0.3) .. controls (-0.05,0) .. (0.3,0.3);
+		\draw[line width=0.6pt] (-0.4,-0.31) -- (-0.4,0.31);
+		\node at (-0.6,0) {\(\cdots\)};
+		\draw[line width=0.6pt] (-0.8,-0.31) -- (-0.8,0.31);
+		\draw[line width=0.6pt] (0.4,-0.31) -- (0.4,0.31);
+		\node at (0.6,0) {\(\cdots\)};
+		\draw[line width=0.6pt] (0.8,-0.31) -- (0.8,0.31);
+	}
 }
 \newcommand{\KPA}{%
 	\KP{\filldraw[fill=none, line width=0.6pt] circle (0.3);}%
