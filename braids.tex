@@ -662,7 +662,7 @@ We see visually that the result of a Markov move on a braid is equivalent to per
 				\strand[{Straight Barb[angle'=85]}-, thick, red] (0,1) to (1,2);
 				\flipcrossings{1}
 			\end{knot}
-		\end{tikzpicture}}\label{a}
+		\end{tikzpicture}}\label{a}\quad
 	\subcaptionbox{}{
 		\begin{tikzpicture}
 			\begin{knot}[clip width = 5]
@@ -670,14 +670,14 @@ We see visually that the result of a Markov move on a braid is equivalent to per
 				\strand[-{Straight Barb[angle'=85]}, thick, red] (0,1) to (1,2);
 				\flipcrossings{1}
 			\end{knot}
-		\end{tikzpicture}}\label{b}
+		\end{tikzpicture}}\label{b}\quad
 	\subcaptionbox{}{
 		\begin{tikzpicture}
 			\begin{knot}[clip width = 5]
 				\strand[{Straight Barb[angle'=85]}-, thick, red] (1,1) to (0,2);
 				\strand[{Straight Barb[angle'=85]}-, thick, red] (0,1) to (1,2);
 			\end{knot}
-		\end{tikzpicture}}\label{c}
+		\end{tikzpicture}}\label{c}\quad
 	\subcaptionbox{}{
 		\begin{tikzpicture}
 			\begin{knot}[clip width = 5]
@@ -713,7 +713,7 @@ We can define the bracket polynomial for braids in the same way as we did for li
 	\langle \cdot \rangle &\colon \B_n \rightarrow \z[A, A^{-1}]\\
 	\langle \cdot \rangle &\colon b \mapsto \langle \overline{b}\rangle.
 \end{align*}
-We simply evaluate the bracket on the closure of the braid. We observe that this function is a Markov trace with \(\alpha = -A^{3}\). We know that \[\BB = A\BD + A^{-1}\BE.\] In terms of braids, we have \[\left\langle\BPB\right\rangle = A\left\langle\BPD\right\rangle + A^{-1}\left\langle\BPE\right\rangle.\] But \[\BPE\] is the identity braid. Thus, if we denote \[\BPD\] by \(U_i\), we can write \[\left\langle{\sigmaa_{i}^{-1}}\right\rangle = A\braket<U_i> + A^{-1}\braket<\I_n>.\] Similarly, one could write \[\braket<\sigmaa_i> = A\braket<\I_n> + A^{-1}\braket<U_i>.\] Note that \(U_i\) does not belong to the braid group and is a new object. We refer to them as ``input-output forms'' or as ``hooks''. It is a cup and cap combination involving the \(i\)th and \(i+1\)th strands (\cref{fig:inputoutputforms}).
+We simply evaluate the bracket on the closure of the braid. We observe that this function is a Markov trace with \(\alpha = -A^{3}\). We know that \[\BB = A\BD + A^{-1}\BE.\] In terms of braids, we have \[\left\langle\BPB\right\rangle = A\left\langle\BPD\right\rangle + A^{-1}\left\langle\BPE\right\rangle.\] But \(\BPE\) is the identity braid. Thus, if we denote \(\BPD\) by \(U_i\), we can write \[\left\langle{\sigmaa_{i}^{-1}}\right\rangle = A\braket<U_i> + A^{-1}\braket<\I_n>.\] Similarly, one could write \[\braket<\sigmaa_i> = A\braket<\I_n> + A^{-1}\braket<U_i>.\] Note that \(U_i\) does not belong to the braid group and is a new object. We refer to them as ``input-output forms'' or as ``hooks''. They are cup and cap combinations involving the \(i\)-th and \((i+1)\)-th strands (\cref{fig:inputoutputforms}).
 \begin{figure}[H]
     \centering
 	\subcaptionbox{\(U_1\)}{
@@ -748,7 +748,60 @@ We simply evaluate the bracket on the closure of the braid. We observe that this
 We see that each bracket polynomial evaluation state of the closure of a braid can be written in terms of the closure of a product of the input-output forms. We shall see an example of this fact now.
 
 \begin{exmp}
-    Let
+	Let \(b = \sigmaa_1\sigmaa_2^{-1}\). We can resolve \(\overline{b}\) in many states. One of the states \(s\) and its corresponding product \(U_1 U_2\) in terms of the input-output forms is shown in \cref{fig:inputoutputexample}.
+	\begin{figure}
+	    \centering
+		\subcaptionbox{\(b\)}{
+			\begin{tikzpicture}
+				\begin{knot}[clip width=5]
+					\strand[very thick, blue] (2,0) to [out=90,in=-90] (1,1);
+					\strand[very thick, blue] (1,1) [out=90,in=-90] to (0,2);
+					\strand[very thick, blue] (1,0) to [out=90,in=-90] (2,1);
+					\strand[very thick, blue] (2,1) [out=90,in=-90] to (2,2);
+					\strand[very thick, blue] (0,0) to [out=90,in=-90] (0,1);
+					\strand[very thick, blue] (0,1) [out=90,in=-90] to (1,2);
+					\flipcrossings{2}
+				\end{knot}
+			\end{tikzpicture}}
+		\quad\quad\subcaptionbox{\(\overline{b}\)}{
+			\begin{tikzpicture}
+				\begin{knot}[clip width=5]
+					\strand[very thick, blue] (2,0) to [out=90,in=-90] (1,1);
+					\strand[very thick, blue] (1,1) [out=90,in=-90] to (0,2);
+					\strand[very thick, blue] (1,0) to [out=90,in=-90] (2,1);
+					\strand[very thick, blue] (2,1) [out=90,in=-90] to (2,2);
+					\strand[very thick, blue] (0,0) to [out=90,in=-90] (0,1);
+					\strand[very thick, blue] (0,1) [out=90,in=-90] to (1,2);
+					\strand[thick, red] (2,2) to (2,2.5) to (2.5, 2.5) to (2.5,-0.5) to (2,-0.5) to (2,0);
+					\strand[thick, red] (1,2) to (1,3) to (3,3) to (3,-1) to (1,-1) to (1,0);
+					\strand[thick, red] (0,2) to (0,3.5) to (3.5,3.5) to (3.5,-1.5) to (0,-1.5) to (0,0);
+					\flipcrossings{2}
+				\end{knot}
+			\end{tikzpicture}}\par\bigskip
+		\subcaptionbox{\(s = \overline{U_1 U_2}\)}{
+			\begin{tikzpicture}
+				\begin{knot}[clip width=5]
+					\draw[very thick, blue] (1,0) .. controls (1,0.5) and (2,0.5) .. (2,0);
+					\draw[very thick, blue] (1,1) .. controls (1,0.5) and (2,0.5) .. (2,1) to (2,2);
+					\draw[very thick, blue] (0,0) to (0,1) .. controls (0,1.5) and (1,1.5) .. (1,1);
+					\draw[very thick, blue] (0,2) .. controls (0,1.5) and (1,1.5) .. (1,2);
+					\strand[thick, red] (2,2) to (2,2.5) to (2.5, 2.5) to (2.5,-0.5) to (2,-0.5) to (2,0);
+					\strand[thick, red] (1,2) to (1,3) to (3,3) to (3,-1) to (1,-1) to (1,0);
+					\strand[thick, red] (0,2) to (0,3.5) to (3.5,3.5) to (3.5,-1.5) to (0,-1.5) to (0,0);
+				\end{knot}
+			\end{tikzpicture}}
+		\quad\quad\quad\subcaptionbox{\(U_1 U_2\)}{
+			\begin{tikzpicture}
+				\begin{knot}[clip width=5]
+					\draw[very thick, blue] (1,0) .. controls (1,0.5) and (2,0.5) .. (2,0);
+					\draw[very thick, blue] (1,1) .. controls (1,0.5) and (2,0.5) .. (2,1) to (2,2);
+					\draw[very thick, blue] (0,0) to (0,1) .. controls (0,1.5) and (1,1.5) .. (1,1);
+					\draw[very thick, blue] (0,2) .. controls (0,1.5) and (1,1.5) .. (1,2);
+				\end{knot}
+			\end{tikzpicture}}
+		\caption{Writing a state of a braid closure in terms of input-output forms.}
+		\label{fig:inputoutputexample}
+	\end{figure}
 \end{exmp}
 
 
