@@ -14,7 +14,8 @@
 % \usepackage{fontspec,unicode-math}\setmainfont[]{STEP}
 % \setmathfont[StylisticSet=0]{XITS Math}
 % \setmathfont[range={\mathcal,\mathbfcal},StylisticSet=1]{XITS Math}
-\usepackage{microtype, lipsum, comment, physics2, tikz, tikz-3dplot, float, subcaption, todonotes, tikz-cd}
+\usepackage{microtype, lipsum, comment, tikz, tikz-3dplot, float, subcaption, todonotes, tikz-cd}
+\usepackage{physics2}\usephysicsmodule{ab,ab.braket}
 \usetikzlibrary{knots, hobby, braids}
 %\usepackage{embedall}
 
@@ -48,6 +49,7 @@
 \DeclarePairedDelimiterX\set[1]\lbrace\rbrace{\setaux#1}
 \def\setaux#1|{#1\;\delimsize\vert\;}
 \DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter\bracket{\left\langle}{\right\rangle}
 \makeatletter
 \def\bign#1{\mathclose{\hbox{$\left#1\vbox to8.5\p@{}\right.\n@space$}}\mathopen{}}
 \makeatother
@@ -76,6 +78,7 @@
 \newtheorem{thm}{Theorem}
 \newtheorem{remark}[thm]{Remark}
 \newtheorem{prop}[thm]{Proposition}
+\newtheorem{exmp}[thm]{Example}
 
 \usepackage[sorting=none]{biblatex}
 \addbibresource{thesis.bib}

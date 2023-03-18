@@ -713,7 +713,45 @@ We can define the bracket polynomial for braids in the same way as we did for li
 	\langle \cdot \rangle &\colon \B_n \rightarrow \z[A, A^{-1}]\\
 	\langle \cdot \rangle &\colon b \mapsto \langle \overline{b}\rangle.
 \end{align*}
-We simply evaluate the bracket on the closure of the braid. We observe that this function is a Markov trace with \(\alpha = -A^{3}\). We know that \[\BB = A\BD + A^{-1}\BE.\] In terms of braids, we have \[\left\langle\BPB\right\rangle = \left\langle\BPD\right\rangle + \left\langle\BPE\right\rangle.\]
+We simply evaluate the bracket on the closure of the braid. We observe that this function is a Markov trace with \(\alpha = -A^{3}\). We know that \[\BB = A\BD + A^{-1}\BE.\] In terms of braids, we have \[\left\langle\BPB\right\rangle = A\left\langle\BPD\right\rangle + A^{-1}\left\langle\BPE\right\rangle.\] But \[\BPE\] is the identity braid. Thus, if we denote \[\BPD\] by \(U_i\), we can write \[\left\langle{\sigmaa_{i}^{-1}}\right\rangle = A\braket<U_i> + A^{-1}\braket<\I_n>.\] Similarly, one could write \[\braket<\sigmaa_i> = A\braket<\I_n> + A^{-1}\braket<U_i>.\] Note that \(U_i\) does not belong to the braid group and is a new object. We refer to them as ``input-output forms'' or as ``hooks''. It is a cup and cap combination involving the \(i\)th and \(i+1\)th strands (\cref{fig:inputoutputforms}).
+\begin{figure}[H]
+    \centering
+	\subcaptionbox{\(U_1\)}{
+		\begin{tikzpicture}[scale=2]
+			\draw[thick, red] (-0.3,0.3) .. controls (-0.3,-0.06) and (0.3,-0.06) .. (0.3,0.3);
+			\draw[thick, red] (-0.3,-0.3) .. controls (-0.3,0.06) and (0.3,0.06) .. (0.3,-0.3);
+			\draw[thick, red] (0.5,-0.3) -- (0.5,0.3);
+			\draw[thick, red] (0.7,-0.3) -- (0.7,0.3);
+		\end{tikzpicture}}
+	\quad\quad\quad\subcaptionbox{\(U_2\)}{
+		\begin{tikzpicture}[scale=2]
+			\begin{knot}[clip width = 5]
+				\draw[thick, red] (-0.5,-0.3) -- (-0.5,0.3);
+				\draw[thick, red] (-0.3,0.3) .. controls (-0.3,-0.06) and (0.3,-0.06) .. (0.3,0.3);
+				\draw[thick, red] (-0.3,-0.3) .. controls (-0.3,0.06) and (0.3,0.06) .. (0.3,-0.3);
+				\draw[thick, red] (0.5,-0.3) -- (0.5,0.3);
+			\end{knot}
+		\end{tikzpicture}}
+	\quad\quad\quad\subcaptionbox{\(U_3\)}{
+		\begin{tikzpicture}[scale=2]
+			\begin{knot}[clip width = 5]
+				\draw[thick, red] (-0.5,-0.3) -- (-0.5,0.3);
+				\draw[thick, red] (-0.3,0.3) .. controls (-0.3,-0.06) and (0.3,-0.06) .. (0.3,0.3);
+				\draw[thick, red] (-0.3,-0.3) .. controls (-0.3,0.06) and (0.3,0.06) .. (0.3,-0.3);
+				\draw[thick, red] (-0.7,-0.3) -- (-0.7,0.3);
+			\end{knot}
+		\end{tikzpicture}}
+	\caption{Input-output forms or hooks for 4 strands}
+	\label{fig:inputoutputforms}
+\end{figure}
+
+We see that each bracket polynomial evaluation state of the closure of a braid can be written in terms of the closure of a product of the input-output forms. We shall see an example of this fact now.
+
+\begin{exmp}
+    Let
+\end{exmp}
+
+
 
 
 
