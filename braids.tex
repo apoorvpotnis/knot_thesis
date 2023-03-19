@@ -863,7 +863,12 @@ These relations are a result of the geometric relations as illustrated in \cref{
 	\label{fig:inputoutputillus}
 \end{figure}
 
-
+Now that we have the Temperley--Lieb algebra, we can define a mapping \[\uprho \colon \B_n \rightarrow \TL_n\] by the following formulae.
+\begin{align*}
+	\uprho (\sigmaa_i) &= A + A^{-1}\U_i,\\
+	\uprho (\sigmaa_i^{-1}) &= A^{-1} + A\U_i.
+\end{align*}
+We now define the diagrammatic trace \(\tr \colon \TL_n \rightarrow \Z[A, A^{-1}]\) by extending linearly \(\tr(P) = \braket<P\,>\), where \(P\) is a product term in \(S(b)\). This version of trace is diagrammatic in nature as we are counting loops in a state. We thus arrive at the formula \(\braket<b> = \tr(\operatorname{\uprho}(b))\). With what we have learnt so far, one can now find a braid representation \(b\) of a link \(L\) by Alexander's theorem, calculate \(\tr(\operatorname{\uprho}(b)\) and normalise it to get the link invariant normalised bracket polynomial. One can see that \(\uprho\) is indeed a representation by verifying that \(\uprhoo(\sigmaa_i)\uprhoo(\sigmaa_i^{-1}) = 1\), \(\uprhoo(\sigmaa_i \sigmaa_{i+1} \sigmaa_i) = \uprhoo(\sigmaa_{i+1} \sigmaa_i \sigmaa_{i+1})\) and \(\uprhoo(\sigmaa_i\sigmaa_j) = \uprhoo(\sigmaa_j\sigmaa_i)\).
 
 
 
