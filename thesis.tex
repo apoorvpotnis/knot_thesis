@@ -39,23 +39,28 @@
 \renewcommand*{\hbar}{\mathrm{^^^^0127}}
 \renewcommand{\i}{\symup{i}}
 \newcommand{\I}{\symbb{I}}
+\newcommand{\Z}{\symbb{Z}}
 \newcommand{\ssep}{\mid}
 \newcommand{\B}{\symup{B}}
 \newcommand{\GB}{\text{GB}}
+\newcommand{\TL}{\text{TL}}
 \newcommand{\sigmaa}{\symup{\sigma}}
 \newcommand{\tauu}{\symup{\tau}}
+\newcommand{\U}{\symup{U}}
 \DeclarePairedDelimiterX\presentation[1]\langle\rangle{\def\given{\;\delimsize\vert\;}#1}
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \DeclarePairedDelimiterX\set[1]\lbrace\rbrace{\setaux#1}
 \def\setaux#1|{#1\;\delimsize\vert\;}
 \DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
-\DeclarePairedDelimiter\bracket{\left\langle}{\right\rangle}
+\DeclarePairedDelimiter{\bracket}{\left\langle}{\right\rangle}
 \makeatletter
 \def\bign#1{\mathclose{\hbox{$\left#1\vbox to8.5\p@{}\right.\n@space$}}\mathopen{}}
 \makeatother
 
 \newcommand{\upphi}{\symup{\phi}}
 \newcommand{\upPhii}{\symup{\Phi}}
+\newcommand{\updelta}{\symup{\delta}}
+
 
 
 %\newcommand{\rthree}{\symbfup{\setBold R\unsetBold}^3}
@@ -120,6 +125,13 @@
 		\draw[line width=0.6pt] (0.8,-0.31) -- (0.8,0.31);
 	}
 }
+\newcommand{\BPIthree}{
+	\KP{
+		\draw[line width=0.6pt] (0,-0.3) -- (0,0.3);
+		\draw[line width=0.6pt] (0.1,-0.3) -- (0.1,0.3);
+		\draw[line width=0.6pt] (0.2,-0.3) -- (0.2,0.3);
+	}
+}
 \newcommand{\BPD}{
 	\KP{
 		\draw[line width=0.6pt] (-0.3,0.3) .. controls (0,-0.05) .. (0.3,0.3);
@@ -165,6 +177,13 @@
 	\KP{%
 		\draw[line width=0.6pt] (-0.3,0.3) .. controls (0,-0.05) .. (0.3,0.3);
 		\draw[line width=0.6pt] (-0.3,-0.3) .. controls (0,0.05) .. (0.3,-0.3);
+	}%
+}
+\newcommand{\KPDonethree}{%
+	\KP{%
+		\draw[line width=0.6pt] (-0.3,0.3) .. controls (0,-0.05) .. (0.3,0.3);
+		\draw[line width=0.6pt] (-0.3,-0.3) .. controls (0,0.05) .. (0.3,-0.3);
+		\draw[line width=0.6pt] (0.4,-0.31) -- (0.4,0.31);
 	}%
 }
 \newcommand{\KPE}{%
