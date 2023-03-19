@@ -749,7 +749,7 @@ We can thus use consider \(\sigmaa_i\) to be equivalent to \(A + A^{-1}\symup{U}
 We see that each bracket polynomial evaluation state of the closure of a braid can be written in terms of the closure of a product of the input-output forms. Given a braid word \(b\), we can consider it equivalent to \(S(b)\), where \(S(b)\) is the sum of products of the \(\symup{U}_i\)'s obtained by substituting \(\sigmaa_i\) by \(A + A^{-1}\symup{U}_i\) and \(\sigmaa_i^{-1}\) by \(A^{-1} + A\symup{U}_i\). Closure of each term (a product in \(U_i\)'s) in the sum corresponds to a state obtained while evaluating the bracket polynomial as it gives a collection of loops. If \(P\) is such a product, then \(\left\langle P\,\right\rangle = \braket<\overline{P}\,> = \symup{\delta}^{\norm{P}}\), where \(\norm{P}\) is the number of loops in \(\overline{P}\) minus \(1\), and \(\symup{\delta} = -A^{-2} - A^2\). Thus, \[S(b) = \sum_s \braket<b|s> P_s,\] where \(s\) denotes a state and indexes all the terms in the product, and \(\braket<b|s>\) is the product of \(A\)'s and \(A^{-1}\)'s multiplying each \(P\)-product \(P_s\). We have \[\braket<b> = \braket<S(b)> = \sum_s \braket<b|s> \braket<P_s> = \sum_s \braket<b|s> \updelta^{\norm{s}}.\]
 
 \begin{exmp}
-	Let \(b = \sigmaa_1\sigmaa_2^{-1}\). We can resolve \(\overline{b}\) in many states. One of the states \(s\) and its corresponding product \(U_1 U_2\) in terms of the input-output forms is shown in \cref{fig:inputoutputexample}.
+	Let \(b = \sigmaa_1\sigmaa_2^{-1}\). We can resolve \(\overline{b}\) in many states. One of the states \(s\) and its corresponding product \(\U_1 \U_2\) in terms of the input-output forms is shown in \cref{fig:inputoutputexample}.
 	\begin{figure}
 	    \centering
 		\subcaptionbox{\(b\)}{
@@ -812,9 +812,58 @@ We see that each bracket polynomial evaluation state of the closure of a braid c
 		P(b) &= A^2\U_2 + \I_3 + \U_1\U_2 + A^{-2}\U_1\\
 		\braket<b> = \braket<\sigmaa_1\sigmaa^{-1}_2> = \braket<P(b)> &= A^2\braket<\U_2> + \braket<\I_3> + \braket<\U_1\U_2> + A^{-2}\braket<\U_1>.
 	\end{align*}
-	Now, \(\I_3\) corresponds to \BPIthree. Thus, \(\braket<I_3> = \updelta^{3-1} = \updelta^2\) as the closure of \(\I_3\) shall give three loops. \(\U_1\) corresponds to \KPDonethree. Thus, \(\braket<\U_1> = \updelta^{2-1} = \updelta\). Similarly, \(\braket<\U_2> = \updelta\) and \(\braket<\U_1\U_2> = \updelta^{1-1} = 1.\) For a visual representation of the state \(\U_1\U_2\), see \cref{fig:inputoutputexample}. In the end, we get \[\braket<\overline{b}> = A^2\updelta + \updelta^2 + 1 + A^{-2}\updelta.\]
+	Now, \(\I_3\) corresponds to \BPIthree. Thus, \(\braket<I_3> = \updelta^{3-1} = \updelta^2\) as the closure of \(\I_3\) shall give three loops. \(\U_1\) corresponds to \KPDonethree. Thus, \(\braket<\U_1> = \updelta^{2-1} = \updelta\) as the closure shall give two loops. Similarly, \(\braket<\U_2> = \updelta\) and \(\braket<\U_1\U_2> = \updelta^{1-1} = 1.\) For a visual representation of the state \(\U_1\U_2\), see \cref{fig:inputoutputexample}, where the closure gives one single loop. In the end, we get \[\braket<\overline{b}> = A^2\updelta + \updelta^2 + 1 + A^{-2}\updelta.\]
 \end{exmp}
 We can give the \(\U_i\)'s a structure of their own by constructing the free additive algebra \(\TL_n\) with the generators \(\U_1, \U_2, \ldots, \U_{n-1}\) and the multiplicative relations coming from the interpretation of \(\U_i\)'s as input-output forms. We can consider this algebra over the ring \(\Z[A, A^{-1}]\) with \(\updelta = -A^{-2} - A^2 \in \Z[A, A^{-1}]\). We shall call \(\TL_n\) the Temperley--Lieb algebra. The multiplicative relations in \(\TL_n\) are as follows.
+\begin{enumerate}
+	\item \(\U_i\U_{i\pm 1}\U_i = U_i\).
+	\item \(\U_i^2 = \updelta \U_i\).
+	\item \(\U_i\U_j = \U_j\U_i\) if \(\abs{i-j} \geq 2\).
+\end{enumerate}
+These relations are a result of the geometric relations as illustrated in \cref{fig:inputoutputillus}.
+\begin{figure}[H]
+    \centering
+	\subcaptionbox{\(\U_1\U_2\U_1 = \U_1\)}{
+		\begin{tikzpicture}
+			\begin{knot}[clip width=5]
+				\draw[thick, red] (0,0) .. controls (0,0.5) and (1,0.5) .. (1,0);
+				\draw[thick, red] (2,0) to (2,1) .. controls (2,1.5) and (1,1.5) .. (1,1) .. controls (1,0.5) and (0,0.5) .. (0,1) to (0,2) .. controls (0,2.5) and (1,2.5) .. (1,2) .. controls (1,1.5) and (2,1.5) .. (2,2) to (2,3);
+				\draw[thick, red] (0,3) .. controls (0,2.5) and (1,2.5) .. (1,3);
+				\node[label={\(\cong\)}] at (3,1.1) {};
+				\draw[thick, red] (4,0) -- (4,1) .. controls (4,1.5) and (5,1.5) .. (5,1) -- (5,0);
+				\draw[thick, red] (4,3) -- (4,2) .. controls (4,1.5) and (5,1.5) .. (5,2) -- (5,3);
+				\draw[thick, red] (6,0) -- (6,3);
+			\end{knot}
+		\end{tikzpicture}}\par\bigskip
+	\subcaptionbox{\(\U_1^2 = \updelta\U_1\), we have a union of a loop(\(\updelta\)), and \(\U_1\) on the right side}{
+		\begin{tikzpicture}
+			\draw[thick, red] (0,2) .. controls (0,1.5) and (1,1.5) .. (1,2);
+			\draw[thick, red] (0,1) .. controls (0,1.5) and (1,1.5) .. (1,1);
+			\draw[thick, red] (0,0) .. controls (0,0.5) and (1,0.5) .. (1,0);
+			\draw[thick, red] (0,1) .. controls (0,0.5) and (1,0.5) .. (1,1);
+			\node[label={\(\cong\)}] at (2,0.7) {};
+			\draw[thick, red] (3,1) .. controls (3,1.5) and (4,1.5) .. (4,1);
+			\draw[thick, red] (3,1) .. controls (3,0.5) and (4,0.5) .. (4,1);
+			\draw[thick, red] (4.5,0) to (4.5,0.5) .. controls (4.5,1) and (5.5,1) .. (5.5,0.5) -- (5.5,0);
+			\draw[thick, red] (4.5,2) to (4.5,1.5) .. controls (4.5,1) and (5.5,1) .. (5.5,1.5) -- (5.5,2);
+		\end{tikzpicture}}\par\bigskip
+	\subcaptionbox{\(\U_1\U_3 = \U_3\U_1\)}{
+		\begin{tikzpicture}
+			\draw[thick, red] (0,0) .. controls (0,0.5) and (1,0.5) .. (1,0);
+			\draw[thick, red] (0,2) -- (0,1) .. controls (0,0.5) and (1,0.5) .. (1,1) -- (1,2);
+			\draw[thick, red] (2,0) -- (2,1) .. controls (2,1.5) and (3,1.5) .. (3,1) -- (3,0);
+			\draw[thick, red] (2,2) .. controls (2,1.5) and (3,1.5) .. (3,2);
+			\node[label={\(\cong\)}] at (4,1.1) {};
+			\draw[rotate around={180:(5.5,1)}, xshift=5cm, thick, red] (0,0) .. controls (0,0.5) and (1,0.5) .. (1,0);
+			\draw[rotate around={180:(5.5,1)}, xshift=5cm, thick, red] (0,2) -- (0,1) .. controls (0,0.5) and (1,0.5) .. (1,1) -- (1,2);
+			\draw[rotate around={180:(7.5,1)}, xshift=5cm, thick, red] (2,0) -- (2,1) .. controls (2,1.5) and (3,1.5) .. (3,1) -- (3,0);
+			\draw[rotate around={180:(7.5,1)}, xshift=5cm, thick, red] (2,2) .. controls (2,1.5) and (3,1.5) .. (3,2);
+		\end{tikzpicture}}
+	\caption{Input-output form relations}
+	\label{fig:inputoutputillus}
+\end{figure}
+
+
 
 
 
