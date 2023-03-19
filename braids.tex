@@ -474,8 +474,6 @@ Let \(w\) be a word of length \(m\) in \(\GB_n\); \(w = \prod_{j=1}^{m} \tauu^{\
 
 \section{Closure of braids}
 
-\subsection{Introduction}
-
 We define the closure of a geometric \(n\)-braid as follows. Consider a geometric \(n\)-braid in the standard position. For each \(1 \leq i \leq n\), we construct the following sequence of line connected line segments. Join \((i, 1, 0)\), \((i, i, 0)\), \((i, i, 0)\), \((i, -i, 0)\), \((i, -i, 0)\), \((i, 0, 0)\) consecutively. We then join \(\gamma_i\) to the constructed line segments. Repeating this process for all \(i\) gives the closure of a braid (\cref{fig:closure}). We denote the closure of a geometric \(n\)-braid \(b\) by \(\overline{b}\). Closure of a braid is unique up to ambient isotopy. Two equivalent braid words have the same closures, thus making the closure well-defined.
 
 \begin{figure}[H]\centering
@@ -814,6 +812,9 @@ We see that each bracket polynomial evaluation state of the closure of a braid c
 	\end{align*}
 	Now, \(\I_3\) corresponds to \BPIthree. Thus, \(\braket<I_3> = \updelta^{3-1} = \updelta^2\) as the closure of \(\I_3\) shall give three loops. \(\U_1\) corresponds to \KPDonethree. Thus, \(\braket<\U_1> = \updelta^{2-1} = \updelta\) as the closure shall give two loops. Similarly, \(\braket<\U_2> = \updelta\) and \(\braket<\U_1\U_2> = \updelta^{1-1} = 1.\) For a visual representation of the state \(\U_1\U_2\), see \cref{fig:inputoutputexample}, where the closure gives one single loop. In the end, we get \[\braket<\overline{b}> = A^2\updelta + \updelta^2 + 1 + A^{-2}\updelta.\]
 \end{exmp}
+
+\section{Temperley--Lieb algebra}
+
 We can give the \(\U_i\)'s a structure of their own by constructing the free additive algebra \(\TL_n\) with the generators \(\U_1, \U_2, \ldots, \U_{n-1}\) and the multiplicative relations coming from the interpretation of \(\U_i\)'s as input-output forms. We can consider this algebra over the ring \(\Z[A, A^{-1}]\) with \(\updelta = -A^{-2} - A^2 \in \Z[A, A^{-1}]\). We shall call \(\TL_n\) the Temperley--Lieb algebra. The multiplicative relations in \(\TL_n\) are as follows.
 \begin{enumerate}
 	\item \(\U_i\U_{i\pm 1}\U_i = U_i\).
@@ -847,7 +848,7 @@ These relations are a result of the geometric relations as illustrated in \cref{
 			\draw[thick, red] (4.5,0) to (4.5,0.5) .. controls (4.5,1) and (5.5,1) .. (5.5,0.5) -- (5.5,0);
 			\draw[thick, red] (4.5,2) to (4.5,1.5) .. controls (4.5,1) and (5.5,1) .. (5.5,1.5) -- (5.5,2);
 		\end{tikzpicture}}\par\bigskip
-	\subcaptionbox{\(\U_1\U_3 = \U_3\U_1\)}{
+	\subcaptionbox{\(\U_3\U_1 = \U_1\U_3\)}{
 		\begin{tikzpicture}
 			\draw[thick, red] (0,0) .. controls (0,0.5) and (1,0.5) .. (1,0);
 			\draw[thick, red] (0,2) -- (0,1) .. controls (0,0.5) and (1,0.5) .. (1,1) -- (1,2);
@@ -868,7 +869,11 @@ Now that we have the Temperley--Lieb algebra, we can define a mapping \[\uprho \
 	\uprho (\sigmaa_i) &= A + A^{-1}\U_i,\\
 	\uprho (\sigmaa_i^{-1}) &= A^{-1} + A\U_i.
 \end{align*}
-We now define the diagrammatic trace \(\tr \colon \TL_n \rightarrow \Z[A, A^{-1}]\) by extending linearly \(\tr(P) = \braket<P\,>\), where \(P\) is a product term in \(S(b)\). This version of trace is diagrammatic in nature as we are counting loops in a state. We thus arrive at the formula \(\braket<b> = \tr(\operatorname{\uprho}(b))\). With what we have learnt so far, one can now find a braid representation \(b\) of a link \(L\) by Alexander's theorem, calculate \(\tr(\operatorname{\uprho}(b)\) and normalise it to get the link invariant normalised bracket polynomial. One can see that \(\uprho\) is indeed a representation by verifying that \(\uprhoo(\sigmaa_i)\uprhoo(\sigmaa_i^{-1}) = 1\), \(\uprhoo(\sigmaa_i \sigmaa_{i+1} \sigmaa_i) = \uprhoo(\sigmaa_{i+1} \sigmaa_i \sigmaa_{i+1})\) and \(\uprhoo(\sigmaa_i\sigmaa_j) = \uprhoo(\sigmaa_j\sigmaa_i)\).
+We now define the diagrammatic trace \(\tr \colon \TL_n \rightarrow \Z[A, A^{-1}]\) by extending linearly \(\tr(P) = \braket<P\,>\), where \(P\) is a product term in \(S(b)\). This version of trace is diagrammatic in nature as we are counting loops in a state. We thus arrive at the formula \(\braket<b> = \tr(\operatorname{\uprho}(b))\). With what we have learnt so far, one can now find a braid representation \(b\) of a link \(L\) by Alexander's theorem, calculate \(\tr(\operatorname{\uprho}(b))\) and normalise it to get the link invariant normalised bracket polynomial. One can see that \(\uprho\) is indeed a representation by verifying that \(\uprhoo(\sigmaa_i)\uprhoo(\sigmaa_i^{-1}) = 1\), \(\uprhoo(\sigmaa_i \sigmaa_{i+1} \sigmaa_i) = \uprhoo(\sigmaa_{i+1} \sigmaa_i \sigmaa_{i+1})\) and \(\uprhoo(\sigmaa_i\sigmaa_j) = \uprhoo(\sigmaa_j\sigmaa_i)\).
+
+
+
+
 
 
 
