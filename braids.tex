@@ -73,13 +73,13 @@ An \(n\)-braid is an element of the Artin braid group \(\B_n\), defined via the 
 \[\B_n \coloneq\Biggl\langle
 \begin{array}{c|rcll}
 	& \sigmaa_i \sigmaa_i^{-1} &=& \symbb{I}_n^{\symrm{a}} &\\
-	\sigmaa_1, \ldots, \sigmaa_{n-1} & \sigmaa_i \sigmaa_{i+1} \sigmaa_i &=& \sigmaa_{i+1} \sigmaa_i \sigmaa_{i+1} &\\
+	\sigmaa_1,\ldots, \sigmaa_{n-1} & \sigmaa_i \sigmaa_{i+1} \sigmaa_i &=& \sigmaa_{i+1} \sigmaa_i \sigmaa_{i+1} &\\
 	& \sigmaa_i \sigmaa_j &=& \sigmaa_j \sigmaa_i &\text{if } \abs{i-j} \geq 2
 \end{array}
 \Biggr\rangle,\] where \(\symbb{I}_n^{\symrm{a}}\) is the identity of \(\B_n\).
 Thus, \(\B_n\) is the quotient of the free group of \(n-1\) generators with the smallest normal subgroup of the free group containing the elements \(\sigmaa_i \sigmaa_i^{-1}\), \(\sigmaa_i \sigmaa_{i+1} \sigmaa_i \sigmaa_{i+1}^{-1} \sigmaa_i^{-1} \sigmaa_{i+1}^{-1}\), and if \(\abs{i-j} \geq 2\), then \(\sigmaa_i \sigmaa_j \sigmaa_i^{-1} \sigmaa_{j}^{-1}\). We want to recover this algebraic definition using the intuitive understanding of braids that we have. For, that we shall now see a geometric construction in the three dimensional Euclidean space to represent the Artin braid group. This shall make clear the geometric intrepretation of the relations as well.
 
-Consider two \textit{ordered} sets of points \(L_1 \coloneq \{p_1 \coloneq (1,0,0), \ldots, p_n \coloneq (n,0,0)\}\) and \(L_2 \coloneq \{q_1 \coloneq (1,1,0), \ldots, q_n \coloneq (n,1,0)\}\) as shown in \cref{fig:3drepbraids} for \(n=4\). Elements of \(L_1\) are called bottom points and elements of \(L_2\) are called the top points. For \(1 \leq i \leq n\), consider a family of non-intersecting continuous curves \(\gamma_i \colon [0, 1] \rightarrow \rthree\) such that
+Consider two \textit{ordered} sets of points \(L_1 \coloneq \{p_1 \coloneq (1,0,0),\ldots, p_n \coloneq (n,0,0)\}\) and \(L_2 \coloneq \{q_1 \coloneq (1,1,0),\ldots, q_n \coloneq (n,1,0)\}\) as shown in \cref{fig:3drepbraids} for \(n=4\). Elements of \(L_1\) are called bottom points and elements of \(L_2\) are called the top points. For \(1 \leq i \leq n\), consider a family of non-intersecting continuous curves \(\gamma_i \colon [0, 1] \rightarrow \rthree\) such that
 \begin{enumerate}
 	\item \(\gamma_i (0) = p_i\) and \(\gamma_i (1) = q_j\) for \(1 \leq i, j \leq n\).
 	\item Any plane perpendicular to the \(xy\)-plane and parallel to the \(x\)-axis intersects each of the curves either exactly once or not at all.
@@ -297,7 +297,7 @@ Denote by \(\tauu_i\) the geometric \(n\)-braid such that
 	\item \(\gamma_i (1) = q_{i+1}\), \(\gamma_{i+1} (1) = q_{i}\), and \(\gamma_j (1) = q_j\) when \(j\) does not equal \(i\) or \(i+1\).
 	\item \(\pii_{xy}(\gamma_i(t)) \geq 0\) and \(\pii_{xy}(\gamma_{i+1}(t)) \leq 0\) for all \(t \in [0,1]\).
 \end{enumerate}
-\(\pii_{xy}\) is the projection maps onto to \(xy\)-plane. \(\tauu_1, \ldots, \tauu_{n-1}\) are the generators of \(\GB_n\) (\cref{fig:geometricbraidgenerators}).
+\(\pii_{xy}\) is the projection maps onto to \(xy\)-plane. \(\tauu_1,\ldots, \tauu_{n-1}\) are the generators of \(\GB_n\) (\cref{fig:geometricbraidgenerators}).
 
 \begin{figure}[H]\centering
 	\subcaptionbox{\(\tauu_i\)}{
@@ -815,7 +815,7 @@ We see that each bracket polynomial evaluation state of the closure of a braid c
 
 \section{Temperley--Lieb algebra}
 
-We can give the \(\U_i\)'s a structure of their own by constructing the free additive algebra \(\TL_n\) with the generators \(\U_1, \U_2, \ldots, \U_{n-1}\) and the multiplicative relations coming from the interpretation of \(\U_i\)'s as input-output forms. We can consider this algebra over the ring \(\Z[A, A^{-1}]\) with \(\updelta = -A^{-2} - A^2 \in \Z[A, A^{-1}]\). We shall call \(\TL_n\) the Temperley--Lieb algebra. The multiplicative relations in \(\TL_n\) are as follows.
+We can give the \(\U_i\)'s a structure of their own by constructing the free additive algebra \(\TL_n\) with the generators \(\U_1, \U_2,\ldots, \U_{n-1}\) and the multiplicative relations coming from the interpretation of \(\U_i\)'s as input-output forms. We can consider this algebra over the ring \(\Z[A, A^{-1}]\) with \(\updelta = -A^{-2} - A^2 \in \Z[A, A^{-1}]\). We shall call \(\TL_n\) the Temperley--Lieb algebra. The multiplicative relations in \(\TL_n\) are as follows.
 \begin{enumerate}
 	\item \(\U_i\U_{i\pm 1}\U_i = U_i\).
 	\item \(\U_i^2 = \updelta \U_i\).
@@ -870,6 +870,29 @@ Now that we have the Temperley--Lieb algebra, we can define a mapping \[\uprho \
 	\uprho (\sigmaa_i^{-1}) &= A^{-1} + A\U_i.
 \end{align*}
 We now define the diagrammatic trace \(\tr \colon \TL_n \rightarrow \Z[A, A^{-1}]\) by extending linearly \(\tr(P) = \braket<P\,>\), where \(P\) is a product term in \(S(b)\). This version of trace is diagrammatic in nature as we are counting loops in a state. We thus arrive at the formula \(\braket<b> = \tr(\operatorname{\uprho}(b))\). With what we have learnt so far, one can now find a braid representation \(b\) of a link \(L\) by Alexander's theorem, calculate \(\tr(\operatorname{\uprho}(b))\) and normalise it to get the link invariant normalised bracket polynomial. One can see that \(\uprho\) is indeed a representation by verifying that \(\uprhoo(\sigmaa_i)\uprhoo(\sigmaa_i^{-1}) = 1\), \(\uprhoo(\sigmaa_i \sigmaa_{i+1} \sigmaa_i) = \uprhoo(\sigmaa_{i+1} \sigmaa_i \sigmaa_{i+1})\) and \(\uprhoo(\sigmaa_i\sigmaa_j) = \uprhoo(\sigmaa_j\sigmaa_i)\).
+
+\section{Jones algebra}
+
+Jones considered a sequence of algebras \(A_n\) for \(n = 2,3,\ldots\) with multiplicative generators \(e_1, e_2,\ldots, e_{n-1}\) and the following relations.
+\begin{enumerate}
+    \item \(e_i^2 = e_i\).
+	\item \(e_ie_{i\pm 1} e_i = ce_i\).
+	\item \(e_ie_j = e_je_i\) if \(\abs{i-j} \geq 2\).
+\end{enumerate}
+Here, \(c\) is a scalar which commutes with all the other elements. We can consider \(A_n\) as the free additive algebra on these generators viewed as a module over the ring \(\symbb{C}[c,c^{-1}]\). While \(c\) is often taken to be a complex number, we can view is as another algebraic variable which commutes with the generators. \(A_n\) arose in the theory of classification of von Neumann algebras and one can realize \(A_n\) as a von Neumann algebra as well. The reader is requested to compare the above mentioned relations for Jones algebra with the relations for the Artin braid group and the Temperley--Lieb algebra.
+
+As mentioned in the beginning of this chapter, it is natural to construct a nested tower of algebras \[M_0 \hookrightarrow M_1 \hookrightarrow M_2 \hookrightarrow M_3\ldots M_n \hookrightarrow M_{n+1} \hookrightarrow\ldots\] with the following properties.
+\begin{enumerate}
+    \item \(M_0\) and \(M_1\) are given.
+	\item \(e_i\colon M_i \rightarrow M_{i-1}\) is `projection'.
+	\item \(e_i^2 = e_i\).
+	\item \(M_{i+1} = \left\langle M_i,e_i\right\rangle\).
+\end{enumerate}
+Jones constructed such a tower of algebras with the other two properties of generators \(e_ie_{i\pm 1} e_i = ce_i\) and \(e_ie_j = e_je_i\) if \(\abs{i-j} \geq 2\). He defined a notion of a trace \(\tr\colon M_n \rightarrow \C\), i.e.\@ a function which vanishes on the commutator of any two elements of \(M_n\). This trace satisfied so called Markov property: \(\tr(we_i) = c\tr(w)\) for \(w\) in the algebra generated by \(M_0\), \(e_i\),\ldots, \(e_{i-1}\).
+
+We now see a concrete example of such a tower of algebras. Consider \[\R[x_1] \hookrightarrow \R[x_1, x_2] \hookrightarrow \R[x_1, x_2, x_3] \hookrightarrow \ldots \hookrightarrow \R[x_1, x_2, \ldots, x_n] \hookrightarrow \ldots.\]
+We have
+
 
 
 
