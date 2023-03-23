@@ -811,7 +811,7 @@ We see that each bracket polynomial evaluation state of the closure of a braid c
 		P(b) &= A^2\U_2 + \I_3 + \U_1\U_2 + A^{-2}\U_1\\
 		\braket<b> = \braket<\sigmaa_1\sigmaa^{-1}_2> = \braket<P(b)> &= A^2\braket<\U_2> + \braket<\I_3> + \braket<\U_1\U_2> + A^{-2}\braket<\U_1>.
 	\end{align*}
-	Now, \(\I_3\) corresponds to \BPIthree. Thus, \(\braket<I_3> = \updelta^{3-1} = \updelta^2\) as the closure of \(\I_3\) shall give three loops. \(\U_1\) corresponds to \KPDonethree. Thus, \(\braket<\U_1> = \updelta^{2-1} = \updelta\) as the closure shall give two loops. Similarly, \(\braket<\U_2> = \updelta\) and \(\braket<\U_1\U_2> = \updelta^{1-1} = 1.\) For a visual representation of the state \(\U_1\U_2\), see \cref{fig:inputoutputexample}, where the closure gives one single loop. In the end, we get \[\braket<\overline{b}> = A^2\updelta + \updelta^2 + 1 + A^{-2}\updelta.\]
+	Now, \(\I_3\) corresponds to \BPIthree. Thus, \(\braket<I_3> = \updelta^{3-1} = \updelta^2\) as the closure of \(\I_3\) shall give three loops. \(\U_1\) corresponds to \KPDonethree\,. Thus, \(\braket<\U_1> = \updelta^{2-1} = \updelta\) as the closure shall give two loops. Similarly, \(\braket<\U_2> = \updelta\) and \(\braket<\U_1\U_2> = \updelta^{1-1} = 1.\) For a visual representation of the state \(\U_1\U_2\), see \cref{fig:inputoutputexample}, where the closure gives one single loop. In the end, we get \[\braket<\overline{b}> = A^2\updelta + \updelta^2 + 1 + A^{-2}\updelta.\]
 \end{exmp}
 
 \section{Temperley--Lieb algebra}
@@ -870,7 +870,44 @@ Now that we have the Temperley--Lieb algebra, we can define a mapping \[\uprho \
 	\uprho (\sigmaa_i) &= A + A^{-1}\U_i,\\
 	\uprho (\sigmaa_i^{-1}) &= A^{-1} + A\U_i.
 \end{align*}
-We now define the diagrammatic trace \(\tr \colon \TL_n \rightarrow \Z[A, A^{-1}]\) by extending linearly \(\tr(P) = \braket<P\,>\), where \(P\) is a product term in \(S(b)\). This version of trace is diagrammatic in nature as we are counting loops in a state. We thus arrive at the formula \(\braket<b> = \tr(\operatorname{\uprho}(b))\). With what we have learnt so far, one can now find a braid representation \(b\) of a link \(L\) by Alexander's theorem, calculate \(\tr(\operatorname{\uprho}(b))\) and normalise it to get the link invariant normalised bracket polynomial. One can substitute \(A = t^{-1/4}\) to arrive at our long sought destination of the Jones polynomial. Also, one can see that \(\uprho\) is indeed a representation by verifying that \(\uprhoo(\sigmaa_i)\uprhoo(\sigmaa_i^{-1}) = 1\), \(\uprhoo(\sigmaa_i \sigmaa_{i+1} \sigmaa_i) = \uprhoo(\sigmaa_{i+1} \sigmaa_i \sigmaa_{i+1})\) and \(\uprhoo(\sigmaa_i\sigmaa_j) = \uprhoo(\sigmaa_j\sigmaa_i)\).
+We see that \(\uprho\) is indeed a representation by verifying that \(\uprhoo(\sigmaa_i)\uprhoo(\sigmaa_i^{-1}) = 1\), \(\uprhoo(\sigmaa_i \sigmaa_{i+1} \sigmaa_i) = \uprhoo(\sigmaa_{i+1} \sigmaa_i \sigmaa_{i+1})\) and if  \(\abs{i-j} \geq 2\), \(\uprhoo(\sigmaa_i\sigmaa_j) = \uprhoo(\sigmaa_j\sigmaa_i)\).
+\begin{prop}
+	\(\uprhoo \colon \B_n \rightarrow \TL_n\) is a representation of the Artin braid group.
+\end{prop}
+\begin{proof}
+	We first prove that \(\uprhoo(\sigmaa_i)\uprhoo(\sigmaa_i^{-1}) = 1\).
+	\begin{align*}
+		\uprhoo(\sigmaa_i)\uprhoo(\sigmaa_i^{-1}) &= (A + A^{-1}\U_i)(A^{-1} + A\U_i)\\
+		&= 1 + (A^{-2} + A^2)\U_i + \U_i^2\\
+	\end{align*}
+	But since \(\U_i^2 = \updelta \U_i\) and \(\updelta = -A^{-2} - A^{2}\), we have
+	\begin{align*}
+		\uprhoo(\sigmaa_i)\uprhoo(\sigmaa_i^{-1}) &= 1 + (A^{-2} + A^2)\U_i + \updelta\U_i\\
+		&= 1 + (A^{-2} + A^2) \U_i + (-A^{-2} - A^{2})\U_i\\
+		&= 1.
+	\end{align*}
+	We now prove that \(\uprhoo(\sigmaa_i \sigmaa_{i+1} \sigmaa_i) = \uprhoo(\sigmaa_{i+1} \sigmaa_i \sigmaa_{i+1})\).
+	\begin{align*}
+		\uprhoo(\sigmaa_i \sigmaa_{i+1} \sigmaa_i) &= (A + A^{-1}\U_i)(A + A^{-1}\U_{i+1})(A + A^{-1}\U_i)\\
+		&= (A^2 + \U_{i+1} + \U_i + A^{-2}\U_i\U_{i+1})(A + A^{-1}\U_i)\\
+		&= A^3 + A\U_{i+1} + A\U_i + A^{-1}\U_i\U_{i+1} + A^{-2}\U_i^2 + A\U_i\\
+		&\phantom{=} + A^{-1}\U_{i+1}\U_i + A^{-3}\U_i\U_{i+1}\U_i\\
+		&= A^3 + A\U_{i+1} + (A^{-1}\updelta + 2A)\U_i\\
+		&\phantom{=} + A^{-1}(\U_i\U_{i+1} + \U_{i+1}\U_i) + A^{-3}\U_i\\
+		&= A^3 + A\U_{i+1} + (A^{-1}(-A^2 - A^{-2}) + 2A + A^{-3})\U_i\\
+		&\phantom{=}+ A^{-1}(\U_i\U_{i+1} + \U_{i+1}\U_i)\\
+		&= A^3 + A(\U_{i+1} + \U_i) + A^{-1}(\U_i\U_{i+1} + \U_{i+1}\U_i).
+	\end{align*}
+	Since symmetry of the above expression in \(i\) and \(i+1\), we can conclude that \(\uprhoo(\sigmaa_i \sigmaa_{i+1} \sigmaa_i) = \uprhoo(\sigmaa_{i+1} \sigmaa_i \sigmaa_{i+1})\).
+	We now prove that if  \(\abs{i-j} \geq 2\), then \(\uprhoo(\sigmaa_i\sigmaa_j) = \uprhoo(\sigmaa_j\sigmaa_i)\).
+	\begin{align*}
+		\uprhoo(\sigmaa_i\sigmaa_j) &= \uprhoo(\sigmaa_i)(\sigmaa_j)\\
+		&= (A + A^{-1}\U_i)(A + A^{-1}\U_j)
+	\end{align*}
+	Now since \(\U_i\U_j = \U_j\U_i\) if \(\abs{i-j} \geq 2\), we have \((A + A^{-1}\U_i)(A + A^{-1}\U_j) = (A + A^{-1}\U_j)(A + A^{-1}\U_i)\) which equals \(\uprhoo(\sigmaa_j\sigmaa_i)\).
+\end{proof}
+
+We now define the diagrammatic trace \(\tr \colon \TL_n \rightarrow \Z[A, A^{-1}]\) by extending linearly \(\tr(P) = \braket<P\,>\), where \(P\) is a product term in \(S(b)\). This version of trace is diagrammatic in nature as we are counting loops in a state. We thus arrive at the formula \(\braket<b> = \tr(\operatorname{\uprho}(b))\). With what we have learnt so far, one can now find a braid representation \(b\) of a link \(L\) by Alexander's theorem, calculate \(\tr(\operatorname{\uprho}(b))\) and normalise it to get the link invariant normalised bracket polynomial. One can substitute \(A = t^{-1/4}\) to arrive at our long sought destination of the Jones polynomial.
 
 \section{Jones algebra}
 
@@ -899,11 +936,4 @@ We now see a concrete example of such a tower of algebras. Consider \[\R \hookri
 where \(p_0\) is the coefficient of \(x_1^0\), i.e.\@ the constant term. For example, \[x_2 (3x_1^4 + 6x_1^3 + x_1 + 5) = 5.\] Similarly, \(x_3\) is a map from \(\R[x_1, x_2]\) to which maps a polynomial in two variables to the polynomial (in one variable \(x_1\)) which does not contain any power of \(x_2\). As an example, \[x_3(4x_1x_2^2 + 3x_1^3 + x_2 + x_2^5 + 1) = 3x_1^3 + 1.\] The other two generator relations and the Markov trace property remain to be checked.
 
 We can retrieve the Jones algebra from the Temperley--Lieb algebra by substituting \(e_i = \updelta^{-1} \U_i\), \(e_i^2 = e_i\) and \(e_ie_{i\pm 1} e_i = \updelta^{-2}e_i\). We have taken \(c = \updelta^{-2}\). Note that the underlying rings are different.
-
-
-
-
-
-
-
 
