@@ -3,7 +3,7 @@
 \section{Definition of a knot}
 
 We normally conceive of knots as open strings with `knotted' parts in between. Given a knotted string with two `open' ends, we can simply pull one end of the string to untie it, in the usual way we untie a knot. This way, any knot with two open ends can be untied. But if have a knot in a closed loop, we won't be able to untie it unless we cut it. We want our notion of a knot to be invariant under `pulling'. Thus, we model our mathematical definition on closed loops instead of open. Insert a figure illustrating this.
-\begin{defn}
+\begin{defn}[Knot]
     A knot \(K\) is an embedding of \(\sone\) in \(\rthree\).
 \end{defn}
 Although one can talk about embeddings of higher dimensional `circles' in higher dimensional spaces, we restrict ourselves to knots in the three dimensional space. The above definition turns out out to be too general for our purposes. It takes into consideration certain pathological knots known as \textit{wild knots}. Although wild knots are an object of study, we won't be dealing with them in this thesis due to their pathological nature. fig shows an example of a wild knot. A section of the knot is scaled down by a constant factor joined on the one side of the previous section. If one does repeats this process infinitely, the section eventually converges to a point, provided that the scaling down is fast enough. We can join the convergence (limit) point to a an end-section on the other side to get wild knot. This knot is continuous everywhere, including the limit point, and an embedding of \(\sone\) in \(\rthree\). Three common ways exist to exclude such behaviour by demanding extra conditions.
@@ -17,9 +17,9 @@ Although one can talk about embeddings of higher dimensional `circles' in higher
     We can demand all the edges of a knot to be piecewise linear. Our knot shall be a polynomial in that case. A polygon has finitely many edges. Infinitely (countably) many sections in a wild knot shall mean infinitely many edges (of decreasing length), which is not allowed. Thus, this condition excludes wild knots.
     \item Local flatness.
 \end{enumerate}
-In this thesis, we shall take the third route following Cromwell~\cite[chp.~1]{cromwell}. If we consider a local neighbourhood around each point of the knot, except the limit point, then we see visually see that we can always find a small enough local neighbourhood around each such point such that the strand is not `knotted' in that neighbourhood. At the limit point, no matter how small a neighbourhood we take, the strand shall always be `knotted'. We enforce this `local unknottedness' condition by demanding local flatness. Let \(p\) be a point in a knot \(K\), \(\symup{B}(0, 1)\) be the unit ball centered at origin and \(d\) be a diameter of \(\symup{B}(0, 1)\).
+In this thesis, we shall take the third route following Cromwell~\cite[chp.~1]{cromwell}. If we consider a local neighbourhood around each point of the knot, except the limit point, then we see visually see that we can always find a small enough local neighbourhood around each such point such that the strand is not `knotted' in that neighbourhood. At the limit point, no matter how small a neighbourhood we take, the strand shall always be `knotted'. We enforce this `local unknottedness' condition by demanding local flatness. Let \(p\) be a point in a knot \(K\), \(\symup{B}(\symup{O}, 1)\) be the unit ball centered at origin \(\symup{O}\) and \(d\) be a diameter of \(\symup{B}(\symup{O}, 1)\).
 \begin{defn}[Local flatness]
-    The point \(p\) is said to be locally flat if there exists a neighbourhood \(U \ni p\) such that the pair \((U, U \cap K)\) is homeomorphic to \((\symup{B}, d)\).
+    The point \(p\) is said to be locally flat if there exists a neighbourhood \(U \ni p\) such that the pair \((U, U \cap K)\) is homeomorphic to \((\symup{B}(\symup{O}, 1), d)\).
 
     A knot is said to be locally flat if each point in that knot is locally flat. A point that is not locally flat is called wild, and a knot is wild if any of its points are wild.
 \end{defn}
@@ -34,7 +34,70 @@ Unless mentioned otherwise, we shall always consider our knots to be tame from n
 
 \section{Distinguishing knots}
 
-Any two homeomorphisms are homeomorphic to the circle and to each other, since homeomorphism is an equivalence relation. But this means that all knots are homeomorphic to each other. Clearly, homeomorphism is not the correct notion to distinguish knots. When we mean that two knots are distinct, we mean that if we create a physical model of those knots, we cannot `physically deform' one knot into another. \textit{Cutting a knot is not allowed.} One might think that homotopy or isotopy are the correct notions, but it turns out that the notion of \textit{ambient isotopy} is the correct one.
+Any two homeomorphisms of the circle are homeomorphic to the circle and to each other, since homeomorphism is an equivalence relation. But this means that all knots are homeomorphic to each other. Clearly, homeomorphism is not the correct notion to distinguish knots. When we mean that two knots are distinct, we mean that if we create a physical model of those knots, we cannot `physically deform' one knot into another. \textit{Cutting a knot is not allowed.} One might think that homotopy or isotopy are what we need, but it turns out that the notion of \textit{ambient isotopy} is the correct one.
+
+\begin{defn}[Homotopy]
+    A homotopy of a space \(X \subset \rthree\) is a continuous map \(h \colon X \times [0, 1] \rightarrow \rthree\).
+
+    The restriction of \(h\) to level \(t \in [0, 1]\) is \(h_t \colon X \times \{t\} \rightarrow \rthree\). \(h_0\) must be the identity map.
+\end{defn}
+Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t \in [0,1]\). The converse is not true. Insert example here. Homotopy allows a curve to pass through itself. All knots are thus homotopic to the trivial knot. If we do not allow a curve to pass through itself, i.e.\@ if we demand injectivity for each \(h_t\), then we get what is known as an isotopy. But isotopy is not useful for distinguishing knots as well, due to bachelors unknotting. All (tame? think) knots turn out to be isotopic to the trivial knot.
+\begin{prop}[Bachelors' unknotting]
+    Every tame knot is isotopic to the unknot.
+\end{prop}
+\begin{proof}
+    The proof is not entirely correct. Correct it. Use the argument that a function linear in one argument and individually continuous in both is continuous in the product topology. Prove this result as well.
+    Let \(K \subset \rthree\) be a tame knot.
+
+    Let \(p \in K\). Since the knot is locally flat at each point by the definition of tameness, we take a ball \(U_p \subset \rthree\) of radius \(\varepsilon\) around the point \(p\) such that the pair \(U_p, U_p \cap K\) is homeomorphic to \((\symup{B}, \symup{d})\), where \(\symup{B}\) is the unit ball in \(\rthree\) centered at the origin and \(\symup{d}\) is the diameter of \(\symup{B}\) along the \(x\)-axis. We choose a parametrization \(f \colon [0, 2\pii) \rightarrow K\) of the knot such that \(f([a, b]) = K \setminus (U_p \cap K) \), where \([a, b] \subset [0, 2\pii)\).
+
+    Let \(r \in \rthree\) be a point outside \(U_p\). Now consider the function \(i_t \colon K \rightarrow \rthree\) defined for each \(t \in [0, 1]\) as follows.
+    \begin{enumerate}
+        \item If \(f(x) \in U_p\), then \(i_t(f(x)) = f(x)\).
+        \item If \(\displaystyle x \in \Bigg[a, a+ t\left[\frac{b-a}{2} - a\right]\Bigg)\), then \\ \(\displaystyle i_t(f(x)) = f(a) + t\left[tr + (1-t)f\left(a + t\left(\frac{b-a}{2} - a\right)\right) - f(a)\right]\).
+        \item If \(\displaystyle x \in \Bigg[a + t\left[\frac{b-a}{2} - a\right], b - t\left[b - \frac{b-a}{2}\right]\Bigg]\), then \\ \(i_t(f(x)) = tr + (1-t)f(x)\).
+        \item If \(\displaystyle x \in \Bigg(b - t\left[b - \frac{b-a}{2}\right], b\Bigg]\), then
+        \begin{flalign*}
+            i_t(f(x)) &= tr + (1-t)f\left(b - t\left(b - \frac{b-a}{2}\right)\right)&&\\
+            &\phantom{=} + t\left[f(b) - tr - (1-t)f\left(b - t\left(b - \frac{b-a}{2}\right)\right)\right].&&
+        \end{flalign*}
+    \end{enumerate}
+    Let \(i \colon [0, 1] \times K \rightarrow \rthree\) be a function defined by \(i(t, f(x)) \coloneq i_t (f(x))\).
+
+    \(i\) is defined such that the part inside \(U_p\) is kept the same for all \(t\). For \(t =0\), \(i\) does not deform the knot at all. For \(t \in (0, 1)\), the knotted part (in \(\rthree\)) shrinks and the interval in the domain \([a,b]\) which maps to the knotted part also shrinks. This shrinkage of the domain happens linearly. All points of the knotted part trace a straight line from their original position to \(r\). Eventually, the knotted part ceases to exist at \(t = 1\) and a single point of the domain \((a + b)/2\) maps to \(r\).
+
+    In the end, we get a figure consisting of two straight lines meeting at \(r\), and \(U_p \cap K\), the original part of the knot inside \(U_p\). The other endpoints of these lines are \(f(a)\) and \(f(b)\). \(U_p \cap K\) is isotopic to the line joining \(f(a)\) and \(f(b)\). Thus, we get a triangle with points \(r\), \(f(a)\) and \(f(b)\). This triangle is isotopic to \(\sone\).
+
+    We now prove that \(i\) is continuous. We know that both \(i_t\) and \(i_x\) are continuous and injective for all \(t \in [0, 1]\) and \(x \in [0, 2\pii)\) respectively, where \(i_x\) is defined to be the restriction of \(i\) for a particular \(x\).
+
+    We want to show that the pre-image of the intersection of any open set in \(\rthree\) with the image of \(i\) is open. Consider an open set \(V \in \rthree\) and let \(t_0\) be such that \(A \coloneq i_{t_0} (K) \cap V\) is a single component arc inside \(V\). Let \(q \in A\). The pre-image of an open neighbourhood \(B \ni q\) in \(A\) is open by continuity of the isotopy in one component. Let the pre-image of the pre-image of \(B\) under \(f\) be \((x_1, x_2) \subset [0, 2\pii)\). Thus, \(i_{t_0}(f((x_1, x_2))) = B\). Since all points of \(B\) are interior points, we take an \(\varepsilon\) tubular neighbourhood around \(B\) such that the whole neighbourhood lies inside \(A\). Let this tube be \(C\). Now consider the set of all \(t\) such that \(i_t(i^{-1}_{t_0}(s))\) is inside \(C\) for all \(s \in B\). For each \(s\), we shall an open set \((t_{1, s}, t_{2, s})\). The union of all such open intervals for all \(s \in B\) is an open set in \( [0, 1] \times [0, 2\pii)\). Thus, for each open set in \(V' \in \rthree\), and for each point \(q'\in V\), we can create an open subset of \(V'\) such that the pre-image of this open subset is open. The union of all the pre-images for all points inside \(V'\) is an open set.
+
+    The arc-length of a tame knot is finite. So, the intersection of \(i_t(K)\) with an open set of \(\rthree\) for each \(t\) shall consist of countable arcs. We now show why the number of arcs must be countable. Consider there are uncountably many arcs for a particular \(t\). Each arc is an intersection of a closed loop in with an open set in \(\rthree\) and so it would have a finite length. Uncountably many arcs of finite length cannot add up to give a loop of finite length. Thus, there must be countable many arcs. We shall apply the method described in the previous paragraph to all the arcs.
+\end{proof}
+
+In an isotopy, we deformed the set \(X = K\). Instead, we take \(X\) to be the entire space \(\rthree\), or a bounded set which completely covers the knot, then we get the notion of ambient isotopy. This modification ensures that the surrounding space is deformed as well as we deform the knot. The knot is a curve which has no volume. If we try bachelors' unknotting on the surrounding space as well, we observe that the surrounding space, which has a finite, non-zero volume cannot shrink to a set of zero volume under isotopy. This finally leads us to the equivalence relation induced by ambient isotopy.
+
+\begin{defn}[Knot equivalence]
+    Two knots \(K_1\) and \(K_2\) are said to be ambient isotopic if there exists an isotopy \(I \colon \rthree \times [0,1] \rightarrow \rthree\) such that \(I(K_1,0) = I_0(K_1) = K_1\) and \(I(K_1,1) = I_1(K_1) = K_2\).
+\end{defn}
+\begin{prop}
+    Knot equivalence is indeed an equivalence relation.
+\end{prop}
+\begin{proof}
+    Reflexivity.
+    Symmetry.
+    Transitivity.
+\end{proof}
+
+Each equivalence class of knots is called a \textit{knot type}. We would often forget the distinction between a knot and its knot type. The intended meaning can be inferred from the context. Note that we distinguish between \textit{ambient isotopy} and \textit{isotopy}. Many treatments of knot theory use the word isotopy for ambient isotopy as ambient isotopy is the useful construct in knot theory. Ambient isotopy is an isotopy of the whole space containing the knot, not just the knot.
+
+Give examples of knots which are ambient isotopic and not ambient isotopic, with images.
+
+\begin{remark}
+    In this thesis, we shall look at knot theory in \(\rthree\). One can compactify \(\rthree\) to \(\sthree\) and do knot theory in \(\sthree\), as many treatments do. This does not result in a different knot theory.
+\end{remark}
+
+
 
 
 
