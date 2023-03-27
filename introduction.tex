@@ -30,7 +30,6 @@ Consider a spherical neighbourhood around a locally flat point. There exists a r
 \begin{defn}[Tame knots]
     A knot is said to be tame if all its points are locally flat.
 \end{defn}
-Unless mentioned otherwise, we shall always consider our knots to be tame from now on.
 
 \section{Distinguishing knots}
 
@@ -41,26 +40,32 @@ Any two homeomorphisms of the circle are homeomorphic to the circle and to each 
 
     The restriction of \(h\) to level \(t \in [0, 1]\) is \(h_t \colon X \times \{t\} \rightarrow \rthree\). \(h_0\) must be the identity map.
 \end{defn}
-Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t \in [0,1]\). The converse is not true. Insert example here. Homotopy allows a curve to pass through itself. All knots are thus homotopic to the trivial knot. If we do not allow a curve to pass through itself, i.e.\@ if we demand injectivity for each \(h_t\), then we get what is known as an isotopy. But isotopy is not useful for distinguishing knots as well, due to bachelors unknotting. All (tame? think) knots turn out to be isotopic to the trivial knot.
+Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t \in [0,1]\). The converse is not true. Insert example here. Homotopy allows a curve to pass through itself. All knots are thus homotopic to the trivial knot. If we do not allow a curve to pass through itself, i.e.\@ if we demand injectivity for each \(h_t\), then we get what is known as an isotopy. But isotopy is not useful for distinguishing knots as well, due to bachelors unknotting. All tame knots, or more generally, all knots with a tame arc turn out to be isotopic to the trivial knot\footnote{See \texttt{\url{https://math.stackexchange.com/a/1336309/239463}}}. It is an open problem if a particular knot known as the Bing sling, which is wild \textit{at all points} is isotopic to the standard unknot\footnote{See \texttt{\url{https://wildandnoncompactknots.wordpress.com/2013/04/30/knots-in-three-space-non-ambient-isotopy-equivalence-classes/}}}.
 \begin{prop}[Bachelors' unknotting]
-    Every tame knot is isotopic to the unknot.
+    Every knot with a tame arc is isotopic to the unknot.
 \end{prop}
 \begin{proof}
-    The proof is not entirely correct. Correct it. Use the argument that a function linear in one argument and individually continuous in both is continuous in the product topology. Prove this result as well.
-    Let \(K \subset \rthree\) be a tame knot.
+%     \begin{figure}
+%         \centering
+%         \begin{tikzpicture}
+%             \begin{knot}[clip width=5]
+%                 \strand[thick, red] (-7,0) to [curve through = {(-6,3) (-4,7) (0,7) (0,4.25) (-2,4) (-3,2.5) (-3,2) (0,-4) (-3,-2) (-1,1) (-3,2.5) (3,3) (1,0) (-1,-2) (-2,-4) (0,-6) (0,-8) (0,6) (-6,-3)}] (-7,0);
+%             \end{knot}
+%         \end{tikzpicture}
+%
+%     \end{figure}
 
-    Let \(p \in K\). Since the knot is locally flat at each point by the definition of tameness, we take a ball \(U_p \subset \rthree\) of radius \(\varepsilon\) around the point \(p\) such that the pair \(U_p, U_p \cap K\) is homeomorphic to \((\symup{B}, \symup{d})\), where \(\symup{B}\) is the unit ball in \(\rthree\) centered at the origin and \(\symup{d}\) is the diameter of \(\symup{B}\) along the \(x\)-axis. We choose a parametrization \(f \colon [0, 2\pii) \rightarrow K\) of the knot such that \(f([a, b]) = K \setminus (U_p \cap K) \), where \([a, b] \subset [0, 2\pii)\).
+    Let \(K \subset \rthree\) be a knot with a tame arc.
+
+    Let \(p \in K\) in a tame arc of the knot. Since the knot is locally flat on the arc, by the definition of tameness, we take a ball \(U_p \subset \rthree\) of radius \(\varepsilon\) around the point \(p\) such that the pair \(U_p, U_p \cap K\) is homeomorphic to \((\symup{B}, \symup{d})\), where \(\symup{B}\) is the unit ball in \(\rthree\) centered at the origin and \(\symup{d}\) is the diameter of \(\symup{B}\) along the \(x\)-axis. We choose a parametrization \(f \colon [0, 2\pii) \rightarrow K\) of the knot such that \(f([a, b]) = K \setminus (U_p \cap K) \), where \([a, b] \subset [0, 2\pii)\).
 
     Let \(r \in \rthree\) be a point outside \(U_p\). Now consider the function \(i_t \colon K \rightarrow \rthree\) defined for each \(t \in [0, 1]\) as follows.
+    Let \[\phi_t(a) \coloneq t\left(\frac{a+b}{2}\right) + (1-t)a\] and \[\psi_t(b) \coloneq t\left(\frac{a+b}{2}\right) + (1-t)b\] for all \(t \in [0,1].\)
     \begin{enumerate}
-        \item If \(f(x) \in U_p\), then \(i_t(f(x)) = f(x)\).
-        \item If \(\displaystyle x \in \Bigg[a, a+ t\left[\frac{b-a}{2} - a\right]\Bigg)\), then \\ \(\displaystyle i_t(f(x)) = f(a) + t\left[tr + (1-t)f\left(a + t\left(\frac{b-a}{2} - a\right)\right) - f(a)\right]\).
-        \item If \(\displaystyle x \in \Bigg[a + t\left[\frac{b-a}{2} - a\right], b - t\left[b - \frac{b-a}{2}\right]\Bigg]\), then \\ \(i_t(f(x)) = tr + (1-t)f(x)\).
-        \item If \(\displaystyle x \in \Bigg(b - t\left[b - \frac{b-a}{2}\right], b\Bigg]\), then
-        \begin{flalign*}
-            i_t(f(x)) &= tr + (1-t)f\left(b - t\left(b - \frac{b-a}{2}\right)\right)&&\\
-            &\phantom{=} + t\left[f(b) - tr - (1-t)f\left(b - t\left(b - \frac{b-a}{2}\right)\right)\right].&&
-        \end{flalign*}
+        \item If \(f(x) \in U_p\), then \[i_t(f(x)) = f(x).\]
+        \item If \(\displaystyle x \in [a, \phi_t(a))\), then \[ i_t(f(x)) = f(a) + \frac{\norm{f(a) - f(\phi_t(a))}}{\norm{a - \phi_t(a)}}(x - a)(r - f(a)).\]
+        \item If \(x \in [\phi_t(a), \psi_t(b)]\), then \[i_t(f(x)) = tr + (1-t)f(x).\]
+        \item If \(\displaystyle x \in (\psi_t(b), b]\), then \[ i_t(f(x)) = f(b) + \frac{\norm{f(b) - f(\psi_t(b))}}{\norm{b - \psi_t(b)}}(b - x)(r - f(b)).\]
     \end{enumerate}
     Let \(i \colon [0, 1] \times K \rightarrow \rthree\) be a function defined by \(i(t, f(x)) \coloneq i_t (f(x))\).
 
@@ -68,14 +73,15 @@ Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t 
 
     In the end, we get a figure consisting of two straight lines meeting at \(r\), and \(U_p \cap K\), the original part of the knot inside \(U_p\). The other endpoints of these lines are \(f(a)\) and \(f(b)\). \(U_p \cap K\) is isotopic to the line joining \(f(a)\) and \(f(b)\). Thus, we get a triangle with points \(r\), \(f(a)\) and \(f(b)\). This triangle is isotopic to \(\sone\).
 
-    We now prove that \(i\) is continuous. We know that both \(i_t\) and \(i_x\) are continuous and injective for all \(t \in [0, 1]\) and \(x \in [0, 2\pii)\) respectively, where \(i_x\) is defined to be the restriction of \(i\) for a particular \(x\).
-
-    We want to show that the pre-image of the intersection of any open set in \(\rthree\) with the image of \(i\) is open. Consider an open set \(V \in \rthree\) and let \(t_0\) be such that \(A \coloneq i_{t_0} (K) \cap V\) is a single component arc inside \(V\). Let \(q \in A\). The pre-image of an open neighbourhood \(B \ni q\) in \(A\) is open by continuity of the isotopy in one component. Let the pre-image of the pre-image of \(B\) under \(f\) be \((x_1, x_2) \subset [0, 2\pii)\). Thus, \(i_{t_0}(f((x_1, x_2))) = B\). Since all points of \(B\) are interior points, we take an \(\varepsilon\) tubular neighbourhood around \(B\) such that the whole neighbourhood lies inside \(A\). Let this tube be \(C\). Now consider the set of all \(t\) such that \(i_t(i^{-1}_{t_0}(s))\) is inside \(C\) for all \(s \in B\). For each \(s\), we shall an open set \((t_{1, s}, t_{2, s})\). The union of all such open intervals for all \(s \in B\) is an open set in \( [0, 1] \times [0, 2\pii)\). Thus, for each open set in \(V' \in \rthree\), and for each point \(q'\in V\), we can create an open subset of \(V'\) such that the pre-image of this open subset is open. The union of all the pre-images for all points inside \(V'\) is an open set.
-
-    The arc-length of a tame knot is finite. So, the intersection of \(i_t(K)\) with an open set of \(\rthree\) for each \(t\) shall consist of countable arcs. We now show why the number of arcs must be countable. Consider there are uncountably many arcs for a particular \(t\). Each arc is an intersection of a closed loop in with an open set in \(\rthree\) and so it would have a finite length. Uncountably many arcs of finite length cannot add up to give a loop of finite length. Thus, there must be countable many arcs. We shall apply the method described in the previous paragraph to all the arcs.
+    We now prove that \(i\) is continuous. We know that both \(i_t\) and \(i_x\) are continuous and injective for all \(t \in [0, 1]\) and \(x \in [0, 2\pii)\) respectively, where \(i_x\) is defined to be the restriction of \(i\) for a particular \(x\). We also see that \(i_t\) is linear in \(t\). A function continuous in one argument and linear in another is continuous in the product topology. We thus have an isotopy which sends a knot with a tame arc to \(\sone\).
 \end{proof}
 
-In the above considered isotopy, we deformed the set \(X = K\). Instead, we take \(X\) to be the entire space \(\rthree\), or a bounded set which completely covers the knot, then we get the notion of ambient isotopy. This modification ensures that the surrounding space is deformed as well as we deform the knot. The knot is a curve which has no volume. If we try bachelors' unknotting on the surrounding space as well, we observe that the surrounding space, which has a finite, non-zero volume cannot shrink to a set of zero volume under isotopy. This finally leads us to the equivalence relation induced by ambient isotopy.
+In the above considered isotopy, we isotoped the set \(X = K\). Instead, we take \(X\) to be the entire space \(\rthree\), or a bounded set which completely covers the knot, then we get the notion of ambient isotopy. This modification ensures that the surrounding space is isotoped as well as we isotope the knot. The knot is a curve which has no volume. If we try bachelors' unknotting on the surrounding space as well, we observe that the surrounding space, which has a finite, non-zero volume cannot shrink to a set of zero volume under isotopy. This finally leads us to the equivalence relation induced by ambient isotopy.
+
+\begin{remark}
+    Unless mentioned otherwise, we shall always consider our knots to be tame from now on.
+\end{remark}
+
 
 \begin{defn}[Knot equivalence]
     Two knots \(K_1\) and \(K_2\) are said to be ambient isotopic if there exists an isotopy \(I \colon \rthree \times [0,1] \rightarrow \rthree\) such that \(I(K_1,0) = I_0(K_1) = K_1\) and \(I(K_1,1) = I_1(K_1) = K_2\).
