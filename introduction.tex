@@ -33,7 +33,7 @@ Consider a spherical neighbourhood around a locally flat point. There exists a r
 
 \section{Distinguishing knots}
 
-Any two homeomorphisms of the circle are homeomorphic to the circle and to each other, since homeomorphism is an equivalence relation. But this means that all knots are homeomorphic to each other. Clearly, homeomorphism is not the correct notion to distinguish knots. When we mean that two knots are distinct, we mean that if we create a physical model of those knots, we cannot `physically deform' one knot into another. \textit{Cutting a knot is not allowed.} One might think that homotopy or isotopy are what we need, but it turns out that the notion of \textit{ambient isotopy} is the correct one.
+Any two homeomorphisms of the circle are homeomorphic to the circle and to each other, since being homeomorphic is an equivalence relation. But this means that all knots are homeomorphic to each other. Clearly, homeomorphism is not the correct notion to distinguish knots. When we mean that two knots are distinct, we mean that if we create a physical model of those knots, we cannot `physically deform' one knot into another. \textit{Cutting a knot is not allowed.} One might think that homotopy or isotopy are what we need, but it turns out that the notion of \textit{ambient isotopy} is the correct one.
 
 \begin{defn}[Homotopy]
     A homotopy of a space \(X \subset \rthree\) is a continuous map \(h \colon X \times [0, 1] \rightarrow \rthree\).
@@ -59,19 +59,19 @@ Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t 
 
     Let \(p \in K\) in a tame arc of the knot. Since the knot is locally flat on the arc, by the definition of tameness, we take a ball \(U_p \subset \rthree\) of radius \(\varepsilon\) around the point \(p\) such that the pair \(U_p, U_p \cap K\) is homeomorphic to \((\symup{B}, \symup{d})\), where \(\symup{B}\) is the unit ball in \(\rthree\) centered at the origin and \(\symup{d}\) is the diameter of \(\symup{B}\) along the \(x\)-axis. We choose a parametrization \(f \colon [0, 2\pii) \rightarrow K\) of the knot such that \(f([a, b]) = K \setminus (U_p \cap K) \), where \([a, b] \subset [0, 2\pii)\).
 
-    Let \(r \in \rthree\) be a point outside \(U_p\). Now consider the function \(i_t \colon K \rightarrow \rthree\) defined for each \(t \in [0, 1]\) as follows.
-    Let \[\phi_t(a) \coloneq t\left(\frac{a+b}{2}\right) + (1-t)a\] and \[\psi_t(b) \coloneq t\left(\frac{a+b}{2}\right) + (1-t)b\] for all \(t \in [0,1].\)
+    Let \(r \in \rthree\) be a point outside \(U_p\). Now consider the function \(i_t \colon K \rightarrow \rthree\), defined for each \(t \in [0, 1]\) as follows.
+    Let \[\phi_t(a) \coloneq t\left(\frac{a+b}{2}\right) + (1-t)a\] be a family of functions for all \(t \in [0,1]\).
     \begin{enumerate}
         \item If \(f(x) \in U_p\), then \[i_t(f(x)) = f(x).\]
         \item If \(\displaystyle x \in [a, \phi_t(a))\), then \[ i_t(f(x)) = f(a) + \frac{\norm{f(a) - f(\phi_t(a))}}{\norm{a - \phi_t(a)}}(x - a)(r - f(a)).\]
-        \item If \(x \in [\phi_t(a), \psi_t(b)]\), then \[i_t(f(x)) = tr + (1-t)f(x).\]
-        \item If \(\displaystyle x \in (\psi_t(b), b]\), then \[ i_t(f(x)) = f(b) + \frac{\norm{f(b) - f(\psi_t(b))}}{\norm{b - \psi_t(b)}}(b - x)(r - f(b)).\]
+        \item If \(x \in [\phi_t(a), \phi_t(b)]\), then \[i_t(f(x)) = tr + (1-t)f(x).\]
+        \item If \(\displaystyle x \in (\phi_t(b), b]\), then \[ i_t(f(x)) = f(b) + \frac{\norm{f(b) - f(\phi_t(b))}}{\norm{b - \phi_t(b)}}(b - x)(r - f(b)).\]
     \end{enumerate}
     Let \(i \colon [0, 1] \times K \rightarrow \rthree\) be a function defined by \(i(t, f(x)) \coloneq i_t (f(x))\).
 
-    \(i\) is defined such that the part inside \(U_p\) is kept the same for all \(t\). For \(t =0\), \(i\) does not deform the knot at all. For \(t \in (0, 1)\), the knotted part (in \(\rthree\)) shrinks and the interval in the domain \([a,b]\) which maps to the knotted part also shrinks. This shrinkage of the domain happens linearly. All points of the knotted part trace a straight line from their original position to \(r\). Eventually, the knotted part ceases to exist at \(t = 1\) and a single point of the domain \((a + b)/2\) maps to \(r\).
+    \(i\) is defined such that the part inside \(U_p\) is kept unchanged for all \(t\). For \(t =0\), \(i\) does not deform the knot at all. For \(t \in (0, 1)\), the knotted part (in \(\rthree\)) shrinks and the interval in the domain \([a,b]\) which maps to the knotted part also shrinks to \([\phi_t(a), \phi_t(b)]\). This shrinkage of the domain happens linearly with \(t\). All points of the knotted part trace a straight line as they travel under isotopy from their original position to \(r\). Eventually, the knotted part ceases to exist at \(t = 1\) and a single point of the domain, namely, \((a + b)/2\) maps to \(r\).
 
-    In the end, we get a figure consisting of two straight lines meeting at \(r\), and \(U_p \cap K\), the original part of the knot inside \(U_p\). The other endpoints of these lines are \(f(a)\) and \(f(b)\). \(U_p \cap K\) is isotopic to the line joining \(f(a)\) and \(f(b)\). Thus, we get a triangle with points \(r\), \(f(a)\) and \(f(b)\). This triangle is isotopic to \(\sone\).
+    In the end, we get a figure consisting of two straight lines meeting at \(r\), and \(U_p \cap K\), the original part of the knot inside \(U_p\). The other endpoints of these lines are \(f(a)\) and \(f(b)\). \(U_p \cap K\) is isotopic to the line joining \(f(a)\) and \(f(b)\). Thus, we get a triangle with points \(r\), \(f(a)\) and \(f(b)\) and we any that any triangle is isotopic to \(\sone\).
 
     We now prove that \(i\) is continuous. We know that both \(i_t\) and \(i_x\) are continuous and injective for all \(t \in [0, 1]\) and \(x \in [0, 2\pii)\) respectively, where \(i_x\) is defined to be the restriction of \(i\) for a particular \(x\). We also see that \(i_t\) is linear in \(t\). A function continuous in one argument and linear in another is continuous in the product topology. We thus have an isotopy which sends a knot with a tame arc to \(\sone\).
 \end{proof}
@@ -103,6 +103,7 @@ Give examples of knots which are ambient isotopic and not ambient isotopic, with
     In this thesis, we shall look at knot theory in \(\rthree\). One can compactify \(\rthree\) to \(\sthree\) and do knot theory in \(\sthree\), as many treatments do. This does not result in a different knot theory.
 \end{remark}
 
+\section{Knot diagrams}
 
 
 
