@@ -2,7 +2,7 @@
 
 \section{Definition of a knot}
 
-We normally conceive of knots as open strings with `knotted' parts in between. Given a knotted string with two `open' ends, we can simply pull one end of the string to untie it, in the usual way we untie a knot, by inserting an open end into the knotted region is a strategic manner and pulling it on the other side\footnote{There exists another way of unknotting an open knot, often used in magic tricks. One creates another knot using the unknotted portion of the string on one side of the knotted portion such that this new knot `cancels' the original knot. In mathematical terms, the new knot is constructed such that the \textit{connected sum} of the original knot and the new knot gives an unknot. We won't deal with connected sums of knots in this thesis}. This way, any knot with two open ends can be untied. But if have a knot in a closed loop, we won't be able to untie it unless we cut it. We want our notion of a knot to be invariant under `pulling'. Thus, we model our mathematical definition on closed loops instead of open. Refer to~\cref{fig:openclosedkots}.
+We normally conceive of knots as open strings with `knotted' parts in between. Given a knotted string with two `open' ends, we can simply pull one end of the string to untie it, in the usual way we untie a knot, by inserting an open end into the knotted region is a strategic manner and pulling it on the other side\footnote{There exists another way of unknotting an open knot, often used in magic tricks. One creates another knot using the unknotted portion of the string on one side of the knotted portion such that this new knot `cancels' the original knot. In mathematical terms, the new knot is constructed such that the \textit{connected sum} of the original knot and the new knot gives an unknot. We shall not deal with connected sums of knots in this thesis.}. This way, any knot with two open ends can be untied. But if have a knot in a closed loop, we won't be able to untie it unless we cut it. We want our notion of a knot to be invariant under `pulling'. Thus, we model our mathematical definition on closed loops instead of open. Refer to~\cref{fig:openclosedkots}.
 
 \begin{figure}
     \centering
@@ -22,13 +22,11 @@ We normally conceive of knots as open strings with `knotted' parts in between. G
                 to (33,0);
                 \flipcrossings{1,2,4,5,6,7,8,9}
             \end{knot}
-        \end{tikzpicture}}
+        \end{tikzpicture}}\par\bigskip
     \subcaptionbox{A knot with closed ends}{
         \begin{tikzpicture}[scale=0.2]
             \begin{knot}[clip width = 10, consider self intersections = true, ignore endpoint intersections = false, use Hobby shortcut]
-                \strand[thick, red] (-6,0)
-                to (6,0)
-                %to [out=0, in=135] (13,-2)
+                \strand[thick, red] (16.5,-8) to [out=0, in=180] (10,-8) to [out=180, in=-90] (-3,-6) to [out=90, in=180] (2,0) to (6,0)
                 to [out=0, in=180] (18, -4)
                 to [out=0, in=-90] (21,0)
                 to [out=90, in=0] (18,4)
@@ -36,7 +34,7 @@ We normally conceive of knots as open strings with `knotted' parts in between. G
                 to [out=180, in=-90] (6,0)
                 to [out=90, in=180] (9,4)
                 to [out=0, in=180] (21,0)
-                to (33,0);
+                to (25,0) to [out=0, in=90] (30,-6) to [out=-90, in=0] (17,-8) to [out=180, in=0] (16.5,-8);
                 \flipcrossings{1,2,4,5,6,7,8,9}
             \end{knot}
         \end{tikzpicture}}
@@ -138,7 +136,14 @@ In the above considered isotopy, we isotoped the set \(X = K\). Instead, we take
     Transitivity.
 \end{proof}
 
-Each equivalence class of knots is called a \textit{knot type}. We would often forget the distinction between a knot and its knot type. The intended meaning can be inferred from the context. Note that we distinguish between \textit{ambient isotopy} and \textit{isotopy}. Many treatments of knot theory use the word isotopy for ambient isotopy as ambient isotopy is the useful construct in knot theory. Ambient isotopy is an isotopy of the whole space containing the knot, not just the knot.
+\begin{remark}
+    Each equivalence class of knots is called a \textit{knot type}. We would often forget the distinction between a knot and its knot type. The intended meaning can be inferred from the context.
+\end{remark}
+
+\begin{remark}
+    Note that we distinguish between \textit{ambient isotopy} and \textit{isotopy}. Many treatments of knot theory use the word isotopy for ambient isotopy as ambient isotopy is the useful construct in knot theory. Ambient isotopy is an isotopy of the whole space containing the knot, not just the knot.
+\end{remark}
+
 
 Give examples of knots which are ambient isotopic and not ambient isotopic, with images.
 
