@@ -29,7 +29,7 @@
 \usepackage[bold=0.04]{xfakebold}
 \usepackage{xfp}
 
-\usepackage{embedall} \embedfile{thesis.bib}
+% \usepackage{embedall} \embedfile{thesis.bib}
 %\embedfile{apoorv_potnis_synopsis.xmpdata}
 
 \usepackage{dsfont}
@@ -71,6 +71,7 @@
 \newcommand{\uprho}{\symup{\rho}}
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\uprhoo}{\uprho}
+\DeclareMathOperator{\proj}{\pi}
 
 \newcommand\restr[2]{{% we make the whole thing an ordinary symbol
 		\left.\kern-\nulldelimiterspace % automatically resize the bar with \right
@@ -394,6 +395,28 @@
 \newcommand{\CL}{\left(\KPL\right)}
 \tikzset{grid/.style={gray,very thin,opacity=1}}
 
+
+\usetikzlibrary{decorations.pathreplacing}
+\tikzset{%
+	show curve controls/.style={
+		postaction={
+			decoration={
+				show path construction,
+				curveto code={
+					\draw [blue]
+					(\tikzinputsegmentfirst) -- (\tikzinputsegmentsupporta)
+					(\tikzinputsegmentlast) -- (\tikzinputsegmentsupportb);
+					\fill [red, opacity=0.5]
+					(\tikzinputsegmentsupporta) circle [radius=.5ex]
+					(\tikzinputsegmentsupportb) circle [radius=.5ex];
+				}
+			},
+			decorate
+		}}}
+
+
+
+
 \begin{document}
 
 	\maketitle
@@ -409,7 +432,7 @@
 
 % 	\end{figure}
 	\input{introduction.tex}
-	\input{braids.tex}
+	%\input{braids.tex}
 	%\input{output.tex}
 
   	\printbibliography

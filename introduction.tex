@@ -3,10 +3,46 @@
 \section{Definition of a knot}
 
 We normally conceive of knots as open strings with `knotted' parts in between. Given a knotted string with two `open' ends, we can simply pull one end of the string to untie it, in the usual way we untie a knot. This way, any knot with two open ends can be untied. But if have a knot in a closed loop, we won't be able to untie it unless we cut it. We want our notion of a knot to be invariant under `pulling'. Thus, we model our mathematical definition on closed loops instead of open. Insert a figure illustrating this.
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[scale=0.3]
+        \begin{knot}[clip width = 5, consider self intersections = true, ignore endpoint intersections = false, use Hobby shortcut, postaction=show curve controls]
+            \strand[ultra thick, red] (0,0)
+            to (6,0)
+            to [out=0, in=135] (10,-1)
+            to [out=-45, in=180] (14, -3)
+            to [out=0, in=-90] (18,0)
+            to [out=90, in=0] (14,3)
+            to [out=180, in=45] (11,1)
+            to [out=-135, in=0] (-2,-3);
+%             to [out=-60, in=180] (7,-2)
+%             to [out=0, in=270] (9,0)
+%             to [out=90, in=0] (7,2)
+%             to [out=180, in=60] (5,1)
+%             to 9;
+%             \strand[ultra thick, red] (-5,0) .. (-1,0) .. (0,0) .. (1,0) .. (2,0) .. (3,-1) .. (4,-2) .. (5,0) .. (4,2) .. (3,1) .. (2,-1) .. (1,-2) .. (0,0) .. (1,1) .. (2,2) .. (3,1) .. (4,0) .. (5,0) .. (6,0);
+%             \flipcrossings{1, 2}
+%             \draw [help lines] (-4, -1) grid (4, 5);
+%             \draw [show curve controls]
+%             (-3, 4) .. controls ++(135:-1) and ++(135:1) .. (0, 4);
+%             \draw [show curve controls] (0, 0)
+%             .. controls ++(165:-1) and ++(240: 1) .. ( 3, 2)
+%             .. controls ++(240:-1) and ++(165:-1) .. ( 2, 4)
+%             .. controls ++(165: 1) and ++(175:-2) .. (-1, 2)
+%             .. controls ++(175: 2) and ++(165: 1) .. ( 0, 0);
+        \end{knot}
+
+    \end{tikzpicture}
+
+\end{figure}
+
+
+
 \begin{defn}[Knot]
     A knot \(K\) is an embedding of \(\sone\) in \(\rthree\).
 \end{defn}
-Although one can talk about embeddings of higher dimensional `circles' in higher dimensional spaces, we restrict ourselves to knots in the three dimensional space. The above definition turns out out to be too general for our purposes. It takes into consideration certain pathological knots known as \textit{wild knots}. Although wild knots are an object of study, we won't be dealing with them in this thesis due to their pathological nature. fig shows an example of a wild knot. A section of the knot is scaled down by a constant factor joined on the one side of the previous section. If one does repeats this process infinitely, the section eventually converges to a point, provided that the scaling down is fast enough. We can join the convergence (limit) point to a an end-section on the other side to get wild knot. This knot is continuous everywhere, including the limit point, and an embedding of \(\sone\) in \(\rthree\). Three common ways exist to exclude such behaviour by demanding extra conditions.
+Although one can talk about embeddings of higher dimensional `circles' in higher dimensional spaces, we restrict ourselves to knots in the three dimensional space. The above definition turns out out to be too general for our purposes. It takes into consideration certain pathological knots known as \textit{wild knots}. See cref{fig:wildknot}. Although wild knots are an object of study, we won't be dealing with them in this thesis due to their pathological nature. fig shows an example of a wild knot. A section of the knot is scaled down by a constant factor joined on the one side of the previous section. If one does repeats this process infinitely, the section eventually converges to a point, provided that the scaling down is fast enough. We can join the convergence (limit) point to a an end-section on the other side to get wild knot. This knot is continuous everywhere, including the limit point, and an embedding of \(\sone\) in \(\rthree\). Three common ways exist to exclude such behaviour by demanding extra conditions.
 \begin{enumerate}
     \item Differentiability.
 
@@ -105,7 +141,9 @@ Give examples of knots which are ambient isotopic and not ambient isotopic, with
 
 \section{Knot diagrams}
 
+So far, we have depicted knots as curves in a plane (of paper) with the implicit understanding that if a strand goes under another strand, then we break the strand which goes underneath. One defined a knot as an object in three dimensions, but we can project the knot onto a plane to represent it, as we have done so far. We do not lose any topological information if we choose a `nice enough' projection. What we have been doing implicitly can be formalized; we shall see how.
 
+Let \(K\) be a knot and let \(\pi \colon \rthree \rightarrow \rtwo\) be a projection map. A point \(p \in \pi(K)\) is called \textit{regular} if \(\pi^{-1}(p)\) is a single point, and \textit{singular} otherwise. If \(\abs{\pi^{-1}(p)} = 2\), then \(p\) is called a \textit{double} point.
 
 
 %
