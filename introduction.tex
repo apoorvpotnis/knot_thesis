@@ -2,28 +2,46 @@
 
 \section{Definition of a knot}
 
-We normally conceive of knots as open strings with `knotted' parts in between. Given a knotted string with two `open' ends, we can simply pull one end of the string to untie it, in the usual way we untie a knot. This way, any knot with two open ends can be untied. But if have a knot in a closed loop, we won't be able to untie it unless we cut it. We want our notion of a knot to be invariant under `pulling'. Thus, we model our mathematical definition on closed loops instead of open. Insert a figure illustrating this.
+We normally conceive of knots as open strings with `knotted' parts in between. Given a knotted string with two `open' ends, we can simply pull one end of the string to untie it, in the usual way we untie a knot, by inserting an open end into the knotted region is a strategic manner and pulling it on the other side\footnote{There exists another way of unknotting an open knot, often used in magic tricks. One creates another knot using the unknotted portion of the string on one side of the knotted portion such that this new knot `cancels' the original knot. In mathematical terms, the new knot is constructed such that the \textit{connected sum} of the original knot and the new knot gives an unknot. We won't deal with connected sums of knots in this thesis}. This way, any knot with two open ends can be untied. But if have a knot in a closed loop, we won't be able to untie it unless we cut it. We want our notion of a knot to be invariant under `pulling'. Thus, we model our mathematical definition on closed loops instead of open. Refer to~\cref{fig:openclosedkots}.
 
 \begin{figure}
     \centering
-    \begin{tikzpicture}[scale=0.2]
-        \begin{knot}[clip width = 10, consider self intersections = true, ignore endpoint intersections = false, use Hobby shortcut]
-            \strand[thick, red] (-6,0)
-            to (6,0)
-            %to [out=0, in=135] (13,-2)
-            to [out=0, in=180] (18, -4)
-            to [out=0, in=-90] (21,0)
-            to [out=90, in=0] (18,4)
-            to [out=180, in=0] (9,-4)
-            to [out=180, in=-90] (6,0)
-            to [out=90, in=180] (9,4)
-            to [out=0, in=180] (21,0)
-            to (33,0);
-            \flipcrossings{1,2,4,5,6,7,8,9}
-        \end{knot}
-
-    \end{tikzpicture}
-
+    \subcaptionbox{A knot with open ends}{
+        \begin{tikzpicture}[scale=0.2]
+            \begin{knot}[clip width = 10, consider self intersections = true, ignore endpoint intersections = false, use Hobby shortcut]
+                \strand[thick, red] (-6,0)
+                to (6,0)
+                %to [out=0, in=135] (13,-2)
+                to [out=0, in=180] (18, -4)
+                to [out=0, in=-90] (21,0)
+                to [out=90, in=0] (18,4)
+                to [out=180, in=0] (9,-4)
+                to [out=180, in=-90] (6,0)
+                to [out=90, in=180] (9,4)
+                to [out=0, in=180] (21,0)
+                to (33,0);
+                \flipcrossings{1,2,4,5,6,7,8,9}
+            \end{knot}
+        \end{tikzpicture}}
+    \subcaptionbox{A knot with closed ends}{
+        \begin{tikzpicture}[scale=0.2]
+            \begin{knot}[clip width = 10, consider self intersections = true, ignore endpoint intersections = false, use Hobby shortcut]
+                \strand[thick, red] (-6,0)
+                to (6,0)
+                %to [out=0, in=135] (13,-2)
+                to [out=0, in=180] (18, -4)
+                to [out=0, in=-90] (21,0)
+                to [out=90, in=0] (18,4)
+                to [out=180, in=0] (9,-4)
+                to [out=180, in=-90] (6,0)
+                to [out=90, in=180] (9,4)
+                to [out=0, in=180] (21,0)
+                to (33,0);
+                \flipcrossings{1,2,4,5,6,7,8,9}
+            \end{knot}
+        \end{tikzpicture}}
+    \caption{Projections of a knot on a plane}
+    \label{fig:openclosedkots}
 \end{figure}
 
 
