@@ -151,7 +151,7 @@ Any two homeomorphisms of the circle are homeomorphic to the circle and to each 
 
     The restriction of \(h\) to level \(t \in [0, 1]\) is \(h_t \colon X \times \{t\} \rightarrow \rthree\). \(h_0\) must be the identity map.
 \end{defn}
-Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t \in [0,1]\). The converse is not true. Insert example here. Homotopy allows a curve to pass through itself. All knots are thus homotopic to the trivial knot. If we do not allow a curve to pass through itself, i.e.\@ if we demand injectivity for each \(h_t\), then we get what is known as an isotopy. But isotopy is not useful for distinguishing knots as well, due to bachelors unknotting. All tame knots, or more generally, all knots with a tame arc turn out to be isotopic to the trivial knot\footnote{See \texttt{\url{https://math.stackexchange.com/a/1336309/239463}}}. It is an open problem if a particular knot known as the Bing sling, which is wild \textit{at all points} is isotopic to the standard unknot\footnote{See \texttt{\url{https://wildandnoncompactknots.wordpress.com/2013/04/30/knots-in-three-space-non-ambient-isotopy-equivalence-classes/}}}.
+Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t \in [0,1]\). The converse is not true. Insert example here. Homotopy allows a curve to pass through itself. All knots are thus homotopic to the trivial knot. If we do not allow a curve to pass through itself, i.e.\@ if we demand injectivity for each \(h_t\), then we get what is known as an isotopy. But isotopy is not useful for distinguishing knots as well, due to bachelors unknotting. All tame knots, or more generally, all knots with a tame arc turn out to be isotopic to the trivial knot. It is an open problem if all knots are isotopic to the trivial knot~\cite{ancel, shijie}. In addition, it is not known as well if a knot known as the Bing sling, which is wild \textit{at all points} is isotopic to the trivial knot~\cite{ancel, shijie}.
 \begin{prop}[Bachelors' unknotting]
     Every knot with a tame arc is isotopic to the unknot.
 \end{prop}
@@ -250,19 +250,19 @@ Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t 
         \centering
         \begin{tikzpicture}[scale=1.4]
             \draw[thick, blue, <->] (0,4.5) node[anchor=south]{\(x\)} -- (0,0) -- (5,0);
-            \draw[line width=0.6pt, gray] (-2.5pt,4) node[anchor=east, black]{\(2\pi\)} -- (2.5pt,4);
+            \draw[line width=0.6pt, black] (-2.5pt,4) node[anchor=east, black]{\(2\pii\)} -- (2.5pt,4);
             \node at (0,-0.2) {\(0\)};
             \node at (4,-0.2) {\(1\)};
 
-            \draw[gray, dotted, line width=0.6pt] (0,2) -- (4,2);
-            \draw[gray, dotted, line width=0.6pt] (2,0) -- (2,4);
-            \draw[gray, dashed, line width=0.7pt] (2,1.5) -- (0,1.5);
-            \draw[gray, dashed, line width=0.7pt] (2,2.5) -- (0,2.5);
+            \draw[black, dotted, line width=0.6pt] (0,2) -- (4,2);
+            \draw[black, dotted, line width=0.6pt] (2,0) -- (2,4);
+            \draw[black, dashed, line width=0.7pt] (2,1.5) -- (0,1.5);
+            \draw[black, dashed, line width=0.7pt] (2,2.5) -- (0,2.5);
             \node at (-0.36,1.5) {\(\phi_t(a)\)};
             \node at (-0.36,2.5) {\(\phi_t(b)\)};
-            \node at (-0.6,2) {\((a+b)/2\)};
+            \node at (-0.6,1.98) {\((a+b)/2\)};
             \node at (2,-0.2) {\(t\)};
-            \draw[thick] (0,1) node[anchor=east]{\(a\)} -- (4,2) -- (0,3) node[anchor=east]{\(b\)};
+            \draw[thick, red] (0,1) node[anchor=east, black]{\(a\)} -- (4,2) -- (0,3) node[anchor=east, black]{\(b\)};
         \end{tikzpicture}
         \caption{Illustration of shrinkage of domain with respect to \(t\). For all \(t \in [0,1]\), the interval \([\phi_t(a), \phi_t(b)] \in [0,2\pii)\) maps to the shrunk `knotted' part. The images of \([a,\phi_t(a)]\) and \([\phi_t(b),b]\) map to the straight lines which connect \(f(a)\) to \(i_t(f(\phi_t(a)))\) and \(i_t(f(\phi_t(b)))\) to \(f(b)\) respectively.}
         \label{fig:graphbachelor}
@@ -283,7 +283,6 @@ In the above considered isotopy, we isotoped the set \(X = K\). Instead, we take
 \begin{remark}
     Unless mentioned otherwise, we shall always consider our knots to be tame from now on.
 \end{remark}
-
 
 \begin{defn}[Knot equivalence]
     Two knots \(K_1\) and \(K_2\) are said to be ambient isotopic if there exists an isotopy \(I \colon \rthree \times [0,1] \rightarrow \rthree\) such that \(I(K_1,0) = I_0(K_1) = K_1\) and \(I(K_1,1) = I_1(K_1) = K_2\).
