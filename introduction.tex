@@ -232,7 +232,7 @@ Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t 
 
     Refer to \cref{fig:bachelor}. Let \(K \subset \rthree\) be a knot with a tame arc.
 
-    Let \(p \in K\) in a tame arc of the knot. Since the knot is locally flat on the arc, by the definition of tameness, we take a ball \(U_p \subset \rthree\) of radius \(\varepsilon\) around the point \(p\) such that the pair \(U_p, U_p \cap K\) is homeomorphic to \((\symup{B}, \symup{d})\), where \(\symup{B}\) is the unit ball in \(\rthree\) centered at the origin and \(\symup{d}\) is the diameter of \(\symup{B}\) along the \(x\)-axis. We choose a parametrization \(f \colon [0, 2\pii) \rightarrow K\) of the knot such that \(f([a, b]) = K \setminus (U_p \cap K) \), where \([a, b] \subset [0, 2\pii)\).
+    Let \(p \in K\) in a tame arc of the knot. Since the knot is locally flat on the arc, by the definition of tameness, we take a ball \(U_p \subset \rthree\) of radius \(\varepsilon\) around the point \(p\) such that the pair \(U_p, U_p \cap K\) is homeomorphic to \((\symup{B}, \symup{d})\), where \(\symup{B}\) is the unit ball in \(\rthree\) centered at the origin and \(\symup{d}\) is the diameter of \(\symup{B}\) along the \(x\)-axis. We choose a parametrization \(f \colon [0, 2\pii) \rightarrow K\) of the knot such that \(f([a, b]) = K - (U_p \cap K) \), where \([a, b] \subset [0, 2\pii)\).
 
     Let \(r \in \rthree\) be a point outside \(U_p\). Now consider the function \(i_t \colon K \rightarrow \rthree\), defined for each \(t \in [0, 1]\) as follows.
     Let \[\phi_t(a) \coloneq t\left(\frac{a+b}{2}\right) + (1-t)a\] be a family of functions for all \(t \in [0,1]\).
@@ -244,14 +244,39 @@ Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t 
     \end{enumerate}
     Let \(i \colon [0, 1] \times K \rightarrow \rthree\) be a function defined by \(i(t, f(x)) \coloneq i_t (f(x))\).
 
-    \(i\) is defined such that the part inside \(U_p\) is kept unchanged for all \(t\). For \(t =0\), \(i\) does not deform the knot at all. For \(t \in (0, 1)\), the knotted part (in \(\rthree\)) shrinks and the interval in the domain \([a,b]\) which maps to the knotted part also shrinks to \([\phi_t(a), \phi_t(b)]\). This shrinkage of the domain happens linearly with \(t\). All points of the knotted part trace a straight line as they travel under isotopy from their original position to \(r\). Eventually, the knotted part ceases to exist at \(t = 1\) and a single point of the domain, namely, \((a + b)/2\) maps to \(r\).
+    \(i\) is defined such that the part inside \(U_p\) is kept unchanged for all \(t\). For \(t =0\), \(i\) does not deform the knot at all. For \(t \in (0, 1)\), the knotted part (in \(\rthree\)) shrinks and the interval in the domain \([a,b]\) which maps to the knotted part also shrinks to \([\phi_t(a), \phi_t(b)]\). This shrinkage of the domain happens linearly with \(t\). Refer to \cref{fig:graphbachelor}. All points of the knotted part trace a straight line as they travel under isotopy from their original position to \(r\). Eventually, the knotted part ceases to exist at \(t = 1\) and a single point of the domain, namely, \((a + b)/2\) maps to \(r\).
+
+    \begin{figure}
+        \centering
+        \begin{tikzpicture}[scale=1.4]
+            \draw[thick, blue, <->] (0,4.5) node[anchor=south]{\(x\)} -- (0,0) -- (5,0);
+            \draw[line width=0.6pt, gray] (-2.5pt,4) node[anchor=east, black]{\(2\pi\)} -- (2.5pt,4);
+            \node at (0,-0.2) {\(0\)};
+            \node at (4,-0.2) {\(1\)};
+
+            \draw[gray, dotted, line width=0.6pt] (0,2) -- (4,2);
+            \draw[gray, dotted, line width=0.6pt] (2,0) -- (2,4);
+            \draw[gray, dashed, line width=0.7pt] (2,1.5) -- (0,1.5);
+            \draw[gray, dashed, line width=0.7pt] (2,2.5) -- (0,2.5);
+            \node at (-0.36,1.5) {\(\phi_t(a)\)};
+            \node at (-0.36,2.5) {\(\phi_t(b)\)};
+            \node at (-0.6,2) {\((a+b)/2\)};
+            \node at (2,-0.2) {\(t\)};
+            \draw[thick] (0,1) node[anchor=east]{\(a\)} -- (4,2) -- (0,3) node[anchor=east]{\(b\)};
+        \end{tikzpicture}
+        \caption{Illustration of shrinkage of domain with respect to \(t\). For all \(t \in [0,1]\), the interval \([\phi_t(a), \phi_t(b)] \in [0,2\pii)\) maps to the shrunk `knotted' part. The images of \([a,\phi_t(a)]\) and \([\phi_t(b),b]\) map to the straight lines which connect \(f(a)\) to \(i_t(f(\phi_t(a)))\) and \(i_t(f(\phi_t(b)))\) to \(f(b)\).}
+        \label{fig:graphbachelor}
+    \end{figure}
 
     In the end, we get a figure consisting of two straight lines meeting at \(r\), and \(U_p \cap K\), the original part of the knot inside \(U_p\). The other endpoints of these lines are \(f(a)\) and \(f(b)\). \(U_p \cap K\) is isotopic to the line joining \(f(a)\) and \(f(b)\). Thus, we get a triangle with points \(r\), \(f(a)\) and \(f(b)\) and we any that any triangle is isotopic to \(\sone\).
 
     We now prove that \(i\) is continuous. We know that both \(i_t\) and \(i_x\) are continuous and injective for all \(t \in [0, 1]\) and \(x \in [0, 2\pii)\) respectively, where \(i_x\) is defined to be the restriction of \(i\) for a particular \(x\). We also see that \(i_t\) is linear in \(t\). A function continuous in one argument and linear in another is continuous in the product topology. We thus have an isotopy which sends a knot with a tame arc to \(\sone\).
-
-    It should be noted that the isotopy that we have constructed does not shrink the complement of \((U_p \cap K)\) uniformly. Parts of the strand closer to the point \(r\) are shrunk more than the parts further away. Also, not all parts move at a uniform rate towards \(r\). Parts closer to \(r\) move slower than the parts further\footnote{The knotted parts are scaled uniformly though in \cref{fig:bachelor} due to the ease of drawing such a figure.}.
 \end{proof}
+
+\begin{remark}
+    It should be noted that the isotopy that we have constructed does not shrink the complement of \((U_p \cap K)\) uniformly. Parts of the strand closer to the point \(r\) are shrunk more than the parts further away. Also, not all parts move at a uniform rate towards \(r\). Parts closer to \(r\) move slower than the parts further\footnote{The knotted parts are scaled uniformly though in \cref{fig:bachelor} due to the ease of drawing such a figure.}.
+\end{remark}
+
 
 In the above considered isotopy, we isotoped the set \(X = K\). Instead, we take \(X\) to be the entire space \(\rthree\), or a bounded set which completely covers the knot, then we get the notion of ambient isotopy. This modification ensures that the surrounding space is isotoped as well as we isotope the knot. The knot is a curve which has no volume. If we try bachelors' unknotting on the surrounding space as well, we observe that the surrounding space, which has a finite, non-zero volume cannot shrink to a set of zero volume under isotopy. This finally leads us to the equivalence relation induced by ambient isotopy.
 
