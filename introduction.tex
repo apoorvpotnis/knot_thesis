@@ -264,17 +264,17 @@ Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t 
             \node at (2,-0.2) {\(t\)};
             \draw[thick] (0,1) node[anchor=east]{\(a\)} -- (4,2) -- (0,3) node[anchor=east]{\(b\)};
         \end{tikzpicture}
-        \caption{Illustration of shrinkage of domain with respect to \(t\). For all \(t \in [0,1]\), the interval \([\phi_t(a), \phi_t(b)] \in [0,2\pii)\) maps to the shrunk `knotted' part. The images of \([a,\phi_t(a)]\) and \([\phi_t(b),b]\) map to the straight lines which connect \(f(a)\) to \(i_t(f(\phi_t(a)))\) and \(i_t(f(\phi_t(b)))\) to \(f(b)\).}
+        \caption{Illustration of shrinkage of domain with respect to \(t\). For all \(t \in [0,1]\), the interval \([\phi_t(a), \phi_t(b)] \in [0,2\pii)\) maps to the shrunk `knotted' part. The images of \([a,\phi_t(a)]\) and \([\phi_t(b),b]\) map to the straight lines which connect \(f(a)\) to \(i_t(f(\phi_t(a)))\) and \(i_t(f(\phi_t(b)))\) to \(f(b)\) respectively.}
         \label{fig:graphbachelor}
     \end{figure}
 
-    In the end, we get a figure consisting of two straight lines meeting at \(r\), and \(U_p \cap K\), the original part of the knot inside \(U_p\). The other endpoints of these lines are \(f(a)\) and \(f(b)\). \(U_p \cap K\) is isotopic to the line joining \(f(a)\) and \(f(b)\). Thus, we get a triangle with points \(r\), \(f(a)\) and \(f(b)\) and we any that any triangle is isotopic to \(\sone\).
+    In the end, we get a figure consisting of two straight lines meeting at \(r\), and \(U_p \cap K\), the original part of the knot inside \(U_p\). The other endpoints of these lines are \(f(a)\) and \(f(b)\). \(U_p \cap K\) is isotopic to the line joining \(f(a)\) and \(f(b)\). Thus, we get a triangle with points \(r\), \(f(a)\) and \(f(b)\) and we any that any triangle in \(\rthree\) is isotopic to \(\sone\).
 
-    We now prove that \(i\) is continuous. We know that both \(i_t\) and \(i_x\) are continuous and injective for all \(t \in [0, 1]\) and \(x \in [0, 2\pii)\) respectively, where \(i_x\) is defined to be the restriction of \(i\) for a particular \(x\). We also see that \(i_t\) is linear in \(t\). A function continuous in one argument and linear in another is continuous in the product topology. We thus have an isotopy which sends a knot with a tame arc to \(\sone\).
+    We now prove that \(i\) is continuous. We know that both \(i_t\) and \(i_x\) are continuous and injective for all \(t \in [0, 1]\) and \(x \in [0, 2\pii)\) respectively, where \(i_x\) is defined to be the restriction of \(i\) for a particular \(x\). We also see that \(i_t\) is linear in \(x\). A function continuous in one argument and linear in the other is continuous in the product topology. We thus have an isotopy which sends a knot with a tame arc to \(\sone\).
 \end{proof}
 
 \begin{remark}
-    It should be noted that the isotopy that we have constructed does not shrink the complement of \((U_p \cap K)\) uniformly. Parts of the strand closer to the point \(r\) are shrunk more than the parts further away. Also, not all parts move at a uniform rate towards \(r\). Parts closer to \(r\) move slower than the parts further\footnote{The knotted parts are scaled uniformly though in \cref{fig:bachelor} due to the ease of drawing such a figure.}.
+    It should be noted that the isotopy that we have constructed does not shrink \(K - (U_p \cap K)\) uniformly. Parts of the strand closer to the point \(r\) are shrunk more than the parts further away. Also, not all parts move at a uniform rate towards \(r\). Parts closer to \(r\) move slower than the parts further\footnote{The knotted parts are scaled uniformly though in \cref{fig:bachelor} due to the ease of drawing such a figure.}.
 \end{remark}
 
 
