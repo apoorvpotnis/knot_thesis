@@ -111,6 +111,7 @@ We normally conceive of knots as open strings with `knotted' parts in between. G
                     \end{scope}
         \draw[thick, red] (1,0) to (0,0) to (0,-6) to (55,-6) to (55,0) to (53,0);
         \node (p) at (53,1.5) {\(p\)};
+        \filldraw[black] (53,0) circle (5pt);
     \end{tikzpicture}
     \caption{A wild knot. The knot is wild only at the point \(p\).}
     \label{fig:wildknot}
@@ -176,7 +177,7 @@ Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t 
                 \draw[dashed, line width=0.6pt] (2,-1) to (2,1) to (-1,1) to (-1,-7) to (28,-7) to (28,1) to (25,1) to (25,-1) to (26,-1) to (26,-5) to (1,-5) to (1,-1) to (2,-1);
                 \node at (26.4,2.5) {\(U_p\)};
             \end{tikzpicture}}
-        \subcaptionbox{\(i_{t_{0.3}} (K)\)}{
+        \subcaptionbox{\(i_{0.3} (K)\)}{
             \begin{tikzpicture}[scale=0.2]
                 \begin{scope}[xshift=4cm, scale=0.7]
                     \begin{knot}[clip width = 7, consider self intersections = true, ignore endpoint intersections = false, use Hobby shortcut]
@@ -197,7 +198,7 @@ Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t 
                 \draw[dashed, line width=0.6pt] (2,-1) to (2,1) to (-1,1) to (-1,-7) to (28,-7) to (28,1) to (25,1) to (25,-1) to (26,-1) to (26,-5) to (1,-5) to (1,-1) to (2,-1);
                 \node at (26.4,2.5) {\(U_p\)};
             \end{tikzpicture}}
-        \subcaptionbox{\(i_{t_{0.6}} (K)\)}{
+        \subcaptionbox{\(i_{0.6} (K)\)}{
             \begin{tikzpicture}[scale=0.2]
                 \begin{scope}[xshift=8cm, scale=0.4]
                     \begin{knot}[clip radius = 2pt, clip width = 4, consider self intersections = true, ignore endpoint intersections = false, use Hobby shortcut]
@@ -249,7 +250,7 @@ Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t 
 
     We now prove that \(i\) is continuous. We know that both \(i_t\) and \(i_x\) are continuous and injective for all \(t \in [0, 1]\) and \(x \in [0, 2\pii)\) respectively, where \(i_x\) is defined to be the restriction of \(i\) for a particular \(x\). We also see that \(i_t\) is linear in \(t\). A function continuous in one argument and linear in another is continuous in the product topology. We thus have an isotopy which sends a knot with a tame arc to \(\sone\).
 
-    It should be noted that the isotopy that we have constructed does not shrink the complement of \((U_p \cap K)\) uniformly. Parts of the strand closer to the point \(r\) are shrunk more than the parts further away. Also, not all parts move in a uniform rate towards \(r\). Parts closer to \(r\) move slower than the parts further\footnote{The knotted parts are scaled uniformly though in \cref{fig:bachelor} due to the ease of drawing such a figure.}.
+    It should be noted that the isotopy that we have constructed does not shrink the complement of \((U_p \cap K)\) uniformly. Parts of the strand closer to the point \(r\) are shrunk more than the parts further away. Also, not all parts move at a uniform rate towards \(r\). Parts closer to \(r\) move slower than the parts further\footnote{The knotted parts are scaled uniformly though in \cref{fig:bachelor} due to the ease of drawing such a figure.}.
 \end{proof}
 
 In the above considered isotopy, we isotoped the set \(X = K\). Instead, we take \(X\) to be the entire space \(\rthree\), or a bounded set which completely covers the knot, then we get the notion of ambient isotopy. This modification ensures that the surrounding space is isotoped as well as we isotope the knot. The knot is a curve which has no volume. If we try bachelors' unknotting on the surrounding space as well, we observe that the surrounding space, which has a finite, non-zero volume cannot shrink to a set of zero volume under isotopy. This finally leads us to the equivalence relation induced by ambient isotopy.
