@@ -1,7 +1,90 @@
 % !TEX TS-program = lualatex
 % !TEX root = ../thesis.tex
 
-\documentclass[oneside]{book}
+\documentclass[12pt, a4paper]{report}
+
+
+
+
+
+
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage[toc, page]{appendix}
+\providecommand{\appendixname}{Appendices}
+
+\newcommand{\head}[1]{\newpage
+	\vspace{3em}
+	\begin{center}
+		\LARGE{\MakeUppercase{\textbf{#1}}}
+	\end{center}
+	\vspace{3em}
+	\addcontentsline{toc}{chapter}{#1}
+}
+\renewcommand{\listfigurename}{}
+% ------------------------------
+% Individual details (Change these!)
+% ------------------------------
+
+\newcommand{\thesistitle}{Some topics in knot theory}
+\newcommand{\studentname}{Apoorv Potnis}
+\newcommand{\studentrollno}{18343}
+\newcommand{\advisorname}{Dr.\@ Dheeraj Kulkarni and Prof.\@ Subhash Chaturvedi}
+\newcommand{\degreename}{BS-MS}
+\newcommand{\subject}{Mathematics}
+\newcommand{\thesisdate}{April 2023}
+
+% ------------------------------
+% Title page
+% ------------------------------
+
+\def\maketitle{
+	\begin{titlepage}
+		\begin{center}
+			\begin{doublespace}
+				\textbf{\MakeUppercase{\LARGE{\thesistitle}}} \\
+				\ \\
+				\ \\
+				\normalsize{\textbf{A REPORT}} \\
+				\normalsize{\textit{submitted in partial fulfillment of the requirements}} \\
+				\normalsize{\textit{for the award of the dual degree of}} \\
+				\ \\
+				\ \\
+				\large{\textbf{Bachelor of Science-Master of Science}} \\
+				\normalsize{\textit{in}} \\
+				\large{\textbf{\MakeUppercase{\subject}}} \\
+				\normalsize{\textit{by}} \\
+				\large{\textbf{\MakeUppercase{\studentname}}} \\
+				\normalsize{\textbf{(\studentrollno)}} \\
+				%\normalsize{\textit{Under the guidance of}} \\
+				%\large{\textbf{\MakeUppercase{\advisorname}}}
+			\end{doublespace}
+			\vfill
+			%\centerline{\includegraphics[scale=0.20]{iiser_b.png}}
+			\ \\
+			\textbf{DEPARTMENT OF \MakeUppercase{\subject} \\
+				INDIAN INSTITUTE OF SCIENCE EDUCATION AND RESEARCH BHOPAL\\ %Flows onto two lines
+				BHOPAL - 462066} \\
+			\ \\
+			\textbf{\thesisdate}
+		\end{center}
+	\end{titlepage}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %\usepackage[nomarginpar]{geometry}
 
@@ -21,13 +104,13 @@
 % \setmathfont[StylisticSet=0]{XITS Math}
 % \setmathfont[range={\mathcal,\mathbfcal},StylisticSet=1]{XITS Math}
 \usepackage[dvipsnames]{xcolor}
-\usepackage{microtype, lipsum, comment, tikz, tikz-3dplot, float, subcaption, todonotes, tikz-cd, xurl}
+\usepackage{microtype, lipsum, comment, tikz, tikz-3dplot, float, subcaption, tikz-cd, xurl, adjustbox}
 \usepackage{physics2}\usephysicsmodule{ab,ab.braket}
 \usetikzlibrary{knots, hobby, braids}
 % \usepackage{embedall}
 
-\usepackage[bold=0.04]{xfakebold}
-\usepackage{xfp}
+%\usepackage[bold=0.04]{xfakebold}
+%\usepackage{xfp}
 
 \usepackage{embedall} \embedfile{thesis.bib}
 %\embedfile{apoorv_potnis_synopsis.xmpdata}
@@ -420,7 +503,73 @@
 \begin{document}
 
 	\maketitle
-	\tableofcontents
+
+	\pagenumbering{roman}
+
+	% ------------------------------
+	\head{Certificate}
+
+	This is to certify that {\bf \studentname}, BS-MS (\subject), has worked on the project entitled {\bf `\thesistitle'} under my supervision and guidance. The content of this report is original and has not been submitted elsewhere for the award of any academic or professional degree.
+
+	\vspace{10em}
+
+	\textbf{\thesisdate \hfill Dr.\@ Dheeraj Kulkarni}
+
+	\textbf{IISER Bhopal}
+	\hspace{12pt}
+
+	\textbf{\hfill Prof.\@ Subhash Chaturvedi}
+
+
+
+% 	\textbf{\thesisdate \hfill \advisorname \\ IISER Bhopal}
+
+	\vfill
+
+	\begin{center}
+		\begin{tabular}{ccc}
+			\textbf{Committee Member} & \textbf{Signature} & \textbf{Date} \\
+			\\
+			\rule{14em}{0.6pt} & \rule{9em}{0.6pt} & \rule{6em}{0.6pt} \\
+			\\
+			\rule{14em}{0.6pt} & \rule{9em}{0.6pt} & \rule{6em}{0.6pt} \\
+			\\
+			\rule{14em}{0.6pt} & \rule{9em}{0.6pt} & \rule{6em}{0.6pt} \\
+			\\
+			\rule{14em}{0.6pt} & \rule{9em}{0.6pt} & \rule{6em}{0.6pt} \\
+		\end{tabular}
+	\end{center}
+
+	% ------------------------------
+	\head{Academic Integrity and Copyright Disclaimer}
+
+	I hereby declare that this project is my own work and, to the best of my knowledge, it contains no materials previously published or written by another
+	person, or substantial proportions of material which have been accepted for the award of any other degree or diploma at IISER Bhopal or any other educational institution, except where due acknowledgement is made in the document.
+
+	I certify that all copyrighted material incorporated into this document is in compliance with the Indian Copyright Act (1957) and that I have received written permission from the copyright owners for my use of their work, which is beyond the scope of the law. I agree to indemnify and save harmless IISER Bhopal from any and all claims that may be asserted or that may arise from any copyright violation.
+
+	\vfill
+
+	\textbf{\thesisdate \hfill \studentname \\ IISER Bhopal}
+
+	% ------------------------------
+	\head{Acknowledgement}
+
+	Acknowledgement is here.
+
+	\vspace{7em}
+
+	\begin{flushright}
+		{\bf \studentname}
+	\end{flushright}
+
+	% ------------------------------
+	\head{Abstract}
+
+	We shall study some selected topics in knot theory from the book \textit{Knots and Physics}, 4th ed.\@ by Louis Kauffman~\cite{kauffman}. The basics of knot theory have been studied from the book \textit{Knots and Links} by Peter Cromwell~\cite{cromwell}.
+
+	A knot is an embedding of the circle in three-dimensional space. We discuss the state model for bracket polynomial, Jones polynomial and some of its generalisations. One can apply these knot invariants to show that various knots are not ambient isotopic, which is the notion we shall use to distinguish knots. We shall see a resolution of some of the old conjectures in knot theory using the bracket polynomial. Vaughn Jones found the polynomial named after him while he was studying towers of von Neumann algebras. We shall follow a different route following Kauffman to understand the relation amongst braids, links, Temperley--Lieb algebras, which arose in statistical physics, and the Jones algebras.
+
 % 	\begin{figure}
 % 		\centering
 % 		\begin{tikzpicture}[scale=0.6]
@@ -431,6 +580,8 @@
 % 		\end{tikzpicture}
 
 % 	\end{figure}
+	\pagenumbering{arabic}
+
 	\input{introduction.tex}
 	\input{braids.tex}
 	%\input{output.tex}

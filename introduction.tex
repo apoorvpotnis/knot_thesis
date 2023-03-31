@@ -254,13 +254,13 @@ Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t 
             \node at (0,-0.2) {\(0\)};
             \node at (4,-0.2) {\(1\)};
 
-            \draw[black, dotted, line width=0.6pt] (0,2) -- (4,2);
+            \draw[black, dotted, line width=0.6pt] (0,2) node[anchor=east, black]{\((a+b)/2\)} -- (4,2);
             \draw[black, dotted, line width=0.6pt] (2,0) -- (2,4);
-            \draw[black, dashed, line width=0.7pt] (2,1.5) -- (0,1.5);
-            \draw[black, dashed, line width=0.7pt] (2,2.5) -- (0,2.5);
-            \node at (-0.36,1.5) {\(\phi_t(a)\)};
-            \node at (-0.36,2.5) {\(\phi_t(b)\)};
-            \node at (-0.6,1.98) {\((a+b)/2\)};
+            \draw[black, dashed, line width=0.7pt] (2,1.5) -- (0,1.5) node[anchor=east, black]{\(\phi_t(a)\)};
+            \draw[black, dashed, line width=0.7pt] (2,2.5) -- (0,2.5) node[anchor=east, black]{\(\phi_t(b)\)};
+%             \node at (-0.36,1.5) {\(\phi_t(a)\)};
+%             \node at (-0.36,2.5) {\(\phi_t(b)\)};
+%             \node at (-0.6,1.98) {\((a+b)/2\)};
             \node at (2,-0.2) {\(t\)};
             \draw[thick, red] (0,1) node[anchor=east, black]{\(a\)} -- (4,2) -- (0,3) node[anchor=east, black]{\(b\)};
         \end{tikzpicture}
