@@ -653,36 +653,36 @@ We see visually that the result of a Markov move on a braid is equivalent to per
 
 \noindent Thus, the writhe \(w\) of the braid \(b\) with a word representation \(\prod_{j=1}^{m} \tauu^{\beta_j}_{\alpha_j}\) of length \(m\), where \(\beta_j \in \{+1, -1\}\) is \[w(b) = \sum_{j = 1}^{m}\beta_j.\] Note that the writhe of a braid is dependent on its word representation. We also see that \(w(b) = w(\overline{b})\).
 
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\subcaptionbox{}{
 		\begin{tikzpicture}
 			\begin{knot}[clip width = 5]
-				\strand[{Straight Barb[angle'=85]}-, thick, red] (1,1) to (0,2);
-				\strand[{Straight Barb[angle'=85]}-, thick, red] (0,1) to (1,2);
+				\strand[<-, thick, red] (1,1) to (0,2);
+				\strand[<-, thick, red] (0,1) to (1,2);
 				\flipcrossings{1}
 			\end{knot}
 		\end{tikzpicture}}\label{a}\quad
 	\subcaptionbox{}{
 		\begin{tikzpicture}
 			\begin{knot}[clip width = 5]
-				\strand[-{Straight Barb[angle'=85]}, thick, red] (1,1) to (0,2);
-				\strand[-{Straight Barb[angle'=85]}, thick, red] (0,1) to (1,2);
+				\strand[->, thick, red] (1,1) to (0,2);
+				\strand[->, thick, red] (0,1) to (1,2);
 				\flipcrossings{1}
 			\end{knot}
 		\end{tikzpicture}}\label{b}\quad
 	\subcaptionbox{}{
 		\begin{tikzpicture}
 			\begin{knot}[clip width = 5]
-				\strand[{Straight Barb[angle'=85]}-, thick, red] (1,1) to (0,2);
-				\strand[{Straight Barb[angle'=85]}-, thick, red] (0,1) to (1,2);
+				\strand[<-, thick, red] (1,1) to (0,2);
+				\strand[<-, thick, red] (0,1) to (1,2);
 			\end{knot}
 		\end{tikzpicture}}\label{c}\quad
 	\subcaptionbox{}{
 		\begin{tikzpicture}
 			\begin{knot}[clip width = 5]
-				\strand[-{Straight Barb[angle'=85]}, thick, red] (1,1) to (0,2);
-				\strand[-{Straight Barb[angle'=85]}, thick, red] (0,1) to (1,2);
+				\strand[->, thick, red] (1,1) to (0,2);
+				\strand[->, thick, red] (0,1) to (1,2);
 			\end{knot}
 		\end{tikzpicture}}\label{d}
 	\caption{Assignment of crossing values. (a) Downward orientation for \(\tauu_i\) corresponding to \(+1\). (b) Upward orientation for \(\tauu_i\) corresponding to \(+1\). (c) Downward orientation for \(\tauu_i^{-1}\) corresponding to \(-1\). (d) Upward orientation for \(\tauu_i^{-1}\) corresponding to \(-1\).}
