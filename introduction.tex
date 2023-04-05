@@ -26,7 +26,7 @@ We normally conceive of knots as open strings with `knotted' parts in between. G
     \subcaptionbox{A knot with closed ends}{
         \begin{tikzpicture}[scale=0.2]
             \begin{knot}[clip width = 8, consider self intersections = true, ignore endpoint intersections = false, use Hobby shortcut]
-                \strand[thick, red] (0,0) to (6,0)
+                \strand[thick, red] (2,0) to (6,0)
                 to [out=0, in=180] (18, -4)
                 to [out=0, in=-90] (21,0)
                 to [out=90, in=0] (18,4)
@@ -34,10 +34,11 @@ We normally conceive of knots as open strings with `knotted' parts in between. G
                 to [out=180, in=-90] (6,0)
                 to [out=90, in=180] (9,4)
                 to [out=0, in=180] (21,0)
-                to (27,0) to (27,-6) to (0,-6);
+                to (25,0);
                 \flipcrossings{4,5,7,8,9,11,12}
             \end{knot}
-            \draw[thick, red] (1,-6) -- (0,-6) -- (0,0) -- (1,0);
+            \draw[thick, red, rounded corners] (2,0) -- (1,0) -- (0,-1) -- (0,-5) -- (1,-6) -- (26,-6) -- (27,-5) -- (27,-1) -- (26,0) -- (25,0);
+%             \draw[thick, red, rounded corners=9] (1,-6) -- (0,-6) -- (0,0) -- (1,0);
         \end{tikzpicture}}
     \caption{Projections of a knot on a plane}
     \label{fig:openclosedknots}
@@ -51,7 +52,7 @@ We normally conceive of knots as open strings with `knotted' parts in between. G
     \centering
     \begin{tikzpicture}[scale=0.2]
         \begin{knot}[clip width = 8, consider self intersections = true, ignore endpoint intersections = false, use Hobby shortcut]
-            \strand[thick, red] (0,0)
+            \strand[thick, red] (1,0)
             to (6,0)
             to [out=0, in=180] (18, -4)
             to [out=0, in=-90] (21,0)
@@ -105,11 +106,11 @@ We normally conceive of knots as open strings with `knotted' parts in between. G
                             to [out=90, in=180] (9,4)
                             to [out=0, in=180] (21,0)
                             to (22,0);
-                            \strand [thick, red, only when rendering/.style={densely dotted}] (22,0) to (48,0);
+                            \strand [thick, red, only when rendering/.style={densely dotted}] (22,0) to (46,0);
                             \flipcrossings{1,2,4,5,6,7,8,9}
                         \end{knot}
                     \end{scope}
-        \draw[thick, red] (1,0) to (0,0) to (0,-6) to (55,-6) to (55,0) to (53,0);
+        \draw[thick, red, rounded corners] (1,0) to (0,0) to (0,-6) to (55,-6) to (55,0) to (53,0);
         \node (p) at (53,1.5) {\(p\)};
         \filldraw[black] (53,0) circle (5pt);
     \end{tikzpicture}
@@ -117,13 +118,13 @@ We normally conceive of knots as open strings with `knotted' parts in between. G
     \label{fig:wildknot}
 \end{figure}
 
-Although one can talk about embeddings of higher dimensional `circles' in higher dimensional spaces, we restrict ourselves to knots in the three dimensional space. The above definition turns out out to be too general for our purposes. It takes into consideration certain pathological knots known as \textit{wild knots}. Although wild knots are an object of study, we shall not be dealing with them in this thesis due to their pathological nature. \cref{fig:wildknot} shows an example of a wild knot. A section of the knot is scaled down by a factor and then joined on one side of the previous section. If one repeats this process infinitely, the resulting curve formed by appending sections eventually converges to a point, provided that the scaling down is fast enough. We can join the convergence (limit) point to a an end-section on the other side to get wild knot. This knot is continuous everywhere, including the limit point. The behaviour of the knot at the limit point is different from the other points. Three common ways exist to exclude such behaviour by demanding extra conditions.
+Although one can talk about embeddings of higher dimensional `circles' in higher dimensional spaces, we restrict ourselves to knots in the three dimensional space. The above definition turns out out to be too general for our purposes. It takes into consideration certain pathological knots known as \textit{wild knots}. Although wild knots are an object of study, we shall not be dealing with them in this thesis due to their pathological nature. \Cref{fig:wildknot} shows an example of a wild knot. A section of the knot is scaled down by a factor and then joined on one side of the previous section. If one repeats this process infinitely, the resulting curve formed by appending sections eventually converges to a point, provided that the scaling down is fast enough. We can join the convergence (limit) point to a an end-section on the other side to get wild knot. This knot is continuous everywhere, including the limit point. The behaviour of the knot at the limit point is different from the other points. Three common ways exist to exclude such behaviour by demanding extra conditions.
 \begin{enumerate}
     \item Differentiability.
 
-    We can demand all knots to be differentiable at all points. We can verify visually that all the points, except the limit point of the wild knot are differentiable, or can be made (isotoped) differentiable. The derivative must necessarily change within a section. As the size of the section decreases, the derivative changes more rapidly. In a scaled down section, all the values which the derivative took in the previous section. As we approach the sections near the limit point, the derivative function must attain all the values it did before, but it must do so in a more rapid manner. At the limit point, the derivative shall cease to exist by the virtue of `changing too rapidly'. Demanding differentiability forcibly removes the offending limit point. The wildness is due to the limit point.
+    We can demand all knots to be differentiable at all points. We can verify visually that all the points, except the limit point of the wild knot are differentiable, or can be made (isotoped) differentiable. The derivative must necessarily change within a section. As the size of the section decreases, the derivative changes more rapidly. In a scaled down section, all the values which the derivative took in the previous section. As we approach the sections near the limit point, the derivative function must attain all the values it did before, but it must do so in a more rapid manner. At the limit point, the derivative shall cease to exist by the virtue of `changing too rapidly'. Demanding differentiability forcibly removes the offending limit point. The wildness is due to the limit point. Along with differentiability, we can demand \(\symup{C}^r\) smoothness or \(\symup{C}^\infty\) smoothness as well.
 
-    But this condition comes with a problem as well, namely we cannot use polygons for describing knots. We have drawn line segments of a knot at right angles in \cref{fig:openclosedknots,fig:wildknot}.
+    But this condition comes with a problem as well, namely we cannot use polygons for describing knots.
     \item Piecewise linearity.
 
     We can demand all the edges of a knot to be piecewise linear. Our knot shall be a polynomial in that case. A polygon has finitely many edges. Infinitely (countably) many sections in a wild knot shall mean infinitely many edges (of decreasing length), which is not allowed. Thus, this condition excludes wild knots.
@@ -141,6 +142,11 @@ Consider a spherical neighbourhood around a locally flat point. There exists a r
 \begin{defn}[Tame knots]
     A knot is said to be tame if all its points are locally flat.
 \end{defn}
+
+\begin{remark}
+    All three approaches for excluding pathological behaviour, including \(\symup{C}^r\) for all \(r\), generate the same knot isotopy classes (insert citations).
+\end{remark}
+
 
 \section{Distinguishing knots}
 
@@ -161,7 +167,7 @@ Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t 
         \subcaptionbox{\(i_0 (K)\)}{
             \begin{tikzpicture}[scale=0.2]
                 \begin{knot}[clip width = 10, consider self intersections = true, ignore endpoint intersections = false, use Hobby shortcut]
-                    \strand[thick, red] (0,0) to (6,0)
+                    \strand[thick, red] (1,0) to (6,0)
                     to [out=0, in=180] (18, -4)
                     to [out=0, in=-90] (21,0)
                     to [out=90, in=0] (18,4)
@@ -169,12 +175,12 @@ Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t 
                     to [out=180, in=-90] (6,0)
                     to [out=90, in=180] (9,4)
                     to [out=0, in=180] (21,0)
-                    to (27,0) to (27,-6) to (0,-6);
+                    to (26,0);
                     \flipcrossings{4,5,7,8,9,11,12}
                 \end{knot}
-                \draw[thick, red] (1,-6) -- (0,-6) -- (0,0) -- (1,0);
+                \draw[thick, red, rounded corners] (26,0) -- (27,0) -- (27,-6) -- (0,-6) -- (0,0) -- (1,0);
                 \filldraw[black] (13.5,-6) circle (5pt) node[anchor=north, yshift=-0.3cm]{\(p\)};
-                \draw[dashed, line width=0.6pt] (2,-1) to (2,1) to (-1,1) to (-1,-7) to (28,-7) to (28,1) to (25,1) to (25,-1) to (26,-1) to (26,-5) to (1,-5) to (1,-1) to (2,-1);
+                \draw[densely dashed, line width=0.6pt, rounded corners, closed] (3,-1) to (3,1) to (-1,1) to (-1,-7) to (28,-7) to (28,1) to (24,1) to (24,-1) to (26,-1) to (26,-5) to (1,-5) to (1,-1) -- cycle;
                 \node at (26.4,2.5) {\(U_p\)};
             \end{tikzpicture}}
         \subcaptionbox{\(i_{0.3} (K)\)}{
@@ -193,9 +199,9 @@ Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t 
                         \flipcrossings{4,5,7,8,9,11,12}
                     \end{knot}
                 \end{scope}
-                \draw[thick, red] (22,0) to (27,0) to (27,-6) to (0,-6) -- (1,-6) -- (0,-6) -- (0,0) -- (5,0);
+                \draw[thick, red, rounded corners, rounded corners] (22,0) to (27,0) to (27,-6) to (0,-6) -- (0,0) -- (5,0);
                 \filldraw[black] (13.5,-6) circle (5pt) node[anchor=north, yshift=-0.3cm]{\(p\)};
-                \draw[dashed, line width=0.6pt] (2,-1) to (2,1) to (-1,1) to (-1,-7) to (28,-7) to (28,1) to (25,1) to (25,-1) to (26,-1) to (26,-5) to (1,-5) to (1,-1) to (2,-1);
+                \draw[densely dashed, line width=0.6pt, rounded corners] (3,-1) to (3,1) to (-1,1) to (-1,-7) to (28,-7) to (28,1) to (24,1) to (24,-1) to (26,-1) to (26,-5) to (1,-5) to (1,-1) -- cycle;
                 \node at (26.4,2.5) {\(U_p\)};
             \end{tikzpicture}}
         \subcaptionbox{\(i_{0.6} (K)\)}{
@@ -214,19 +220,19 @@ Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t 
                         \flipcrossings{4,5,7,8,9,11,12}
                     \end{knot}
                 \end{scope}
-                \draw[thick, red] (19,0) to (27,0) to (27,-6) to (0,-6) -- (1,-6) -- (0,-6) -- (0,0) -- (8.1,0);
+                \draw[thick, red, rounded corners] (19,0) to (27,0) to (27,-6) to (0,-6) to (0,-6) -- (0,0) -- (8.1,0);
                 \filldraw[black] (13.5,-6) circle (5pt) node[anchor=north, yshift=-0.3cm]{\(p\)};
-                \draw[dashed, line width=0.6pt] (2,-1) to (2,1) to (-1,1) to (-1,-7) to (28,-7) to (28,1) to (25,1) to (25,-1) to (26,-1) to (26,-5) to (1,-5) to (1,-1) to (2,-1);
+                \draw[densely dashed, line width=0.6pt, rounded corners] (3,-1) to (3,1) to (-1,1) to (-1,-7) to (28,-7) to (28,1) to (24,1) to (24,-1) to (26,-1) to (26,-5) to (1,-5) to (1,-1)  -- cycle;
                 \node at (26.4,2.5) {\(U_p\)};
             \end{tikzpicture}}
         \subcaptionbox{\(i_1 (K)\)}{
             \begin{tikzpicture}[scale=0.2]
-                \draw[thick, red] (22,0) to (27,0) to (27,-6) to (0,-6) -- (1,-6) -- (0,-6) -- (0,0) -- (22,0);
+                \draw[thick, red, rounded corners] (22,0) to (27,0) to (27,-6) to (0,-6) -- (0,0) -- (22,0);
                 \filldraw[black] (13.5,-6) circle (5pt) node[anchor=north, yshift=-0.3cm]{\(p\)};
-                \draw[dashed, line width=0.6pt] (2,-1) to (2,1) to (-1,1) to (-1,-7) to (28,-7) to (28,1) to (25,1) to (25,-1) to (26,-1) to (26,-5) to (1,-5) to (1,-1) to (2,-1);
+                \draw[densely dashed, line width=0.6pt, rounded corners] (3,-1) to (3,1) to (-1,1) to (-1,-7) to (28,-7) to (28,1) to (24,1) to (24,-1) to (26,-1) to (26,-5) to (1,-5) to (1,-1) -- cycle;
                 \node at (26.4,2.5) {\(U_p\)};
             \end{tikzpicture}}
-        \caption{Bachelors' unknotting demonstrating the isotopy equivalence of a knot with tame arc to the trivial knot. Here we have chosen the point \(r\) (not shown in the figure) to be the midpoint of the knotted region. \(f(a)\) and \(f(b)\) are the intersections of the knot \(K\), represented by the thick red line, with \(U_p\), shown using dashed lines. Note that \(f(a)\), \(r\) and \(f(b)\) are collinear in this case. The entirety of the knot is tame in this case, but we only require tameness in the chosen region of \(U_p \cap K\).}
+        \caption{Bachelors' unknotting demonstrating the isotopy equivalence of a knot with tame arc to the trivial knot. Here we have chosen the point \(r\) (not shown in the figure) to be the midpoint of the knotted region. \(f(a)\) and \(f(b)\) are the intersections of the knot \(K\), represented by the thick red line, with \(U_p\), shown using densely dashed lines. Note that \(f(a)\), \(r\) and \(f(b)\) are collinear in this case. The entirety of the knot is tame in this case, but we only require tameness in the chosen region of \(U_p \cap K\).}
         \label{fig:bachelor}
     \end{figure}
 
@@ -256,8 +262,8 @@ Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t 
 
             \draw[black, dotted, line width=0.6pt] (0,2) node[anchor=east, black]{\((a+b)/2\)} -- (4,2);
             \draw[black, dotted, line width=0.6pt] (2,0) -- (2,4);
-            \draw[black, dashed, line width=0.7pt] (2,1.5) -- (0,1.5) node[anchor=east, black]{\(\phi_t(a)\)};
-            \draw[black, dashed, line width=0.7pt] (2,2.5) -- (0,2.5) node[anchor=east, black]{\(\phi_t(b)\)};
+            \draw[black, densely dashed, line width=0.7pt] (2,1.5) -- (0,1.5) node[anchor=east, black]{\(\phi_t(a)\)};
+            \draw[black, densely dashed, line width=0.7pt] (2,2.5) -- (0,2.5) node[anchor=east, black]{\(\phi_t(b)\)};
 %             \node at (-0.36,1.5) {\(\phi_t(a)\)};
 %             \node at (-0.36,2.5) {\(\phi_t(b)\)};
 %             \node at (-0.6,1.98) {\((a+b)/2\)};
@@ -274,7 +280,7 @@ Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t 
 \end{proof}
 
 \begin{remark}
-    It should be noted that the isotopy that we have constructed does not shrink \(K - (U_p \cap K)\) uniformly. Parts of the strand closer to the point \(r\) are shrunk more than the parts further away. Also, not all parts move at a uniform rate towards \(r\). Parts closer to \(r\) move slower than the parts further\footnote{The knotted parts are scaled uniformly though in \cref{fig:bachelor} due to the ease of drawing such a figure.}.
+    It should be noted that the isotopy that we have constructed does not shrink \(K - (U_p \cap K)\) uniformly. Parts of the strand closer to the point \(r\) are shrunk more than the parts further away. Also, not all parts move at a uniform rate towards \(r\). Parts closer to \(r\) move slower than the parts further.%\footnote{The knotted parts are scaled uniformly though in \cref{fig:bachelor} due to the ease of drawing such a figure.}.
 \end{remark}
 
 
@@ -344,7 +350,7 @@ In the above considered isotopy, we isotoped the set \(X = K\). Instead, we take
                 \draw[thick, red] (tl) -- (tr.center);
             \end{tikzpicture}}
         \subcaptionbox{The cinquefoil knot}{
-            \begin{tikzpicture}
+            \begin{tikzpicture}[rotate=18]
                 \begin{knot}[thick, red, clip width=7,
                     consider self intersections=true,
                     %  draft mode=crossings,

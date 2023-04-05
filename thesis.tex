@@ -1,13 +1,9 @@
 % !TEX TS-program = lualatex
 % !TEX root = ../thesis.tex
 
-\documentclass[12pt, a4paper]{report}
+\documentclass[10pt, a4paper, twoside]{report}
 
-
-
-
-
-
+% \usepackage[left=1.5in,right=1.5in]{geometry}
 
 \usepackage{setspace}
 %\onehalfspacing
@@ -64,9 +60,9 @@
 			\vfill
 			%\centerline{\includegraphics[scale=0.20]{iiser_b.png}}
 			\ \\
-			\textbf{DEPARTMENT OF \MakeUppercase{\subject} \\
-				INDIAN INSTITUTE OF SCIENCE EDUCATION AND RESEARCH BHOPAL\\ %Flows onto two lines
-				BHOPAL - 462066} \\
+			\textbf{DEPARTMENT OF \MakeUppercase{\subject}, \\
+				INDIAN INSTITUTE OF SCIENCE EDUCATION AND RESEARCH BHOPAL,\\ %Flows onto two lines
+				BHOPAL - 462 066} \\
 			\ \\
 			\textbf{\thesisdate}
 		\end{center}
@@ -112,7 +108,7 @@
 %\usepackage[bold=0.04]{xfakebold}
 %\usepackage{xfp}
 
-\usepackage{embedall} \embedfile{thesis.bib}
+% \usepackage{embedall} \embedfile{thesis.bib}
 % \embedfile{apoorv_potnis_synopsis.xmpdata}
 
 \usepackage{dsfont}
@@ -538,7 +534,7 @@
 	\end{center}
 
 	% ------------------------------
-	\head{Academic Integrity and Copyright Disclaimer}
+	\begin{doublespace}\head{Academic Integrity and Copyright Disclaimer}\end{doublespace}
 
 	I hereby declare that this project is my own work and, to the best of my knowledge, it contains no materials previously published or written by another
 	person, or substantial proportions of material which have been accepted for the award of any other degree or diploma at IISER Bhopal or any other educational institution, except where due acknowledgement is made in the document.
