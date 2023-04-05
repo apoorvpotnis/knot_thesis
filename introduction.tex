@@ -127,7 +127,7 @@ Although one can talk about embeddings of higher dimensional `circles' in higher
     But this condition comes with a problem as well, namely we cannot use polygons for describing knots.
     \item Piecewise linearity.
 
-    We can demand all the edges of a knot to be piecewise linear. Our knot shall be a polynomial in that case. A polygon has finitely many edges. Infinitely (countably) many sections in a wild knot shall mean infinitely many edges (of decreasing length), which is not allowed. Thus, this condition excludes wild knots.
+    We can demand all the edges of a knot to be piecewise linear with finitely many edges. Our knot shall be a polynomial (with finitely many edges) in that case. Infinitely (countably) many sections in a wild knot shall mean infinitely many edges (of decreasing length), which is not allowed. Thus, this condition excludes wild knots.
     \item Local flatness.
 \end{enumerate}
 In this thesis, we shall take the third route following Cromwell~\cite[chp.~1]{cromwell}. If we consider a local neighbourhood around each point of the knot, except the limit point, then we see visually see that we can always find a small enough local neighbourhood around each such point such that the strand is not `knotted' in that neighbourhood. At the limit point, no matter how small a neighbourhood we take, the strand shall always be `knotted'. We enforce this `local unknottedness' condition by demanding local flatness. Let \(p\) be a point in a knot \(K\), \(\symup{B}(\symup{O}, 1)\) be the unit ball centered at origin \(\symup{O}\) and \(d\) be a diameter of \(\symup{B}(\symup{O}, 1)\).
@@ -142,11 +142,6 @@ Consider a spherical neighbourhood around a locally flat point. There exists a r
 \begin{defn}[Tame knots]
     A knot is said to be tame if all its points are locally flat.
 \end{defn}
-
-\begin{remark}
-    All three approaches for excluding pathological behaviour, including \(\symup{C}^r\) for all \(r\), generate the same knot isotopy classes (insert citations).
-\end{remark}
-
 
 \section{Distinguishing knots}
 
@@ -308,6 +303,10 @@ In the above considered isotopy, we isotoped the set \(X = K\). Instead, we take
 
 \begin{remark}
     Note that we distinguish between \textit{ambient isotopy} and \textit{isotopy}. Many treatments of knot theory use the word isotopy for ambient isotopy as ambient isotopy is the useful construct in knot theory. Ambient isotopy is an isotopy of the whole space containing the knot, not just the knot.
+\end{remark}
+
+\begin{remark}
+    All three approaches for excluding pathological behaviour, including \(\symup{C}^r\) for all \(r \geq 1\), generate the same knot isotopy classes (insert citations). The knot isotopy classes corresponding to \(\symup{C}^1\) curves, piecewise-linear curves with finitely many components, smooth \(\symup{C}^\infty\) curves and locally flat everywhere curves are equal~\cite[chp.~1, \S~1.11]{cromwell}.
 \end{remark}
 
 \begin{exmp}
