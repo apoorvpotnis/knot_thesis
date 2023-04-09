@@ -475,26 +475,23 @@
 \tikzset{grid/.style={gray,very thin,opacity=1}}
 
 
-\usetikzlibrary{decorations.pathreplacing}
-\tikzset{%
-	show curve controls/.style={
-		postaction={
-			decoration={
-				show path construction,
-				curveto code={
-					\draw [blue]
-					(\tikzinputsegmentfirst) -- (\tikzinputsegmentsupporta)
-					(\tikzinputsegmentlast) -- (\tikzinputsegmentsupportb);
-					\fill [red, opacity=0.5]
-					(\tikzinputsegmentsupporta) circle [radius=.5ex]
-					(\tikzinputsegmentsupportb) circle [radius=.5ex];
-				}
-			},
-			decorate
-		}}}
-
-
-
+% \usetikzlibrary{decorations.pathreplacing}
+% \tikzset{%
+% 	show curve controls/.style={
+% 		postaction={
+% 			decoration={
+% 				show path construction,
+% 				curveto code={
+% 					\draw [blue]
+% 					(\tikzinputsegmentfirst) -- (\tikzinputsegmentsupporta)
+% 					(\tikzinputsegmentlast) -- (\tikzinputsegmentsupportb);
+% 					\fill [red, opacity=0.5]
+% 					(\tikzinputsegmentsupporta) circle [radius=.5ex]
+% 					(\tikzinputsegmentsupportb) circle [radius=.5ex];
+% 				}
+% 			},
+% 			decorate
+% 		}}}
 
 \begin{document}
 
@@ -573,6 +570,8 @@
 % 		\end{tikzpicture}
 
 % 	\end{figure}
+
+	\tableofcontents
 	\pagenumbering{arabic}
 
 	\input{introduction.tex}

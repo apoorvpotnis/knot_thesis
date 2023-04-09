@@ -320,14 +320,28 @@ Denote by \(\tauu_i\) the geometric \(n\)-braid such that
 
 			%draw the axes
 			\begin{knot}[clip width=8]
+				\strand[thick, red] (-3,-0.1) to (-3,2.1);
+				\strand[thick, red] (-1,-0.1) to (-1,2.1);
 				\strand[thick, red] (0,0) to (2,2);
 				\strand[thick, red] (2,0) to (0,2);
+				\strand[thick, red] (3,-0.1) to (3,2.1);
+				\strand[thick, red] (5,-0.1) to (5,2.1);
 			\end{knot}
+			\node[ultra thick, red] at (-2,1) {\(\cdots\)};
+			\node[ultra thick, red] at (4,1) {\(\cdots\)};
 
+			\node[below, label={\(p_1\)}] at (-3,-0.7) {};
+			\node[below, label={\(p_{i-1}\)}] at (-1,-0.7) {};
+			\node[below, label={\(q_1\)}] at (-3,2) {};
+			\node[below, label={\(q_{i-1}\)}] at (-1,2) {};
 			\node[below, label={\(q_i\)}] at (0,2) {};
 			\node[below, label={\(q_{i+1}\)}] at (2,2) {};
 			\node[below, label={\(p_i\)}] at (0,-0.7) {};
 			\node[below, label={\(p_{i+1}\)}] at (2,-0.7) {};
+			\node[below, label={\(p_{i+2}\)}] at (3,-0.7) {};
+			\node[below, label={\(p_{n}\)}] at (5,-0.7) {};
+			\node[below, label={\(q_{i+2}\)}] at (3,2) {};
+			\node[below, label={\(q_{n}\)}] at (5,2) {};
 
 			%\node at (1, -1.1) {\(\tauu_i\)};
 		\end{tikzpicture}}
@@ -348,19 +362,34 @@ Denote by \(\tauu_i\) the geometric \(n\)-braid such that
 
 			%draw the axes
 			\begin{knot}[clip width=8]
+				\strand[thick, red] (-3,-0.1) to (-3,2.1);
+				\strand[thick, red] (-1,-0.1) to (-1,2.1);
 				\strand[thick, red] (0,0) to (2,2);
 				\strand[thick, red] (2,0) to (0,2);
+				\strand[thick, red] (3,-0.1) to (3,2.1);
+				\strand[thick, red] (5,-0.1) to (5,2.1);
 				\flipcrossings{1}
 			\end{knot}
+			\node[ultra thick, red] at (-2,1) {\(\cdots\)};
+			\node[ultra thick, red] at (4,1) {\(\cdots\)};
 
+			\node[below, label={\(p_1\)}] at (-3,-0.7) {};
+			\node[below, label={\(p_{i-1}\)}] at (-1,-0.7) {};
+			\node[below, label={\(q_1\)}] at (-3,2) {};
+			\node[below, label={\(q_{i-1}\)}] at (-1,2) {};
 			\node[below, label={\(q_i\)}] at (0,2) {};
 			\node[below, label={\(q_{i+1}\)}] at (2,2) {};
 			\node[below, label={\(p_i\)}] at (0,-0.7) {};
 			\node[below, label={\(p_{i+1}\)}] at (2,-0.7) {};
+			\node[below, label={\(p_{i+2}\)}] at (3,-0.7) {};
+			\node[below, label={\(p_{n}\)}] at (5,-0.7) {};
+			\node[below, label={\(q_{i+2}\)}] at (3,2) {};
+			\node[below, label={\(q_{n}\)}] at (5,2) {};
+
 
 			%\node at (1, -1.1) {\(\tauu_i^{-1}\)};
 		\end{tikzpicture}}
-	\caption{Generators \(\tauu_i\) and \(\tauu_i^{-1}\). We have omitted the other straight strands.}
+	\caption{Generators \(\tauu_i\) and \(\tauu_i^{-1}\)}
 	\label{fig:geometricbraidgenerators}
 \end{figure}
 
@@ -393,7 +422,7 @@ If we multiply \(\tauu_i\) and \(\tauu_i^{-1}\) to form \(\tauu_i \tauu_i^{-1}\)
 		\node at (1, -0.7) {\(\I_n\)};
 	\end{tikzpicture}
 
-	\captionof{figure}{A type II move illustrating \(\tauu_i \tauu_i^{-1} = \I_n\)}
+	\captionof{figure}{A type II move illustrating \(\tauu_i \tauu_i^{-1} = \I_n\).}
 	\label{fig:type2}
 \end{figure}
 
@@ -491,7 +520,7 @@ We define the closure of a geometric \(n\)-braid as follows. Consider a geometri
 				%\strand[thick, red] (6,0) to [in angle=-90, out angle=90, curve through = {(6,4)}] (4,6);
 			\end{knot}
 
-			%\node at (2, -0.7) {\(b\)};\cite{witten}
+			%\node at (2, -0.7) {\(b\)};
 		\end{tikzpicture}}
 	\quad\quad\subcaptionbox{\(\overline{b}\)}{
 		\begin{tikzpicture}
