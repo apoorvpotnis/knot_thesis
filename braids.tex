@@ -679,7 +679,65 @@ We observe that if \(b \in \GB_n\), then \(b \tauu_n \in \GB_{n+1}\), \(b \tauu_
 
 \section{Orientation}
 
-We see visually that the result of a Markov move on a braid is equivalent to performing a type I move on the braid closure. We know that a type I move increases or decreases the writhe of a link by a unit value. Since all the crossings in a braid closure occur only in the cube containing the braid strands, we can define the writhe of a braid equal to the writhe of the braid closure by assigning each braid crossing a value, either \(+1\) or \(-1\). Our assignment must be consistent with our earlier assignment for knots. But for this procedure, we need to assign an orientation to the braid. We assign all the strands (inside the braid cube) a downward orientation. Doing so, we see that \(\tauu_i\) inherits \(+1\) value while \(\tauu_i^{-1}\) inherits \(-1\). We could instead have assigned all the strands an upward orientation as well. This would not have changed the values of \(\tauu_i\) and \(\tauu_i^{-1}\) (\cref{fig:writhebraids}). What is not allowed is assigning arbitrary orientation to strands. If we assign the orientation arbitrarily, then the well-definedness of the orientation cannot be guaranteed. Two distinct strands in a braid could be connected via the closure strands and one would need to check the whole connected link component of the braid closure for a well-defined closure.
+We see visually that the result of a Markov move on a braid is equivalent to performing a type I move on the braid closure. We know that a type I move increases or decreases the writhe of a link by a unit value. Since all the crossings in a braid closure occur only in the cube containing the braid strands, we can define the writhe of a braid equal to the writhe of the braid closure by assigning each braid crossing a value, either \(+1\) or \(-1\). Our assignment must be consistent with our earlier assignment for knots. But for this procedure, we need to assign an orientation to the braid. We assign all the strands (inside the braid cube) a downward orientation (\cref{fig:2drepbraidsorientation}).
+
+\begin{figure}
+	\centering
+	\begin{tikzpicture}
+		[scale=1.5,
+		cube/.style={thick,black},
+		grid/.style={very thin,gray},
+		axis/.style={->,beamer@blendedblue,thick}]
+
+% 				\draw[axis] (0,0,0) -- (5,0) node[anchor=west]{\(x\)};
+% 				\draw[axis] (0,0,0) -- (0,2.8) node[anchor=south]{\(y\)};
+
+		\begin{knot}[clip width=8]
+			\strand[thick, red, draw=red,
+			only when rendering/.style={
+				postaction=decorate,
+			},
+			decoration={
+				markings,
+				mark=at position .9 with {\arrowreversed{To}}
+			}] (1,0) to [in angle=-90, out angle=90, curve through = {(1.3,0.4)}] (4,2);% node[black, below]{\(p_1\)};
+			\strand[thick, red,
+			only when rendering/.style={
+				postaction=decorate,
+			},
+			decoration={
+				markings,
+				mark=at position .8 with {\arrowreversed{To}}
+			}] (2,0) to [in angle=-90, out angle=90, curve through = {(1.3,1.2)}] (1,2);% node[black, below]{\(p_2\)};
+			\strand[thick, red,
+			only when rendering/.style={
+				postaction=decorate,
+			},
+			decoration={
+				markings,
+				mark=at position .8 with {\arrowreversed{To}}
+			}] (3,0) to [in angle=-90, out angle=90, curve through = {(2.8,0.5)}] (2,2);% node[black, below]{\(p_3\)};
+			\strand[thick, red,
+			only when rendering/.style={
+				postaction=decorate,
+			},
+			decoration={
+				markings,
+				mark=at position .8 with {\arrowreversed{To}}
+			}] (4,0) to [in angle=-90, out angle=90, curve through = {(3.2,1.6)}] (3,2);% node[black, below]{\(p_4\)};
+			\flipcrossings{2}
+		\end{knot}
+
+% 				\node[below, label={\(q_1\)}] at (1,2) {};
+% 				\node[below, label={\(q_2\)}] at (2,2) {};
+% 				\node[below, label={\(q_3\)}] at (3,2) {};
+% 				\node[below, label={\(q_4\)}] at (4,2) {};
+	\end{tikzpicture}
+	\caption{A braid with downward orientation}
+	\label{fig:2drepbraidsorientation}
+\end{figure}
+
+Doing so, we see that \(\tauu_i\) inherits \(+1\) value while \(\tauu_i^{-1}\) inherits \(-1\). We could instead have assigned all the strands an upward orientation as well. This would not have changed the values of \(\tauu_i\) and \(\tauu_i^{-1}\) (\cref{fig:writhebraids}). What is not allowed is assigning arbitrary orientation to strands. If we assign the orientation arbitrarily, then the well-definedness of the orientation cannot be guaranteed. Two distinct strands in a braid could be connected via the closure strands and one would need to check the whole connected link component of the braid closure for a well-defined closure.
 
 \noindent Thus, the writhe \(w\) of the braid \(b\) with a word representation \(\prod_{j=1}^{m} \tauu^{\beta_j}_{\alpha_j}\) of length \(m\), where \(\beta_j \in \{+1, -1\}\) is \[w(b) = \sum_{j = 1}^{m}\beta_j.\] Note that the writhe of a braid is dependent on its word representation. We also see that \(w(b) = w(\overline{b})\).
 
@@ -776,7 +834,7 @@ We simply evaluate the bracket on the closure of the braid. We observe that this
 \end{figure}
 We can thus use consider \(\sigmaa_i\) to be equivalent to \(A + A^{-1}\symup{U}_i\), \(\sigmaa^{-1}_i\) to be equivalent to \(A^{-1} + A\symup{U}_i\), and create a formalism based on this. Given a braid word representation of a braid, we can simply substitute the above mentioned equivalences to get a product of \(\symup{U}_i\)'s, with \(A\) and \(A^{-1}\) as coefficients. Note that this product is dependent on the specific braid representation of a knot. It is not invariant under a type I move, as is the case with the un-normalised bracket polynomial.
 
-We see that each bracket polynomial evaluation state of the closure of a braid can be written in terms of the closure of a product of the input-output forms. Given a braid word \(b\), we can consider it equivalent to \(S(b)\), where \(S(b)\) is the sum of products of the \(\symup{U}_i\)'s obtained by substituting \(\sigmaa_i\) by \(A + A^{-1}\symup{U}_i\) and \(\sigmaa_i^{-1}\) by \(A^{-1} + A\symup{U}_i\). Closure of each term (a product in \(U_i\)'s) in the sum corresponds to a state obtained while evaluating the bracket polynomial as it gives a collection of loops. If \(P\) is such a product, then \(\left\langle P\,\right\rangle = \braket<\overline{P}\,> = \symup{\delta}^{\norm{P}}\), where \(\norm{P}\) is the number of loops in \(\overline{P}\) minus \(1\), and \(\symup{\delta} = -A^{-2} - A^2\). Thus, \[S(b) = \sum_s \braket<b|s> P_s,\] where \(s\) denotes a state and indexes all the terms in the product, and \(\braket<b|s>\) is the product of \(A\)'s and \(A^{-1}\)'s multiplying each \(P\)-product \(P_s\). We have \[\braket<b> = \braket<S(b)> = \sum_s \braket<b|s> \braket<P_s> = \sum_s \braket<b|s> \updelta^{\norm{s}}.\]
+We see that each bracket polynomial evaluation state of the closure of a braid can be written in terms of the closure of a product of the input-output forms. Given a braid word \(b\), we can consider it equivalent to \(S(b)\), where \(S(b)\) is the sum of products of the \(\symup{U}_i\)'s obtained by substituting \(\sigmaa_i\) by \(A + A^{-1}\symup{U}_i\) and \(\sigmaa_i^{-1}\) by \(A^{-1} + A\symup{U}_i\). Closure of each term (a product in \(U_i\)'s) in the sum corresponds to a state obtained while evaluating the bracket polynomial as it gives a collection of loops. If \(P\) is such a product, then \(\left\langle P\,\right\rangle = \langle\mybar[0.9][2pt]{P}\,\rangle = \symup{\delta}^{\norm{P}}\), where \(\norm{P}\) is the number of loops in \(\mybar[0.9][2pt]{P}\) minus \(1\), and \(\symup{\delta} = -A^{-2} - A^2\). Thus, \[S(b) = \sum_s \braket<b|s> P_s,\] where \(s\) denotes a state and indexes all the terms in the product, and \(\braket<b|s>\) is the product of \(A\)'s and \(A^{-1}\)'s multiplying each \(P\)-product \(P_s\). We have \[\braket<b> = \braket<S(b)> = \sum_s \braket<b|s> \braket<P_s> = \sum_s \braket<b|s> \updelta^{\norm{s}}.\]
 
 \begin{exmp}
 	Let \(b = \sigmaa_1\sigmaa_2^{-1}\). We can resolve \(\overline{b}\) in many states. One of the states \(s\) and its corresponding product \(\U_1 \U_2\) in terms of the input-output forms is shown in \cref{fig:inputoutputexample}.
@@ -842,12 +900,12 @@ We see that each bracket polynomial evaluation state of the closure of a braid c
 		P(b) &= A^2\U_2 + \I_3 + \U_1\U_2 + A^{-2}\U_1\\
 		\braket<b> = \braket<\sigmaa_1\sigmaa^{-1}_2> = \braket<P(b)> &= A^2\braket<\U_2> + \braket<\I_3> + \braket<\U_1\U_2> + A^{-2}\braket<\U_1>.
 	\end{align*}
-	Now, \(\I_3\) corresponds to \BPIthree. Thus, \(\braket<I_3> = \updelta^{3-1} = \updelta^2\) as the closure of \(\I_3\) shall give three loops. \(\U_1\) corresponds to \KPDonethree\,. Thus, \(\braket<\U_1> = \updelta^{2-1} = \updelta\) as the closure shall give two loops. Similarly, \(\braket<\U_2> = \updelta\) and \(\braket<\U_1\U_2> = \updelta^{1-1} = 1.\) For a visual representation of the state \(\U_1\U_2\), see \cref{fig:inputoutputexample}, where the closure gives one single loop. In the end, we get \[\braket<\overline{b}> = A^2\updelta + \updelta^2 + 1 + A^{-2}\updelta.\]
+	Now, \(\I_3\) corresponds to \BPIthree. Thus, \(\braket<I_3> = \updelta^{3-1} = \updelta^2\) as the closure of \(\I_3\) shall give three loops. \(\U_1\) corresponds to \KPDonethree\,. Thus, \(\braket<\U_1> = \updelta^{2-1} = \updelta\) as the closure shall give two loops. Similarly, \(\braket<\U_2> = \updelta\) and \(\braket<\U_1\U_2> = \updelta^{1-1} = 1.\) For a visual representation of the state \(\U_1\U_2\), see \cref{fig:inputoutputexample}, where the closure gives one single loop. In the end, we get \[\langle\overline{b}\rangle = A^2\updelta + \updelta^2 + 1 + A^{-2}\updelta.\]
 \end{exmp}
 
 \section{Temperley--Lieb algebra}
 
-We can give the \(\U_i\)'s a structure of their own by constructing the free additive algebra \(\TL_n\) with the generators \(\U_1, \U_2,\ldots, \U_{n-1}\) and the multiplicative relations coming from the interpretation of \(\U_i\)'s as input-output forms. We can consider this algebra over the ring \(\Z[A, A^{-1}]\) with \(\updelta = -A^{-2} - A^2 \in \Z[A, A^{-1}]\). We shall call \(\TL_n\) the Temperley--Lieb algebra. The multiplicative relations in \(\TL_n\) are as follows.
+We can give the \(\U_i\)'s a structure of their own by constructing the free additive algebra \(\TL_n\) with the generators \(\U_1, \U_2,\ldots, \U_{n-1}\) and the multiplicative relations coming from the interpretation of \(\U_i\)'s as input-output forms. We can consider this algebra as module over the ring \(\Z[A, A^{-1}]\) with \(\updelta = -A^{-2} - A^2 \in \Z[A, A^{-1}]\). We shall call \(\TL_n\) the Temperley--Lieb algebra. The multiplicative relations in \(\TL_n\) are as follows.
 \begin{enumerate}
 	\item \(\U_i\U_{i\pm 1}\U_i = \U_i\).
 	\item \(\U_i^2 = \updelta \U_i\).
