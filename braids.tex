@@ -86,9 +86,23 @@ Consider two \textit{ordered} sets of points \(L_1 \coloneq \{p_1 \coloneq (1,0,
 \begin{enumerate}
 	\item \(\gamma_i (0) = p_i\) and \(\gamma_i (1) = q_j\) for \(1 \leq i, j \leq n\).
 	\item Any plane perpendicular to the \(xy\)-plane and parallel to the \(x\)-axis intersects each of the curves either exactly once or not at all.
-	\item All the curves lie in the cube determined by the vertices \((0,0,1)\), \((0,0,-1)\), \((0,1,1)\), \((0,1,-1)\), \((n+1,0,1)\), \((n+1,0,-1)\), \((n+1,1,1)\), \((n+1,1,-1)\).
+	\item All the curves strictly lie in the cube determined by the vertices \((0,0,1)\), \((0,0,-1)\), \((0,1,1)\), \((0,1,-1)\), \((n+1,0,1)\), \((n+1,0,-1)\), \((n+1,1,1)\), \((n+1,1,-1)\).
 \end{enumerate}
-Such a labelled curve is called a strand in standard position and a family of such labelled \(n\) stands is called an \(n\)-strand set in a standard position. We can ambient isotope or rigidly move an \(n\)-strand set to get another \(n\)-strand set, possibly not in a standard position. Two \(n\)-strand sets are said to be equivalent if they are related by a sequence of rigid motions of the strand sets, and ambient isotopies of the strand sets such that the space outside the cube, along with the endpoints, remains fixed. We shall refer to an equivalence class of such \(n\)-strands as a geometric \(n\)-braid. Thus, a geometric \(n\)-braid is well-defined.
+Such a labelled curve is called a strand in standard position and a family of such labelled \(n\) stands is called an \(n\)-strand set in a standard position. We can ambient isotope or rigidly move an \(n\)-strand set to get another \(n\)-strand set, possibly not in a standard position. Two \(n\)-strand sets are said to be equivalent if they are related by a finite sequence of the following operations.
+\begin{enumerate}
+    \item Rigid motions of \(\R^3\). Note that the labels of the strands do not change.
+	\item Ambient isotopies of the strand sets such that the space outside the cube remains constant, and the ambient isotoped set satisfies the above mentioned first and second conditions for all times.
+\end{enumerate}
+
+\begin{remark}
+	Though rigid motions of the Euclidean space include rotations and reflections, we carry the labels of the endpoints as well when we isotope. For example, suppose we have two strand sets such that if we reflect points of one strand set with respect to a plane, we the unmarked points of the other strand set. This reflection shall reflect the marked endpoints of the strands as well. The two strand sets in consideration shall be considered equivalent iff all the marked endpoints match as well. \label{remark:reflectionrotation}
+\end{remark}
+
+\begin{remark}
+    Ambient isotopies which preserve the points outside the cube must preserve the points on the boundary as well, especially the endpoints. The curves cannot touch the boundary at all times.
+\end{remark}
+
+We shall refer to an equivalence class of such \(n\)-strands as a geometric \(n\)-braid. A geometric \(n\)-braid is well-defined.
 
 \begin{remark}
 	Even though we have restricted our strands to the a bounded cube in the standard position, we can in principle change the bounds of our cube in \(x\) and \(z\) directions to any value and get the same theory. We shall not pursue this approach here.
@@ -140,6 +154,10 @@ Now onwards, we shall always visually represent geometric \(n\)-braids using the
 \subsection{Group structure}
 
 Multiplication of any two \(n\)-geometric braids \(b_1\) and \(b_2\), denoted by \(b_1 b_2\) is defined as follows (\cref{fig:braidmultiplication}). Ambient isotope and then rigidly move \(b_1\) and \(b_2\) \textit{separately} in the standard position. Now translate only \(b_1\) in the \(+y\) direction by unit distance. The bottom points of \(b_1\) and the top points of \(b_2\) now coincide. Concatenate their strands and shrink the concatenated strands in the \(y\) direction by half keeping fixed the bottom points of \(b_2\). The result is another geometric \(n\)-braid \(b_1 b_2\) in the standard position. Multiplication defined this way is associative.
+
+\begin{remark}
+	Note that braid multiplication is not commutative in general. The reader is advised to refer to  remark~\ref{remark:reflectionrotation}.
+\end{remark}
 
 \begin{figure}
 	\centering

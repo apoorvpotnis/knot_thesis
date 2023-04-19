@@ -202,7 +202,8 @@
 \crefname{claim}{claim}{claims}
 \crefname{prop}{proposition}{propositions}
 \crefname{thm}{theorem}{theorems}
-\crefname{exmp}{example}{example}
+\crefname{exmp}{example}{examples}
+\crefname{remark}{remark}{remarks}
 %\PassOptionsToPackage{sorting=none}{hyperref}
 \hypersetup{colorlinks=true, urlcolor=blue, linkcolor=red, citecolor=OliveGreen}
 %\usepackage[a-3u]{pdfx}
@@ -586,15 +587,3 @@
   	\printbibliography
 
 \end{document}
-
-\item If \(\displaystyle x \in \Bigg[a, a+ t\left[\frac{b-a}{2} - a\right]\Bigg)\), then \\ \(\displaystyle i_t(f(x)) = f(a) + t\left[tr + (1-t)f\left(a + t\left(\frac{b-a}{2} - a\right)\right) - f(a)\right]\).
-\item If \(\displaystyle x \in \Bigg[a + t\left[\frac{b-a}{2} - a\right], b - t\left[b - \frac{b-a}{2}\right]\Bigg]\), then \\ \(i_t(f(x)) = tr + (1-t)f(x)\).
-\item If \(\displaystyle x \in \Bigg(b - t\left[b - \frac{b-a}{2}\right], b\Bigg]\), then
-\begin{flalign*}
-	i_t(f(x)) &= tr + (1-t)f\left(b - t\left(b - \frac{b-a}{2}\right)\right)&&\\
-	&\phantom{=} + t\left[f(b) - tr - (1-t)f\left(b - t\left(b - \frac{b-a}{2}\right)\right)\right].&&
-\end{flalign*}
-
-We want to show that the pre-image of the intersection of any open set in \(\rthree\) with the image of \(i\) is open. Consider an open set \(V \in \rthree\) and let \(t_0\) be such that \(A \coloneq i_{t_0} (K) \cap V\) is a single component arc inside \(V\). Let \(q \in A\). The pre-image of an open neighbourhood \(B \ni q\) in \(A\) is open by continuity of the isotopy in one component. Let the pre-image of the pre-image of \(B\) under \(f\) be \((x_1, x_2) \subset [0, 2\pii)\). Thus, \(i_{t_0}(f((x_1, x_2))) = B\). Since all points of \(B\) are interior points, we take an \(\varepsilon\) tubular neighbourhood around \(B\) such that the whole neighbourhood lies inside \(A\). Let this tube be \(C\). Now consider the set of all \(t\) such that \(i_t(i^{-1}_{t_0}(s))\) is inside \(C\) for all \(s \in B\). For each \(s\), we shall an open set \((t_{1, s}, t_{2, s})\). The union of all such open intervals for all \(s \in B\) is an open set in \( [0, 1] \times [0, 2\pii)\). Thus, for each open set in \(V' \in \rthree\), and for each point \(q'\in V\), we can create an open subset of \(V'\) such that the pre-image of this open subset is open. The union of all the pre-images for all points inside \(V'\) is an open set.
-
-The arc-length of a tame knot is finite. So, the intersection of \(i_t(K)\) with an open set of \(\rthree\) for each \(t\) shall consist of countable arcs. We now show why the number of arcs must be countable. Consider there are uncountably many arcs for a particular \(t\). Each arc is an intersection of a closed loop in with an open set in \(\rthree\) and so it would have a finite length. Uncountably many arcs of finite length cannot add up to give a loop of finite length. Thus, there must be countable many arcs. We shall apply the method described in the previous paragraph to all the arcs.
