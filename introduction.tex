@@ -130,7 +130,7 @@ Although one can talk about embeddings of higher dimensional `circles' in higher
     We can demand all the edges of a knot to be piecewise linear with finitely many edges. Our knot shall be a polynomial (with finitely many edges) in that case. Infinitely (countably) many sections in a wild knot shall mean infinitely many edges (of decreasing length), which is not allowed. Thus, this condition excludes wild knots.
     \item Local flatness.
 \end{enumerate}
-In this thesis, we shall take the third route following Cromwell~\cite[chp.~1]{cromwell}. If we consider a local neighbourhood around each point of the knot, except the limit point, then we see visually see that we can always find a small enough local neighbourhood around each such point such that the strand is not `knotted' in that neighbourhood. At the limit point, no matter how small a neighbourhood we take, the strand shall always be `knotted'. We enforce this `local unknottedness' condition by demanding local flatness. Let \(p\) be a point in a knot \(K\), \(\symup{B}(\symup{O}, 1)\) be the unit ball centered at origin \(\symup{O}\) and \(d\) be a diameter of \(\symup{B}(\symup{O}, 1)\).
+In this thesis, we shall take the third route following Cromwell~\cite[chp.~1]{cromwell}. Local flatness is a topological condition unlike other other two. If we consider a local neighbourhood around each point of the knot, except the limit point, then we see visually see that we can always find a small enough local neighbourhood around each such point such that the strand is not `knotted' in that neighbourhood. At the limit point, no matter how small a neighbourhood we take, the strand shall always be `knotted'. We enforce this `local unknottedness' condition by demanding local flatness. Let \(p\) be a point in a knot \(K\), \(\symup{B}(\symup{O}, 1)\) be the unit ball centered at origin \(\symup{O}\) and \(d\) be a diameter of \(\symup{B}(\symup{O}, 1)\).
 \begin{defn}[Local flatness]
     The point \(p\) is said to be locally flat if there exists a neighbourhood \(U \ni p\) such that the pair \((U, U \cap K)\) is homeomorphic to \((\symup{B}(\symup{O}, 1), d)\).
 
@@ -382,6 +382,10 @@ In the above considered isotopy, we isotoped the set \(X = K\). Instead, we take
     In this thesis, we shall look at knot theory in \(\rthree\). One can compactify \(\rthree\) to \(\sthree\) and do knot theory in \(\sthree\), as many treatments do. This does not result in a different knot theory.
 \end{remark}
 
+\section{Links}
+
+Introduce links here.
+
 \section{Knot diagrams}
 
 So far, we have depicted knots as curves in a plane (of paper) with the implicit understanding that if a strand goes under another strand, then we break the strand which goes underneath. We defined a knot as an object in three dimensions, but we can project the knot onto a plane to represent it, as we have done so far. We do not lose any topological information if we choose a `nice enough' projection. What we have been doing implicitly can be formalized; we shall see how. We shall introduce some preliminary topological notions which shall be required.
@@ -392,34 +396,72 @@ So far, we have depicted knots as curves in a plane (of paper) with the implicit
     A topological \(n\)-manifold is a Hausdorff and second-countable topological space such that each point has a neighbourhood homeomorphic to \(\R^n\) or \(\R^n_{\geq 0}\).
 \end{defn}
 
-% \begin{remark}
+\begin{remark}
+    Different sources define a topological manifold in slightly differing ways. Some require just paracompactness instead of second-countability. The above definition includes manifolds with boundary as well. Boundary points shall be the points which map to the boundary of \(\R^n_{\geq 0}\).
+\end{remark}
 
-% \end{remark}
+\begin{defn}
+    A curve is a compact \(1\)-manifold and a surface is a compact \(2\)-manifold.
+\end{defn}
 
+Up to homeomorphism, there are only four different connected \(1\)-manifolds, namely the real line, the real half-line, the compact interval and the circle.
 
+\subsection{Transversality}
 
-Let \(K\) be a knot and let \(\pi \colon \rthree \rightarrow \rtwo\) be a projection map. A point \(p \in \pi(K)\) is called \textit{regular} if \(\pi^{-1}(p)\) is a single point, and \textit{singular} otherwise. If \(\abs{\pi^{-1}(p)} = 2\), then \(p\) is called a \textit{double} point.
+We shall need to consider the ways surfaces and curves intersect each other. We use the principle of general position to classify these intersections. We shall follow the treatment of Cromwell in this section~\cite[chp.~2, \S~2.10]{cromwell}.
 
+A structure or property is said to be \textit{stable} if it maintains its essential characteristics when it is perturbed a little. In our context, this means that the original set of curves and surfaces must be homeomorphic to the perturbed set of curves and surfaces. We desire our intersections to be stable. A collection of curves in a plane is said to be \textit{stable} if the collection maintains its essential characteristics when perturbed a little. For example, consider the intersection of circle and a line as shown in \cref{fig:intersectionoflineandcircle}.
 
-%
-%
-% \section{Isotopy}
-%
-% \subsection{Bachelors' unknotting}
+\begin{figure}
+    \centering
+    \subcaptionbox{\label{subfig:intersectiona}}{\CWL}\quad\quad
+    \subcaptionbox{\label{subfig:intersectionb}}{\CWLO}\quad\quad
+    \subcaptionbox{\label{subfig:intersectionc}}{\CWLI}
+    \caption{Intersection of a line and a circle}\label{fig:intersectionoflineandcircle}
+\end{figure}
 
-% \begin{figure}
-%     \centering
-% 	\subcaptionbox{}{
-% 		\begin{tikzpicture}[scale=0.5]
-% 			\begin{knot}[clip width=5, consider self intersections,
-% 				ignore endpoint intersections=false]
-% 				\strand[thick, red] (7,3) to [curve through={(5,7) .. (2.7,5.2) .. (4,4) ..  (5.6,4.3) .. (6.9,5.5) .. (7,6) .. (6, 8).. (5,5)}] (7.5, 4);
-% 				\flipcrossings{1,3}
-% 			\end{knot}
-%
-% 		\end{tikzpicture}
-%
-% }
-% \end{figure}
-% .. (6.1,10.3) .. (4.4,10.3) .. (3.2,9.6) .. (4.4,10.3)
+The intersection as shown in \cref{subfig:intersectiona} is not stable as any translation or rotation of the straight line shall lead to a figure homeomorphic to \cref{subfig:intersectionb} or \cref{subfig:intersectionc}. The figure does not represent a \(1\)-manifold as no neighbourhood around the intersection point is homeomorphic to \(\R^n\). \Cref{subfig:intersectionb} is a union of two connected \(1\)-manifold components. \Cref{subfig:intersectionc} is again not a \(1\)-manifold. Since the number of intersection points is different in each case, all three figures are topologically distinct (not homeomorphic). The intersections in \cref{subfig:intersectionb} and \cref{subfig:intersectionc} are stable though.
 
+\begin{defn}
+    An intersection is said to be \textit{transverse} if a neighbourhood of it is homeomorphic to one of the following four cases.
+    \begin{enumerate}
+        \item The union of \(x\)-axis and \(y\)-axis in \(\R^2\).
+        \item The union of \(z\)-axis and \(xy\)-plane in \(\R^3\).
+        \item The union of \(xz\)-plane and \(yz\)-plane in \(\R^3\).
+        \item The union of \(xy\)-plane, \(xz\)-plane and \(yz\)-plane in \(\R^3\).
+    \end{enumerate}
+\end{defn}
+
+\begin{thm}
+    The above four cases the only stable arrangements of curves and surfaces in two and three dimensions.
+\end{thm}
+
+The above theorem states that if we have a stable set of curves and surfaces in two and three dimensions, then the set is homeomorphic to one the above four cases. A set of objects is said to be in \textit{general position} if all their intersections are transverse.
+
+\begin{thm}
+    Every finite set of curves and surfaces embedded in \(\R^3\) is arbitrarily close to an ambient isotopic set in general position.
+\end{thm}
+
+Thus, we can always eliminate points of tangency such as saddle points, maxima and minima. A detailed treatment about transversality of manifolds can be found in books of differential topology, such as the book of Guillemin and Pollack~\cite{pollack}.
+
+\subsection{Knot diagrams}
+
+Let \(L\) be a link and let \(\pi \colon \rthree \rightarrow \rtwo\) be a projection map. A point \(p \in \pi(L)\) is called \textit{regular} if \(\pi^{-1}(p)\) is a single point, and \textit{singular} otherwise. If \(\abs{\pi^{-1}(p)} = 2\), then \(p\) is called a \textit{double} point.
+
+We wish to get `nice enough' projections. There can be infinitely many singular points that occur in a projection. We demand that a projection contains only a finite number of singular points. Singular points shall be isolated in such a case. This shall exclude cases such as two line segments of link projecting onto the same line segment on the plane. The singular points can have multiple pre-images as well. We thus demand that \(\abs{\pi^{-1} (x)} \leq 2\). We also demand our projections to be stable so that if we change the projection direction by a small amount, the projection is essentially unchanged: no singular points are created or destroyed.
+
+\begin{defn}
+    If \(\pi(L)\) has a finite number of singular points and they are all transverse double points, then the projection is said to be a \textit{regular} projection.
+\end{defn}
+
+\begin{thm}
+    Every tame link admits a regular projection.
+\end{thm}
+
+A link projection with the added information about the relative heights at crossings is called a link diagram. We adopt the convention that if a strand passes underneath another strand, then we break the underneath strand at the crossing in the diagram. A regular projection has only finitely many crossings.
+
+\begin{thm}
+    Every tame link admits a diagram.
+\end{thm}
+
+Proofs of the above two theorems can be found in Cromwell~\cite[chp.~3]{cromwell}.
