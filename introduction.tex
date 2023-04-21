@@ -464,4 +464,87 @@ A link projection with the added information about the relative heights at cross
     Every tame link admits a diagram.
 \end{thm}
 
-Proofs of the above two theorems can be found in Cromwell~\cite[chp.~3]{cromwell}.
+Proofs of the above two theorems can be found in Cromwell~\cite[chp.~3]{cromwell}. From now on, unless mentioned otherwise, we shall always assume that our link diagrams correspond to regular projections.
+
+\begin{figure}
+    \centering
+    \subcaptionbox{A knot projection of the cinquefoil knot}[10cm]{
+        \begin{tikzpicture}[rotate=18]
+            \begin{knot}[thick, red, clip width=7,
+                consider self intersections=false,
+                %  draft mode=crossings,
+                flip crossing/.list={2,4},
+                only when rendering/.style={
+                    %    show curve controls
+                }
+                ]
+                \strand[thick, red] (2,0) .. controls +(0,1.0) and +(54:1.0) .. (144:2) .. controls +(54:-1.0) and +(18:-1.0) .. (-72:2) .. controls +(18:1.0) and +(162:-1.0) .. (72:2) .. controls +(162:1.0) and +(126:1.0) .. (-144:2) .. controls +(126:-1.0) and +(0,-1.0) .. (2,0);
+            \end{knot}
+        \end{tikzpicture}}\par\bigskip
+    \subcaptionbox{A knot diagram of the cinquefoil knot}[10cm]{
+        \begin{tikzpicture}[rotate=18]
+            \begin{knot}[thick, red, clip width=7,
+                consider self intersections=true,
+                %  draft mode=crossings,
+                flip crossing/.list={2,4},
+                only when rendering/.style={
+                    %    show curve controls
+                }
+                ]
+                \strand[thick, red] (2,0) .. controls +(0,1.0) and +(54:1.0) .. (144:2) .. controls +(54:-1.0) and +(18:-1.0) .. (-72:2) .. controls +(18:1.0) and +(162:-1.0) .. (72:2) .. controls +(162:1.0) and +(126:1.0) .. (-144:2) .. controls +(126:-1.0) and +(0,-1.0) .. (2,0);
+            \end{knot}
+        \end{tikzpicture}}
+\end{figure}
+
+\section{Reidemeister theorem}
+
+We can now encode all the topological information about a link in a two dimensional diagrammatic representation. If two links are ambient isotopic, then a natural question arises whether there exists relation between their diagrams. The famous and important theorem of Reidemeister answers this question in affirmative. Given a link diagram, we define three moves on local sections of a diagram, called as Reidemeister moves (\cref{fig:reidemeistermoves}). These moves are local, i.e.\@ we always perform these moves, or the ambient isotopies corresponding to these moves in a small enough neighbourhood such that everything is constant outside this neighbourhood. Such a neighbourhood exists as the knots are tame and the projections regular. moves preserve the link type.
+
+\begin{figure}
+    \centering
+    \subcaptionbox{A type I move}{
+        \begin{tikzpicture}
+            \begin{knot}[scale=2]
+                \strand[thick, red] (0,0) .. controls (0.3,0.5) .. (0,1);
+            \end{knot}
+            \begin{knot}[scale=1, yshift=1cm, xshift=2.5cm, clip width=8, ignore endpoint intersections=false, consider self intersections=true]
+                % 					\strand[thick, red] (0,0) .. controls (0.2,1) and (-1,0.9) .. (0.5,0.9);
+                \strand[thick, red] (-1,1) to[out=-90,in=-90] (1,0) to [out=90,in=90] (-1,-1);
+            \end{knot}
+        \end{tikzpicture}}\par\bigskip
+    \subcaptionbox{A type II move}{
+        \begin{tikzpicture}
+            \begin{knot}[scale=2]
+                \strand[thick, red] (0,0) .. controls (0.3,0.5) .. (0,1);
+                \strand[thick, red, xshift=0.7cm, xscale=-1] (0,0) .. controls (0.3,0.5) .. (0,1);
+            \end{knot}
+            \begin{knot}[scale=2, xshift=1.4cm, clip width=8]
+                \strand[thick, red] (0,0) .. controls (0.7,0.5) .. (0,1);
+                \strand[thick, red, xshift=0.7cm, xscale=-1] (0,0) .. controls (0.7,0.5) .. (0,1);
+            \end{knot}
+        \end{tikzpicture}}\par\bigskip
+    \subcaptionbox{A type III move}{
+        \begin{tikzpicture}[scale=0.8]
+            \begin{knot}[clip width=8]
+                \strand[thick, red] (-1,1) to (2,-2);
+                \strand[thick, red] (1,1) to (-2,-2);
+                \strand[ultra thick, blue] (-2,-1) to (2,-1);
+            \end{knot}
+            \begin{knot}[yshift=-1cm, yscale=-1, xshift=6cm, clip width=8]
+                \strand[thick, red] (-1,1) to (2,-2);
+                \strand[thick, red] (1,1) to (-2,-2);
+                \strand[ultra thick, blue] (-2,-1) to (2,-1);
+            \end{knot}
+        \end{tikzpicture}}
+    \label{fig:reidemeistermoves}
+    \caption{The Reidemeister moves.}
+\end{figure}
+
+We now state the Reidemeister theorem. It was proved by Kurt Reidemeister in 1927~\cite{reidemeister}, and by James Alexander and Garland Briggs in 1926~\cite{alexanderbriggs}.
+
+\begin{thm}[Reidemeister]
+    Two diagrams of a link are related by a finite sequence of Reidemeister moves.
+\end{thm}
+
+A proof of the above theorem can be found in the book of Murasugi on knots~\cite[chp.~4]{murasugi}.
+
