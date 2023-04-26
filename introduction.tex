@@ -2,7 +2,7 @@
 
 \section{Definition of a knot}
 
-We normally conceive of knots as open strings with `knotted' parts in between. Given a knotted string with two `open' ends, we can simply pull one end of the string to untie it, in the usual way we untie a knot, by inserting an open end into the knotted region is a strategic manner and pulling it on the other side\footnote{There exists another way of unknotting an open knot, often used in magic tricks. One creates another knot using the unknotted portion of the string on one side of the knotted portion such that this new knot `cancels' the original knot. In mathematical terms, the new knot is constructed such that the \textit{connected sum} of the original knot and the new knot gives an unknot. We shall not deal with connected sums of knots in this thesis.}. This way, any knot with two open ends can be untied. But if have a knot in a closed loop, we won't be able to untie it unless we cut it. We want our notion of a knot to be invariant under `pulling'. Thus, we model our mathematical definition on closed loops instead of open. Refer to~\cref{fig:openclosedknots}.
+We normally conceive of knots as open strings with `knotted' parts in between. Given a knotted string with two `open' ends, we can simply pull one end of the string to untie it, in the usual way we untie a knot, by inserting an open end into the knotted region is a strategic manner and pulling it on the other side\footnote{There exists another way of unknotting an open knot, often used in magic tricks. One creates another knot using the unknotted portion of the string on one side of the knotted portion such that this new knot `cancels' the original knot. In mathematical terms, the new knot is constructed such that the \textit{connected sum} of the original knot and the new knot gives an unknotted circle, or the \textit{unknot}. We shall not deal with connected sums of knots in this thesis.}. This way, any knot with two open ends can be untied. But if have a knot in a closed loop, we won't be able to untie it unless we cut it. We want our notion of a knot to be invariant under `pulling'. Thus, we model our mathematical definition on closed loops instead of open. Refer to~\cref{fig:openclosedknots}.
 
 \begin{figure}
     \centering
@@ -152,9 +152,9 @@ Any two homeomorphisms of the circle are homeomorphic to the circle and to each 
 
     The restriction of \(h\) to level \(t \in [0, 1]\) is \(h_t \colon X \times \{t\} \rightarrow \rthree\). \(h_0\) must be the identity map.
 \end{defn}
-Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t \in [0,1]\). The converse is not true. Insert example here. Homotopy allows a curve to pass through itself. All knots are thus homotopic to the trivial knot. If we do not allow a curve to pass through itself, i.e.\@ if we demand injectivity for each \(h_t\), then we get what is known as an isotopy. But isotopy is not useful for distinguishing knots as well, due to bachelors' unknotting. All tame knots, or more generally, all knots with a tame arc turn out to be isotopic to the trivial knot. It is an open problem if all knots are isotopic to the trivial knot~\cite{ancel, shijie}. In addition, it is not known as well if a knot known as the Bing sling, which is wild \textit{at all points} is isotopic to the trivial knot~\cite{ancel, shijie}.
+Note that the continuity of \(h\) implies the continuity of \(h_t\) for all \(t \in [0,1]\). The converse is not true though. Homotopy allows a curve to pass through itself. All knots are thus homotopic to the unknot, also referred to as the trivial knot. If we do not allow a curve to pass through itself, i.e.\@ if we demand injectivity for each \(h_t\), then we get what is known as an isotopy. But isotopy is not useful for distinguishing knots as well, due to bachelors' unknotting. All tame knots, or more generally, all knots with a tame arc turn out to be isotopic to the trivial knot. It is an open problem if all knots are isotopic to the trivial knot~\cite{ancel, shijie}. In addition, it is not known as well if a knot known as the Bing sling, which is wild \textit{at all points} is isotopic to the trivial knot~\cite{ancel, shijie}.
 \begin{prop}[Bachelors' unknotting]
-    Every knot with a tame arc is isotopic to the unknot.
+    Every knot with a tame arc is isotopic to the trivial knot.
 \end{prop}
 \begin{proof}
     \begin{figure}
@@ -288,14 +288,7 @@ In the above considered isotopy, we isotoped the set \(X = K\). Instead, we take
 \begin{defn}[Knot equivalence]
     Two knots \(K_1\) and \(K_2\) are said to be ambient isotopic if there exists an isotopy \(I \colon \rthree \times [0,1] \rightarrow \rthree\) such that \(I(K_1,0) = I_0(K_1) = K_1\) and \(I(K_1,1) = I_1(K_1) = K_2\).
 \end{defn}
-\begin{prop}
-    Knot equivalence is indeed an equivalence relation.
-\end{prop}
-\begin{proof}
-    Reflexivity.
-    Symmetry.
-    Transitivity.
-\end{proof}
+Knot equivalence is an equivalence relation as it satisfies the properties of reflexivity, symmetry and transitivity.
 
 \begin{remark}
     Each equivalence class of knots is called a \textit{knot type}. We would often forget the distinction between a knot and its knot type. The intended meaning can be inferred from the context.
@@ -306,7 +299,7 @@ In the above considered isotopy, we isotoped the set \(X = K\). Instead, we take
 \end{remark}
 
 \begin{remark}
-    All three approaches for excluding pathological behaviour, including \(\symup{C}^r\) for all \(r \geq 1\), generate the same knot isotopy classes (insert citations). The knot isotopy classes corresponding to \(\symup{C}^1\) curves, piecewise-linear curves with finitely many components, smooth \(\symup{C}^\infty\) curves and locally flat everywhere curves are equal~\cite[chp.~1, \S~1.11]{cromwell}.
+    All three approaches for excluding pathological behaviour, including \(\symup{C}^r\) for all \(r \geq 1\), generate the same knot isotopy classes. The knot isotopy classes corresponding to \(\symup{C}^1\) curves, piecewise-linear curves with finitely many components, smooth \(\symup{C}^\infty\) curves and locally flat everywhere curves are equal~\cite[\S~1.11]{cromwell}.
 \end{remark}
 
 \begin{exmp}
@@ -384,9 +377,46 @@ In the above considered isotopy, we isotoped the set \(X = K\). Instead, we take
 
 \section{Links}
 
-Introduce links here.
+So far, we have looked at embeddings of a single circle. We can embed more than one circles to get links.
 
-\section{Knot diagrams}
+\begin{defn}
+    A collection of disjoint embeddings of \(\sone\) in a three dimensional space is called a link.
+\end{defn}
+
+Each knot (an embedding of a circle) belonging to a link is called a \textit{component} of the link. The number of components of a link is called the \textit{multiplicity} of the link. We shall denote the multiplicity of a link \(L\) by \(\mu(L)\). A knot is thus a link with one component.
+
+A link such that when projected onto a plane gives us \(n\) disjoint circles is referred to as a trivial link with \(\mu(L) = n\) components. Refer to \cref{fig:triviallink} for a link with \(n = 4\). A link is trivial iff all its components are trivial knots and they are `unlinked'. Equivalently, a link is trivial if its components bound disjoint discs.
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \draw[thick, red] (0,0) circle [radius=1];
+        \draw[thick, red] (2.5,0) circle [radius=1];
+        \draw[thick, red] (5,0) circle [radius=1];
+        \draw[thick, red] (7.5,0) circle [radius=1];
+    \end{tikzpicture}
+    \caption{A trivial link with \(4\) components}
+    \label{fig:triviallink}
+\end{figure}
+
+Since a link is a union of knots, we might try to describe a link \(L\) as \(L = K_1 \cup \cdots \cup K_n\) such that images of \(K_i\)'s are disjoint. But this does not completely describe a link as this only lists the component parts, and does not indicate how they are put together in space.
+
+We can define two links to be equivalent if they are ambient isotopic, i.e.\@ there exists an ambient isotopy which takes one link to another. This equivalence relation is \textit{weak} in the sense that one has the freedom to match different components of the two links. We have not labelled the links.
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{knot}[clip width=7]
+            \strand[thick, red] (0,0) circle [radius=1];
+            \strand[thick, blue] (1,0) circle [radius=1];
+            \flipcrossings{1}
+        \end{knot}
+    \end{tikzpicture}
+    \caption{A Hopf link}
+    \label{fig:hopflink}
+\end{figure}
+
+\section{Link diagrams}
 
 So far, we have depicted knots as curves in a plane (of paper) with the implicit understanding that if a strand goes under another strand, then we break the strand which goes underneath. We defined a knot as an object in three dimensions, but we can project the knot onto a plane to represent it, as we have done so far. We do not lose any topological information if we choose a `nice enough' projection. What we have been doing implicitly can be formalized; we shall see how. We shall introduce some preliminary topological notions which shall be required.
 
@@ -404,7 +434,7 @@ So far, we have depicted knots as curves in a plane (of paper) with the implicit
     A curve is a compact \(1\)-manifold and a surface is a compact \(2\)-manifold.
 \end{defn}
 
-Up to homeomorphism, there are only four different connected \(1\)-manifolds, namely the real line, the real half-line, the compact interval and the circle.
+Up to homeomorphism, there are only four distinct connected \(1\)-manifolds, namely the real line, the real half-line, the compact interval and the circle.
 
 \subsection{Transversality}
 
@@ -444,7 +474,7 @@ The above theorem states that if we have a stable set of curves and surfaces in 
 
 Thus, we can always eliminate points of tangency such as saddle points, maxima and minima. A detailed treatment about transversality of manifolds can be found in books of differential topology, such as the book of Guillemin and Pollack~\cite{pollack}.
 
-\subsection{Knot diagrams}
+\subsection{Projections and diagrams}
 
 Let \(L\) be a link and let \(\pi \colon \rthree \rightarrow \rtwo\) be a projection map. A point \(p \in \pi(L)\) is called \textit{regular} if \(\pi^{-1}(p)\) is a single point, and \textit{singular} otherwise. If \(\abs{\pi^{-1}(p)} = 2\), then \(p\) is called a \textit{double} point.
 
@@ -508,8 +538,7 @@ We can now encode all the topological information about a link in a two dimensio
                 \strand[thick, red] (0,0) .. controls (0.3,0.5) .. (0,1);
             \end{knot}
             \begin{knot}[scale=1, yshift=1cm, xshift=2.5cm, clip width=8, ignore endpoint intersections=false, consider self intersections=true]
-                % 					\strand[thick, red] (0,0) .. controls (0.2,1) and (-1,0.9) .. (0.5,0.9);
-                \strand[thick, red] (-1,1) to[out=-90,in=-90] (1,0) to [out=90,in=90] (-1,-1);
+                \strand[thick, red] (-1,1) to[out=-90,in=-90] (0.5,0) to [out=90,in=90] (-1,-1);
             \end{knot}
         \end{tikzpicture}}\par\bigskip
     \subcaptionbox{A type II move}{
@@ -525,19 +554,19 @@ We can now encode all the topological information about a link in a two dimensio
         \end{tikzpicture}}\par\bigskip
     \subcaptionbox{A type III move}{
         \begin{tikzpicture}[scale=0.8]
-            \begin{knot}[clip width=8]
+            \begin{knot}[clip width=7]
                 \strand[thick, red] (-1,1) to (2,-2);
                 \strand[thick, red] (1,1) to (-2,-2);
                 \strand[ultra thick, blue] (-2,-1) to (2,-1);
             \end{knot}
-            \begin{knot}[yshift=-1cm, yscale=-1, xshift=6cm, clip width=8]
+            \begin{knot}[yshift=-1cm, yscale=-1, xshift=6cm, clip width=7]
                 \strand[thick, red] (-1,1) to (2,-2);
                 \strand[thick, red] (1,1) to (-2,-2);
                 \strand[ultra thick, blue] (-2,-1) to (2,-1);
             \end{knot}
         \end{tikzpicture}}
-    \label{fig:reidemeistermoves}
     \caption{The Reidemeister moves.}
+    \label{fig:reidemeistermoves}
 \end{figure}
 
 We now state the Reidemeister theorem. It was proved by Kurt Reidemeister in 1927~\cite{reidemeister}, and by James Alexander and Garland Briggs in 1926~\cite{alexanderbriggs}.
@@ -546,5 +575,84 @@ We now state the Reidemeister theorem. It was proved by Kurt Reidemeister in 192
     Two diagrams of a link are related by a finite sequence of Reidemeister moves.
 \end{thm}
 
-A proof of the above theorem can be found in the book of Murasugi on knots~\cite[chp.~4]{murasugi}.
+A proof of the above theorem can be found in the book of Murasugi on knots and links~\cite[chp.~4]{murasugi}.
+
+\subsection{Crossing number}
+
+Let \(c(D)\) denote the number of crossings in a diagram \(D\) of a link \(L\). The crossing number \(c(L)\) is is the minimum number of crossings in any diagram of the link.
+
+\section{Orientation}
+
+We can assign a direction or orientation to links. \Cref{fig:oriented} shows a trefoil knot and a Hopf link with orientations.
+
+\begin{figure}
+    \centering
+    \subcaptionbox{An oriented trefoil}{
+        \begin{tikzpicture}[
+            use Hobby shortcut,
+            every trefoil component/.style={thick, draw},
+            trefoil component 1/.style={red},
+            trefoil component 2/.style={red},
+            trefoil component 3/.style={red},
+            draw=red,
+            only when rendering/.style={
+                postaction=decorate,
+            },
+            decoration={
+                markings,
+                mark=at position 0.5 with {\arrowreversed{To}}
+            }]
+            \path[spath/save=trefoil] ([closed]90:2) foreach \k in {1,...,3} {
+                .. (-30+\k*240:.5) .. (90+\k*240:2) } (90:2);
+            \tikzset{spath/knot={trefoil}{8pt}{1,3,5}}
+        \end{tikzpicture}}\quad\quad
+    \subcaptionbox{An oriented Hopf link}{
+        \begin{tikzpicture}
+            \begin{knot}[clip width=7]
+                \strand[thick, red, draw=red,
+                only when rendering/.style={
+                    postaction=decorate,
+                },
+                decoration={
+                    markings,
+                    mark=at position 1 with {\arrowreversed{To}}
+                }] (0,0) circle [radius=1];
+                \strand[thick, blue, draw=blue,
+                only when rendering/.style={
+                    postaction=decorate,
+                },
+                decoration={
+                    markings,
+                    mark=at position 1 with {\arrowreversed{To}}
+                }] (1,0) circle [radius=1];
+                \flipcrossings{1}
+            \end{knot}
+        \end{tikzpicture}}
+    \caption{Oreinted links}
+    \label{fig:oriented}
+\end{figure}
+
+It can be seen that with orientations added, each crossing can be categorised in to two types, positive and negative. Refer to \cref{fig:crossings}. We can distinguish between the types of these crossings in the following manner. Hold your right hand thumb along the oriented direction of the upper strand. If the fingers curl along the oriented direction, then we call it a positive crossing and assign it the value \(+1\). If the fingers curl in the opposite direction, then we call it a negative crossing at assign it \(-1\).
+
+\begin{figure}
+    \centering
+    \subcaptionbox{Positive crossing \(+1\)}[3cm]{
+        \begin{tikzpicture}
+            \begin{knot}[clip width = 6]
+                \strand[->, thick, red] (1,1) to (0,2);
+                \strand[->, thick, red] (0,1) to (1,2);
+                \flipcrossings{1}
+            \end{knot}
+        \end{tikzpicture}}\quad
+    \subcaptionbox{Negative crossing \(-1\)}[3cm]{
+        \begin{tikzpicture}
+            \begin{knot}[clip width = 6]
+                \strand[->, thick, red] (1,1) to (0,2);
+                \strand[->, thick, red] (0,1) to (1,2);
+            \end{knot}
+        \end{tikzpicture}}
+    \caption{Assignment of crossing values}
+    \label{fig:crossings}
+\end{figure}
+
 
