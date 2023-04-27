@@ -1,0 +1,14 @@
+\chapter{The Jones polynomial and its Generalisations}
+
+In the previous chapters, we defined Kauffman's bracket polynomial using the state model and then normalised it to get a link invariant. Instead of using the state model, one can define the bracket polynomial in an axiomatic way as well. One defines the polynomial as a function on link diagrams which satisfies certain properties. We would need to check the well-definedness and invariance of such a function under the Reidemeister moves. We thus define the bracket polynomial in the following way.
+
+\begin{defn}[Kauffman's bracket polynomial]
+	Let \(K\) an unoriented link diagram. Then the bracket \(\bk \in \Z[A, A^{-1}]\) is defined by the rules:
+	\begin{enumerate}
+		\item \(\braket<\hspace{-0.9pt}\KPA> = 1\).
+		\item \(\braket<\KPA \cup K> = (-A^2 - A^{-2}) \braket<K\hspace{1pt}>\).
+		\item \(\BB = A\BD + A^{-1}\BE\).
+	\end{enumerate}
+\end{defn}
+
+This definition is consistent with the state model. \(\bk\) is invariant under the type II and type III moves. In order to gain type I invariance, we normalise it by multiplying \(\bk\) with \((-A^3)^{-w(K)}\).

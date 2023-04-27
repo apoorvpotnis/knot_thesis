@@ -583,24 +583,7 @@ Let \(c(D)\) denote the number of crossings in a diagram \(D\) of a link \(L\). 
 
 \section{Orientation}
 
-We can assign a direction or orientation to links. Take three points \(a\), \(b\) and \(c\) on a circle. We can define an orientation using a path such that one encounters the point \(a\) at the start, \(b\) in the middle and \(c\) at the end. If we transpose the points once, then we see that the orientation reverses. Even permutations of the set \({a,b,c}\) can be identified with one orientation and the odd permutations with the other.
-
-\begin{figure}
-    \centering
-    \begin{tikzpicture}
-        \tkzDefPoints{0/1/A,3/2/B,1/4/C}
-        \tkzDefTriangleCenter[circum](A,B,C)
-        \tkzGetPoint{O}
-        \tkzDrawPolygon(A,B,C)
-        \tkzDrawCircle(O,A)
-        \tkzDrawPoints(A,B,C,O)
-        \tkzLabelPoint(O){$O$}
-    \end{tikzpicture}
-
-\end{figure}
-
-
-\Cref{fig:oriented} shows a trefoil knot and a Hopf link with orientations.
+We can assign a direction or orientation to links. Take three points \(a\), \(b\) and \(c\) on a circle. We can define an orientation using a path such that one encounters the point \(a\) at the start, \(b\) in the middle and \(c\) at the end. If we transpose the points once, then we see that the orientation reverses. Even permutations of the set \(\{a,b,c\}\) can be identified with one orientation and the odd permutations with the other. \Cref{fig:oriented} shows a trefoil knot and a Hopf link with orientations.
 
 \begin{figure}
     \centering
@@ -683,5 +666,7 @@ It was conjectured for many years that minimal diagrams of a link, i.e.\@ diagra
 
 \subsection{Linking number}
 
-Let \(D\) be an oriented diagram of a \(2\)-component link \(K_1 \cup K_2\), and let \(D_i\) denote the component of \(D\) corresponding to \(K_i\). The crossings of \(D\) are of three types: \(D_1\) with itself, \(D_2\) with itself, and \(D_1\) with \(D_2\). We shall denote the last group by \(D_1 \cap D_2\). We define the \textit{linking number} of \(D_1\) with \(D_2\) as \[\operatorname{lk}(D_1, D_2) = \frac{1}{2} \sum_{c \in D_1 \cap D_2} \epsilon(c).\] As the name suggests, this quantity captures how many times one component `winds around' or `goes around' an other component. The linking number for the Hopf link in \cref{fig:oriented} is \(-1\). If we change the orientation of any of the components, keeping the other constant, we shall get a linking number of \(+1\). Changing the orientation of a component and keeping the others constant shall change only the sign of the linking number, and not the absolute value.
+Let \(D\) be an oriented diagram of a \(2\)-component link \(K_1 \cup K_2\), and let \(D_i\) denote the component of \(D\) corresponding to \(K_i\). The crossings of \(D\) are of three types: \(D_1\) with itself, \(D_2\) with itself, and \(D_1\) with \(D_2\). We shall denote the last group by \(D_1 \cap D_2\). We define the \textit{linking number} of \(D_1\) with \(D_2\) as \[\operatorname{\ell}(D_1, D_2) = \frac{1}{2} \sum_{c \in D_1 \cap D_2} \epsilon(c).\] As the name suggests, this quantity captures how many times one component `winds around' or `goes around' an other component. The linking number for the Hopf link in \cref{fig:oriented} is \(-1\). If we change the orientation of any of the components, keeping the other constant, we shall get a linking number of \(+1\). Changing the orientation of a component and keeping the others constant shall change only the sign of the linking number, and not the absolute value.
+
+Linking number is an invariant for oriented two component links as it does not change under the Reidemeister moves. This shall be a general strategy for proving that a function is an invariant; in order to prove that a function is a link invariant, we prove its invariance under the Reidemeister moves.
 
