@@ -151,6 +151,7 @@
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\uprhoo}{\uprho}
 \DeclareMathOperator{\proj}{\pi}
+\DeclareMathOperator{\V}{V}
 
 \newcommand\restr[2]{{% we make the whole thing an ordinary symbol
 		\left.\kern-\nulldelimiterspace % automatically resize the bar with \right
@@ -374,7 +375,7 @@
 	}%
 }
 \newcommand{\KPX}[1]{%
-	\begin{tikzpicture}[baseline=-\dimexpr\fontdimen22\textfont2\relax, > = {Straight Barb[bend, length=2.15, angle'=85]}]
+	\begin{tikzpicture}[baseline=-\dimexpr\fontdimen22\textfont2\relax]
 		#1
 	\end{tikzpicture}%
 }
@@ -613,9 +614,9 @@
 	\tableofcontents
 	\pagenumbering{arabic}
 
-	\input{introduction.tex}
-	\input{state.tex}
-	\input{braids.tex}
+% 	\input{introduction.tex}
+% 	\input{state.tex}
+% 	\input{braids.tex}
 	\input{generalisations.tex}
 
 	%\input{output.tex}

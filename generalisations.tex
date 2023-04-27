@@ -5,10 +5,32 @@ In the previous chapters, we defined Kauffman's bracket polynomial using the sta
 \begin{defn}[Kauffman's bracket polynomial]
 	Let \(K\) an unoriented link diagram. Then the bracket \(\bk \in \Z[A, A^{-1}]\) is defined by the rules:
 	\begin{enumerate}
-		\item \(\braket<\hspace{-0.9pt}\KPA> = 1\).
+		\item \(\braket<\hspace{-0.5pt}\KPA> = 1\).
 		\item \(\braket<\KPA \cup K> = (-A^2 - A^{-2}) \braket<K\hspace{1pt}>\).
 		\item \(\BB = A\BD + A^{-1}\BE\).
 	\end{enumerate}
 \end{defn}
 
-This definition is consistent with the state model. \(\bk\) is invariant under the type II and type III moves. In order to gain type I invariance, we normalise it by multiplying \(\bk\) with \((-A^3)^{-w(K)}\).
+This definition is consistent with the state model. \(\bk\) is invariant under the type II and type III moves. In order to gain type I invariance, we normalise it by adding an orientation and multiplying \(\bk\) with \((-A^3)^{-w(K)}\).
+
+\subsection{Jones polynomial}
+
+We now give an axiomatic definition of the Jones polynomial.
+
+\[
+F\BF
+G\BG
+H\BH
+I\BI
+J\BJ
+K\BK
+L\BL
+\]
+
+\begin{defn}[Jones polynomial]
+	Let \(K\) be an oriented link diagram. Then the Jones polynomial \(\displaystyle \V(K) \in \Z\left[\sqrt{t}, \frac{1}{\sqrt{t}}\right]\) is defined by the rules:
+	\begin{enumerate}
+	    \item \(\V\CL = 1\).
+		\item \(\displaystyle \frac{1}{t}\V\CF - t\V\CG = \left(\sqrt t - \frac{1}{\sqrt{t}}\right)\).
+	\end{enumerate}
+\end{defn}
