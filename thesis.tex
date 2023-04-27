@@ -222,6 +222,21 @@
 		#1
 	\end{tikzpicture}%
 }
+\newcommand{\TREFOIL}{
+	\KP{
+		\begin{tikzpicture}[xshift=0.6cm, xscale=-0.25, yscale=0.25,
+                use Hobby shortcut,
+                every trefoil component/.style={line width=0.6pt, draw},
+                trefoil component 1/.style={black},
+                trefoil component 2/.style={black},
+                trefoil component 3/.style={black},
+                ]
+                \path[spath/save=trefoil] ([closed]90:2) foreach \k in {1,...,3} {
+                    .. (-30+\k*240:.5) .. (90+\k*240:2) } (90:2);
+				\tikzset{spath/knot={trefoil}{4pt}{1,3,5}}
+            \end{tikzpicture}
+	}
+}
 \newcommand{\CWL}{
 	\KP{
 		\filldraw[fill=none, thick, red] circle (0.7);
