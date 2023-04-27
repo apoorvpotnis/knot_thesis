@@ -3,7 +3,7 @@
 
 \documentclass[10pt, a4paper]{report}
 
-\usepackage[left=1.5in,right=1.5in]{geometry}
+\usepackage[left=1.5in, right=1.5in]{geometry}
 
 \usepackage{setspace}
 % \onehalfspacing
@@ -100,7 +100,7 @@
 % \setmathfont[StylisticSet=0]{XITS Math}
 % \setmathfont[range={\mathcal,\mathbfcal},StylisticSet=1]{XITS Math}
 \usepackage[dvipsnames]{xcolor}
-\usepackage{microtype, lipsum, comment, tikz, tikz-3dplot, float, subcaption, tikz-cd, xurl, adjustbox, svg}
+\usepackage{microtype, lipsum, comment, tikz, tikz-3dplot, float, subcaption, tikz-cd, xurl, adjustbox, svg, tkz-euclide}
 \usepackage{physics2}\usephysicsmodule{ab,ab.braket}
 \usetikzlibrary{knots, hobby, braids}
 % \usepackage{embedall}
@@ -337,40 +337,40 @@
 }
 \newcommand{\KPF}{%
 	\KP{
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (-0.3,0.3) -- (0.3,-0.3);
+		\draw[->, line width=0.6pt] (-0.3,0.3) -- (0.3,-0.3);
 		\draw[line width=0.6pt] (-0.3,-0.3) -- (-0.05,-0.05);
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (0.05,0.05) -- (0.3,0.3);
+		\draw[->, line width=0.6pt] (0.05,0.05) -- (0.3,0.3);
 	}%
 }
 \newcommand{\KPG}{%
 	\KP{
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (-0.3,-0.3) -- (0.3,0.3);
+		\draw[->, line width=0.6pt] (-0.3,-0.3) -- (0.3,0.3);
 		\draw[line width=0.6pt] (-0.3,0.3) -- (-0.05,0.05);
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (0.05,-0.05) -- (0.3,-0.3);
+		\draw[->, line width=0.6pt] (0.05,-0.05) -- (0.3,-0.3);
 	}%
 }
 \newcommand{\KPH}{%
 	\KP{%
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (-0.3,0.3) .. controls (0,-0.05) .. (0.3,0.3);
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (-0.3,-0.3) .. controls (0,0.05) .. (0.3,-0.3);
+		\draw[->, line width=0.6pt] (-0.3,0.3) .. controls (0,-0.05) .. (0.3,0.3);
+		\draw[->, line width=0.6pt] (-0.3,-0.3) .. controls (0,0.05) .. (0.3,-0.3);
 	}%
 }
 \newcommand{\KPI}{%
 	\KP{%
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (-0.3,0.3) .. controls (0,-0.05) .. (0.3,0.3);
-		\draw[{Straight Barb[angle'=85, length=2.15]}-, line width=0.6pt] (-0.3,-0.3) .. controls (0,0.05) .. (0.3,-0.3);
+		\draw[->, line width=0.6pt] (-0.3,0.3) .. controls (0,-0.05) .. (0.3,0.3);
+		\draw[<-, line width=0.6pt] (-0.3,-0.3) .. controls (0,0.05) .. (0.3,-0.3);
 	}%
 }
 \newcommand{\KPJ}{%
 	\KP{%
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (-0.3,-0.3) .. controls (0.05,0) .. (-0.3,0.3);
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (0.3,-0.3) .. controls (-0.05,0) .. (0.3,0.3);
+		\draw[->, line width=0.6pt] (-0.3,-0.3) .. controls (0.05,0) .. (-0.3,0.3);
+		\draw[->, line width=0.6pt] (0.3,-0.3) .. controls (-0.05,0) .. (0.3,0.3);
 	}%
 }
 \newcommand{\KPK}{%
 	\KP{%
-		\draw[{Straight Barb[angle'=85, length=2.15]}-, line width=0.6pt] (-0.3,-0.3) .. controls (0.05,0) .. (-0.3,0.3);
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (0.3,-0.3) .. controls (-0.05,0) .. (0.3,0.3);
+		\draw[<-, line width=0.6pt] (-0.3,-0.3) .. controls (0.05,0) .. (-0.3,0.3);
+		\draw[->, line width=0.6pt] (0.3,-0.3) .. controls (-0.05,0) .. (0.3,0.3);
 	}%
 }
 \newcommand{\KPX}[1]{%
@@ -430,40 +430,40 @@
 }
 \newcommand{\KPSF}{%
 	\KPS{
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (-0.3,0.3) -- (0.3,-0.3);
+		\draw[->, line width=0.6pt] (-0.3,0.3) -- (0.3,-0.3);
 		\draw[line width=0.6pt] (-0.3,-0.3) -- (-0.08,-0.08);
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (0.08,0.08) -- (0.3,0.3);
+		\draw[->, line width=0.6pt] (0.08,0.08) -- (0.3,0.3);
 	}%
 }
 \newcommand{\KPSG}{%
 	\KPS{
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (-0.3,-0.3) -- (0.3,0.3);
+		\draw[->, line width=0.6pt] (-0.3,-0.3) -- (0.3,0.3);
 		\draw[line width=0.6pt] (-0.3,0.3) -- (-0.08,0.08);
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (0.08,-0.08) -- (0.3,-0.3);
+		\draw[->, line width=0.6pt] (0.08,-0.08) -- (0.3,-0.3);
 	}%
 }
 \newcommand{\KPSH}{%
 	\KPS{%
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (-0.3,0.3) .. controls (0,-0.0) .. (0.3,0.3);
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (-0.3,-0.3) .. controls (0,0.0) .. (0.3,-0.3);
+		\draw[->, line width=0.6pt] (-0.3,0.3) .. controls (0,-0.0) .. (0.3,0.3);
+		\draw[->, line width=0.6pt] (-0.3,-0.3) .. controls (0,0.0) .. (0.3,-0.3);
 	}%
 }
 \newcommand{\KPSI}{%
 	\KPS{%
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (-0.3,0.3) .. controls (0,-0.0) .. (0.3,0.3);
-		\draw[{Straight Barb[angle'=85, length=1.8]}-, line width=0.6pt] (-0.3,-0.3) .. controls (0,0.0) .. (0.3,-0.3);
+		\draw[->, line width=0.6pt] (-0.3,0.3) .. controls (0,-0.0) .. (0.3,0.3);
+		\draw[<-, line width=0.6pt] (-0.3,-0.3) .. controls (0,0.0) .. (0.3,-0.3);
 	}%
 }
 \newcommand{\KPSJ}{%
 	\KPS{%
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (-0.3,-0.3) .. controls (0.0,0) .. (-0.3,0.3);
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (0.3,-0.3) .. controls (-0.0,0) .. (0.3,0.3);
+		\draw[->, line width=0.6pt] (-0.3,-0.3) .. controls (0.0,0) .. (-0.3,0.3);
+		\draw[->, line width=0.6pt] (0.3,-0.3) .. controls (-0.0,0) .. (0.3,0.3);
 	}%
 }
 \newcommand{\KPSK}{%
 	\KPS{%
-		\draw[{Straight Barb[angle'=85, length=1.8]}-, line width=0.6pt] (-0.3,-0.3) .. controls (0.0,0) .. (-0.3,0.3);
-		\draw[-{Straight Barb[angle'=85, length=1.8]}, line width=0.6pt] (0.3,-0.3) .. controls (-0.0,0) .. (0.3,0.3);
+		\draw[<-, line width=0.6pt] (-0.3,-0.3) .. controls (0.0,0) .. (-0.3,0.3);
+		\draw[->, line width=0.6pt] (0.3,-0.3) .. controls (-0.0,0) .. (0.3,0.3);
 	}%
 }
 \newcommand{\KPSS}[1]{%
@@ -477,7 +477,7 @@
 
 \newcommand{\KPSX}{%
 	\KPS{
-		\draw[-{Straight Barb[angle'=85, length=2.15]}, line width=0.6pt] (-0.3,0) -- (0.3,0);
+		\draw[->, line width=0.6pt] (-0.3,0) -- (0.3,0);
 	}%
 }
 \newcommand{\KPSY}{% 5
