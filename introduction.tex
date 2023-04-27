@@ -45,7 +45,7 @@ We normally conceive of knots as open strings with `knotted' parts in between. G
 \end{figure}
 
 \begin{defn}[Knot]
-    A knot \(K\) is an embedding of \(\sone\) in \(\rthree\).
+    A knot \(K\) is the image an embedding of \(\sone\) in \(\rthree\).
 \end{defn}
 
 \begin{figure}
@@ -606,7 +606,7 @@ We can assign a direction or orientation to links. \Cref{fig:oriented} shows a t
                     mark=at position 1 with {\arrowreversed{To}}
                 }] (2,0) .. controls +(0,1.0) and +(54:1.0) .. (144:2) .. controls +(54:-1.0) and +(18:-1.0) .. (-72:2) .. controls +(18:1.0) and +(162:-1.0) .. (72:2) .. controls +(162:1.0) and +(126:1.0) .. (-144:2) .. controls +(126:-1.0) and +(0,-1.0) .. (2,0);
             \end{knot}
-        \end{tikzpicture}}\quad\quad
+        \end{tikzpicture}\label{fig:orientedcinquefoilknot}}\quad\quad
     \subcaptionbox{An oriented Hopf link}[4cm]{
         \begin{tikzpicture}
             \begin{knot}[clip width=7]
@@ -628,7 +628,7 @@ We can assign a direction or orientation to links. \Cref{fig:oriented} shows a t
                 }] (1,0) circle [radius=1];
                 \flipcrossings{1}
             \end{knot}
-        \end{tikzpicture}}
+        \end{tikzpicture}\label{fig:orientedhopflink}}
     \caption{Oreinted links}
     \label{fig:oriented}
 \end{figure}
@@ -656,4 +656,15 @@ It can be seen that with orientations added, each crossing can be categorised in
     \label{fig:crossings}
 \end{figure}
 
+\subsection{Writhe}
+
+We define \textit{writhe} \(w\) of a diagram \(D\) as the sum of all \(\epsilon(c)\) for all \(c \in D\). \[w(D) = \sum_{c\in D} \epsilon(c).\] Note that writhe is a property of a diagram of a link, not the link itself. A link can have diagrams corresponding to all the possible writhes (the integers). We see this fact by applying the Reidemeister type I move repeatedly to generate a diagram with the desired writhe. A type I move can increase or decrease the writhe of a diagram depending upon the direction of twist we apply.
+
+For example, the oriented cinquefoil knot in \cref{fig:oriented} has a writhe of \(-5\) as all the crossings are negative. Changing the orientation to another direction does not change the writhe of a knot as under an orientation change, the crossings preserve their signs. However, this is not true for links with more than one components, i.e.\@ links which are not knots. The writhe of the oriented Hopf link as shown in \cref{fig:oriented} is \(-2\), but changing the orientations of the individual components gives us different writhes.
+
+It was conjectured for many years that minimal diagrams of a link, i.e.\@ diagrams with the minimal crossing number had the same writhe. It was shown by Kenneth Perko in 1974 that two diagrams in the famous Rolfsen catalogue represented the same knot~\cite{perko}. They were thought to represent different knots as both were minimal crossing diagrams with different writhes. These knot diagrams go by the famous name of `Perko pair'.
+
+\subsection{Linking number}
+
+Let \(D\) be an oriented diagram of a \(2\)-component link \(K_1 \cup K_2\), and let \(D_i\) denote the component of \(D\) corresponding to \(K_i\). The crossings of \(D\) are of three types: \(D_1\) with itself, \(D_2\) with itself, and \(D_1\) with \(D_2\). We shall denote the last group by \(D_1 \cap D_2\). We define the \textit{linking number} of \(D_1\) with \(D_2\) as \[\operatorname{lk}(D_1, D_2) = \frac{1}{2} \sum_{c \in D_1 \cap D_2} \epsilon(c).\] As the name suggests, this quantity captures how many times one component `winds around` or `goes around' an other component.
 
