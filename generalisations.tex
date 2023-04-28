@@ -111,10 +111,59 @@ Note that this polynomial is a two variable polynomial. If we take \(\alpha = t^
 
 The Kauffman polynomial \(\operatorname{F}(\alpha, z, K)\) is a semi-oriented two variable polynomial invariant which generalises Kauffman's bracket and the Jones polynomial. This polynomial is a normalisation of a polynomial, \(\kauf(\alpha, z, K)\), defined for unoriented links which satisfies the following properties.
 \begin{enumerate}
-	\item \(\kauf\left(\alpha, z, \KPL\right) = 1\).
-	\item \(\kauf\left(\alpha, z, \KPB\right) + \kauf\left(\alpha, z, \KPC\right) = z \left[\kauf\left(\alpha, z, \KPD\right) + \kauf\left(\alpha, z, \KPE\right)\right]\).
-	\item \(\kauf\bigg(\alpha, z, \plusoneu\bigg) = \alpha \kauf\left(\alpha, z, \KPL\right)\)
-	\item \(\kauf\bigg(\alpha, z, \minusoneu\bigg) = \frac{1}{\alpha} \kauf\left(\alpha, z, \KPL\right)\).
+	\item \(\kauf\left(\alpha, z, \KPA\right) = 1\).
+	\item \(\kauf\bigg(\alpha, z, \KPB\bigg) + \kauf\bigg(\alpha, z, \KPC\bigg) = z \left[\kauf\bigg(\alpha, z, \KPD\bigg) + \kauf\bigg(\alpha, z, \KPE\bigg)\right]\).
+	\item \(\kauf\bigg(\alpha, z, \plusoneu\bigg) = \alpha \kauf\left(\alpha, z, \lineone\right)\)
+	\item \(\displaystyle \kauf\bigg(\alpha, z, \minusoneu\bigg) = \frac{1}{\alpha} \kauf\left(\alpha, z, \lineone\right)\).
 \end{enumerate}
 The Kauffman polynomial is defined by the formula \[\operatorname{F}(\alpha, z, K) = \alpha^{-w(K)} \kauf(\alpha, z, K).\]
 
+The bracket and the Jones polynomials are special cases of the Kauffman polynomial.
+
+\begin{thm}
+	\(\braket<K> (A) = \kauf(-A^3, A + A^{-1}, K)\).
+\end{thm}
+\begin{proof}
+    We recall the bracket identities \[\left\langle\KPB\right\rangle = A \left\langle\KPD\right\rangle + A^{-1} \left\langle\KPE\right\rangle\] and \[\left\langle\KPC\right\rangle = A^{-1} \left\langle\KPD\right\rangle + A \left\langle\KPE\right\rangle.\] Adding them, we have \[\left\langle\KPB\right\rangle + \left\langle\KPC\right\rangle = (A + A^{-1})\left[\BD + \BE\right].\]
+	Thus, \(\langle K\rangle (A) = \kauf(-A^3, A + A^{-1}, K)\).
+\end{proof}
+
+\begin{thm}
+	\(\V(t, K) = \operatorname{F}(-t^{-3/4}, t^{-1/4} + t^{1/4}, K)\).
+\end{thm}
+\begin{proof}
+    Since \[\V(t, K) = \kau(t^{-1/4}, K)\] and \[\kau(A, K) = (-A^3)^{-\w(K)}\langle K\rangle (A),\] we have that \[\V(t, K) = (-t^{-3/4})^{-\w(K)} \kau(-t^{-3/4}, t^{-1/4} + t^{1/4}, K).\] Hence, \(\V(t, K) = \operatorname{F}(-t^{-3/4}, t^{-1/4} + t^{1/4}, K)\).
+\end{proof}
+
+\section{Regular isotopy \textsc{homflypt} polynomial}
+
+The regular isotopy \textsc{homflypt} polynomial \(\homreg(\alpha, z, K)\), is defined by the following properties.
+
+\begin{enumerate}
+	\item \(\homreg\left(\alpha, z, \KPL\right) = 1\).
+	\item \(\displaystyle \homreg\left(\alpha, z, \KPF\right) - \homreg\left(\alpha, z, \KPG\right) = z \homreg\left(\alpha, z, \KPH\right)\).
+	\item \(\homreg\left(\alpha, z, \plusoneo\right) = \alpha \homreg(\alpha, z, \lineoneo)\).
+	\item \(\displaystyle \homreg\left(\alpha, z, \minusoneo\right) = \frac{1}{\alpha}\homreg(\alpha, z, \lineoneo)\).
+\end{enumerate}
+
+
+
+\begin{frame}{Regular isotopy \textsc{homflypt} polynomial}
+	The regular isotopy \textsc{homflypt} polynomial \(H_K(\alpha, z)\), is defined by the following properties.
+	\begin{enumerate}
+		\item \(H_{K} (z) = H_{K'} (z)\) if the oriented links \(K\) and \(K'\) are regular isotopic.
+		\item \(H_{\,\KPSL} = 1\).
+		\item \(\displaystyle H_{\KPSF} - H_{\KPSG} = z \cdot H_{\KPSH}\).
+		\item \(H_{+} = \alpha \cdot H_{\rightarrow}\) and \(H_{-} = \alpha^{-1} \cdot H_{\rightarrow}\).
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	Again, believing in the existence of this invariant, we have
+	\begin{thm}
+		\(P_K(\alpha, z) = \alpha^{-w(K)} \cdot H_K(\alpha, z)\).
+	\end{thm}
+	\begin{proof}[Proof\nopunct]
+		Let \(W_K(\alpha, z) = \alpha^{-w(K)} H_K(\alpha, z)\). Then \(W_K\) is an invariant of ambient isotopy, and \(W_{\KPSL} = 1\). We thus check the exchange identity. We have \(H_{\KPSF} - H_{\KPSG} = z \cdot H_{\KPSH}\), and thus, \[\alpha^{+1} \alpha^{-(w+1)}\cdot  H_{\KPSF} - \alpha^{-1} \alpha^{-(w-1)} \cdot H_{\KPSG} = z \cdot \alpha^{-w} \cdot H_{\KPSH},\] where \(w = w\left(\KPH\right)\). Hence \(\alpha \cdot W_{\KPSF} - \alpha^{-1} \cdot W_{\KPSG} = z \cdot W_{\KPSH}.\)
+	\end{proof}
+\end{frame}
