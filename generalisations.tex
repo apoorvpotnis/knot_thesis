@@ -38,7 +38,7 @@
 % It can be verified that this defines an invariant.
 
 
-
+In the previous chapters, we defined Kauffman's bracket polynomial using the state model and then normalised it to get a link invariant. Instead of using the state model, one can define the bracket polynomial in an axiomatic way as well. One defines the polynomial as a function on link diagrams which satisfies certain properties. We would need to check well-definedness and invariance of such a function under the Reidemeister moves. In this chapter, we shall take a cursory look at the Jones polynomial and some of its generalisations. We shall not check well-definedness and invariance under the Reidemeister moves.
 
 \section{Jones polynomial}
 
@@ -146,24 +146,12 @@ The regular isotopy \textsc{homflypt} polynomial \(\homreg(\alpha, z, K)\), is d
 	\item \(\displaystyle \homreg\left(\alpha, z, \minusoneo\right) = \frac{1}{\alpha}\homreg(\alpha, z, \lineoneo)\).
 \end{enumerate}
 
+We take the existence of this invariant for granted.
 
-
-\begin{frame}{Regular isotopy \textsc{homflypt} polynomial}
-	The regular isotopy \textsc{homflypt} polynomial \(H_K(\alpha, z)\), is defined by the following properties.
-	\begin{enumerate}
-		\item \(H_{K} (z) = H_{K'} (z)\) if the oriented links \(K\) and \(K'\) are regular isotopic.
-		\item \(H_{\,\KPSL} = 1\).
-		\item \(\displaystyle H_{\KPSF} - H_{\KPSG} = z \cdot H_{\KPSH}\).
-		\item \(H_{+} = \alpha \cdot H_{\rightarrow}\) and \(H_{-} = \alpha^{-1} \cdot H_{\rightarrow}\).
-	\end{enumerate}
-\end{frame}
-
-\begin{frame}
-	Again, believing in the existence of this invariant, we have
-	\begin{thm}
-		\(P_K(\alpha, z) = \alpha^{-w(K)} \cdot H_K(\alpha, z)\).
-	\end{thm}
-	\begin{proof}[Proof\nopunct]
-		Let \(W_K(\alpha, z) = \alpha^{-w(K)} H_K(\alpha, z)\). Then \(W_K\) is an invariant of ambient isotopy, and \(W_{\KPSL} = 1\). We thus check the exchange identity. We have \(H_{\KPSF} - H_{\KPSG} = z \cdot H_{\KPSH}\), and thus, \[\alpha^{+1} \alpha^{-(w+1)}\cdot  H_{\KPSF} - \alpha^{-1} \alpha^{-(w-1)} \cdot H_{\KPSG} = z \cdot \alpha^{-w} \cdot H_{\KPSH},\] where \(w = w\left(\KPH\right)\). Hence \(\alpha \cdot W_{\KPSF} - \alpha^{-1} \cdot W_{\KPSG} = z \cdot W_{\KPSH}.\)
-	\end{proof}
-\end{frame}
+\begin{thm}
+	\(\homfly(\alpha, z, K) = \alpha^{-\w(K)} \homreg(\alpha, z, K)\).
+\end{thm}
+\begin{proof}
+	Let \[\operatorname{W}(\alpha, z, K) = \alpha^{-\w(K)} \homreg(\alpha, z, K).\] We see that \(\operatorname{W}(\alpha, z, K)\) is invariant under ambient isotopy, and \[\operatorname{W}\left(\alpha, z, \KPL\right) = 1.\]
+	We thus check the behaviour under the exchange identity. We have \[\homreg\left(\alpha, z, \KPF\right) - \homreg\left(\alpha, z, \KPG\right) = z \homreg\left(\alpha, z, \KPH\right),\] and thus, \[\alpha^{+1} \alpha^{-(w+1)} \homreg\left(\alpha, z, \KPF\right) - \alpha^{-1} \alpha^{-(w-1)}  \homreg\left(\alpha, z, \KPG\right) = z \alpha^{-w} \homreg\left(\alpha, z, \KPH\right),\] where \(w = w\left(\KPH\right)\).
+\end{proof}
