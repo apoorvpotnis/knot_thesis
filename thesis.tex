@@ -138,6 +138,7 @@
 \def\setaux#1|{#1\;\delimsize\vert\;}
 \DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
 \DeclarePairedDelimiter{\bracket}{\left\langle}{\right\rangle}
+\DeclarePairedDelimiter\brak{\left(}{\right)}
 \makeatletter
 \def\bign#1{\mathclose{\hbox{$\left#1\vbox to8.5\p@{}\right.\n@space$}}\mathopen{}}
 \makeatother
@@ -152,6 +153,10 @@
 \DeclareMathOperator{\uprhoo}{\uprho}
 \DeclareMathOperator{\proj}{\pi}
 \DeclareMathOperator{\V}{V}
+\DeclareMathOperator{\w}{w}
+% \newcommand{\V}{\symup{V}}
+% \let\L\relax
+% \DeclareMathOperator{\kau}{L}
 
 \newcommand\restr[2]{{% we make the whole thing an ordinary symbol
 		\left.\kern-\nulldelimiterspace % automatically resize the bar with \right
@@ -614,9 +619,9 @@
 	\tableofcontents
 	\pagenumbering{arabic}
 
-% 	\input{introduction.tex}
-% 	\input{state.tex}
-% 	\input{braids.tex}
+	\input{introduction.tex}
+	\input{state.tex}
+	\input{braids.tex}
 	\input{generalisations.tex}
 
 	%\input{output.tex}
