@@ -159,6 +159,7 @@
 % \newcommand{\V}{\symup{V}}
 % \let\L\relax
 \DeclareMathOperator{\kau}{L}
+\DeclareMathOperator{\kauf}{\overline{L}}
 \DeclareMathOperator{\lk}{lk}
 
 \newcommand\restr[2]{{% we make the whole thing an ordinary symbol
@@ -408,6 +409,42 @@
 	}
 }
 
+\newcommand{\plusoneo}{
+	\KP{
+		\begin{knot}[rotate=-90, scale=0.3, clip width=7, ignore endpoint intersections=false, consider self intersections=true, looseness=1.6]
+			\strand[line width=0.6pt] (-1,1) to[out=-90,in=-90] (0.5,0) to [out=90,in=90] (-1,-1);
+		\end{knot}
+		\draw[scale=0.3, line width=0.6pt, <-, looseness=1.6, rotate=-90] (-1,1.2) -- (-1,1) to[out=-90,in=-90] (0.5,0);
+	}
+}
+
+\newcommand{\minusoneo}{
+	\KP{
+		\begin{knot}[rotate=-90, scale=0.3, clip width=7, ignore endpoint intersections=false, consider self intersections=true, looseness=1.6]
+			\strand[line width=0.6pt] (-1,1) to[out=-90,in=-90] (0.5,0) to [out=90,in=90] (-1,-1);
+		\end{knot}
+		\draw[scale=0.3, line width=0.6pt, <-, looseness=1.6, rotate=-90] (-1,1.2) -- (-1,1) to[out=-90,in=-90] (0.5,0);
+	}
+}
+
+\newcommand{\plusoneu}{
+	\KP{
+		\begin{knot}[rotate=180, scale=0.3, clip width=7, ignore endpoint intersections=false, consider self intersections=true, looseness=1.6]
+			\strand[line width=0.6pt] (-1,1) to[out=-90,in=-90] (0.5,0) to [out=90,in=90] (-1,-1);
+		\end{knot}
+% 		\draw[scale=0.3, line width=0.6pt, <-, looseness=1.6, rotate=-90] (-1,1.2) -- (-1,1) to[out=-90,in=-90] (0.5,0);
+	}\hspace{-6pt}
+}
+
+\newcommand{\minusoneu}{
+	\KP{
+		\begin{knot}[rotate=180, scale=0.3, clip width=7, ignore endpoint intersections=false, consider self intersections=true, looseness=1.6, flip crossing=2]
+			\strand[line width=0.6pt] (-1,1) to[out=-90,in=-90] (0.5,0) to [out=90,in=90] (-1,-1);
+		\end{knot}
+		% 		\draw[scale=0.3, line width=0.6pt, <-, looseness=1.6, rotate=-90] (-1,1.2) -- (-1,1) to[out=-90,in=-90] (0.5,0);
+	}\hspace{-6pt}
+}
+
 
 
 
@@ -654,10 +691,10 @@
 	\tableofcontents
 	\pagenumbering{arabic}
 % %
-% 	\input{introduction.tex}
-% 	\input{state.tex}
+	\input{introduction.tex}
+	\input{state.tex}
 	\input{generalisations.tex}
-% 	\input{braids.tex}
+	\input{braids.tex}
 
 
 	%\input{output.tex}

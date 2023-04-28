@@ -105,3 +105,16 @@ The \textsc{homflypt} polynomial was discovered independently by two groups, one
 	\end{enumerate}
 \end{defn}
 
+Note that this polynomial is a two variable polynomial. If we take \(\alpha = t^{-1}\) and \(z = t^{1/2} - 1/t^{1/2}\), we retrieve the Jones polynomial. If we take \(\alpha = 1\), we retrieve the Alexander--Conway polynomial.
+
+\section{Kauffman polynomial}
+
+The Kauffman polynomial \(\operatorname{F}(\alpha, z, K)\) is a semi-oriented two variable polynomial invariant which generalises Kauffman's bracket and the Jones polynomial. This polynomial is a normalisation of a polynomial, \(\kauf(\alpha, z, K)\), defined for unoriented links which satisfies the following properties.
+\begin{enumerate}
+	\item \(\kauf\left(\alpha, z, \KPL\right) = 1\).
+	\item \(\kauf\left(\alpha, z, \KPB\right) + \kauf\left(\alpha, z, \KPC\right) = z \left[\kauf\left(\alpha, z, \KPD\right) + \kauf\left(\alpha, z, \KPE\right)\right]\).
+	\item \(\kauf\bigg(\alpha, z, \plusoneu\bigg) = \alpha \kauf\left(\alpha, z, \KPL\right)\)
+	\item \(\kauf\bigg(\alpha, z, \minusoneu\bigg) = \frac{1}{\alpha} \kauf\left(\alpha, z, \KPL\right)\).
+\end{enumerate}
+The Kauffman polynomial is defined by the formula \[\operatorname{F}(\alpha, z, K) = \alpha^{-w(K)} \kauf(\alpha, z, K).\]
+
