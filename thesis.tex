@@ -102,7 +102,7 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{microtype, lipsum, comment, tikz, tikz-3dplot, float, subcaption, tikz-cd, xurl, adjustbox, svg, tkz-euclide}
 \usepackage{physics2}\usephysicsmodule{ab,ab.braket}
-\usetikzlibrary{knots, hobby, braids}
+\usetikzlibrary{knots, hobby, braids, babel, decorations.markings}
 % \usepackage{embedall}
 
 %\usepackage[bold=0.04]{xfakebold}
@@ -156,7 +156,8 @@
 \DeclareMathOperator{\w}{w}
 % \newcommand{\V}{\symup{V}}
 % \let\L\relax
-% \DeclareMathOperator{\kau}{L}
+\DeclareMathOperator{\kau}{L}
+\DeclareMathOperator{\lk}{lk}
 
 \newcommand\restr[2]{{% we make the whole thing an ordinary symbol
 		\left.\kern-\nulldelimiterspace % automatically resize the bar with \right
@@ -379,6 +380,35 @@
 		\draw[->, line width=0.6pt] (0.3,-0.3) .. controls (-0.05,0) .. (0.3,0.3);
 	}%
 }
+
+\tikzset{%
+	arrowat/.style={%
+		postaction={decorate,decoration={
+				markings,
+				mark=at position #1 with {\arrow[xshift=2pt,opacity=1]{>}}}}
+	},
+}
+
+\newcommand{\KPfigureeight}{
+	\KP{
+		\begin{knot}[scale=0.3, consider self intersections = true, clip width = 8, ignore endpoint intersections=false]
+		    \strand[closed, line width=0.6pt] (0,0) to [out=-90, in=180] (0.5,-1) to [out=0, in=180] (2.5,1) to [out=0, in=90] (3,0) to [out=-90, in=0] (2.5,-1) to [out=180, in=0] (0.5,1) to [out=180, in=90] (0,0);
+		\end{knot}
+		\draw[<-, line width=0.6pt] (0,0);
+	}
+}
+\newcommand{\KPfigureeightf}{
+	\KP{
+		\begin{knot}[flip crossing=2, scale=0.3, consider self intersections = true, clip width = 8, ignore endpoint intersections=false]
+			\strand[closed, line width=0.6pt] (0,0) to [out=-90, in=180] (0.5,-1) to [out=0, in=180] (2.5,1) to [out=0, in=90] (3,0) to [out=-90, in=0] (2.5,-1) to [out=180, in=0] (0.5,1) to [out=180, in=90] (0,0);
+		\end{knot}
+		\draw[<-, line width=0.6pt] (0,0);
+	}
+}
+
+
+
+
 \newcommand{\KPX}[1]{%
 	\begin{tikzpicture}[baseline=-\dimexpr\fontdimen22\textfont2\relax]
 		#1
@@ -473,7 +503,7 @@
 	}%
 }
 \newcommand{\KPSS}[1]{%
-	\begin{tikzpicture}[baseline=-\dimexpr\fontdimen22\textfont2\relax, scale=0.45, > = {Straight Barb[bend, length=1.8, angle'=85]}]
+	\begin{tikzpicture}[baseline=-\dimexpr\fontdimen22\textfont2\relax, scale=0.45]
 		#1
 	\end{tikzpicture}%
 }
@@ -505,6 +535,7 @@
 \newcommand{\BK}{\left\langle\KPK\right\rangle}
 \newcommand{\BL}{\left\langle\KPL\right\rangle}
 
+
 \newcommand{\CA}{\left(\KPA\right)}
 \newcommand{\CB}{\left(\KPB\right)}
 \newcommand{\CC}{\left(\KPC\right)}
@@ -517,6 +548,8 @@
 \newcommand{\CJ}{\left(\KPJ\right)}
 \newcommand{\CK}{\left(\KPK\right)}
 \newcommand{\CL}{\left(\KPL\right)}
+\newcommand{\Cfigureeight}{\left(\hspace{-10pt}\KPfigureeight\right)}
+\newcommand{\Cfigureeightf}{\left(\hspace{-10pt}\KPfigureeightf\right)}
 \tikzset{grid/.style={gray,very thin,opacity=1}}
 
 
@@ -618,7 +651,7 @@
 
 	\tableofcontents
 	\pagenumbering{arabic}
-
+%
 	\input{introduction.tex}
 	\input{state.tex}
 	\input{braids.tex}

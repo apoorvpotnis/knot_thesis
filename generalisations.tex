@@ -16,16 +16,16 @@
 % \subsection{Jones polynomial}
 %
 % We now give an axiomatic definition of the Jones polynomial.
-
-\[
-F\BF
-G\BG
-H\BH
-I\BI
-J\BJ
-K\BK
-L\BL
-\]
+%
+% \[
+% F\BF
+% G\BG
+% H\BH
+% I\BI
+% J\BJ
+% K\BK
+% L\BL
+% \]
 %
 % \begin{defn}[Jones polynomial]
 % 	Let \(K\) be an oriented link diagram. Then the Jones polynomial \(\displaystyle \V(K) \in \Z\left[\sqrt{t}, \frac{1}{\sqrt{t}}\right]\) is defined by the rules:
@@ -35,16 +35,16 @@ L\BL
 % 	\end{enumerate}
 % \end{defn}
 %
-It can be verified that this defines an invariant.
+% It can be verified that this defines an invariant.
 
 
 
 
 
 
-\begin{thm}[Jones polynomial]
+\begin{defn}[Jones polynomial]
 	The Jones polynomial \(\V(t, K)\) is defined as \[\V(t, K) \coloneq \operatorname{L}\left(\frac{1}{t^1/4}, K\right)\] for an oriented link \(K\).
-\end{thm}
+\end{defn}
 
 Here, \(\displaystyle t = \frac{1}{A^4}\). \(\V(t, K)\) is a Laurent polynomial in \(\sqrt{t}\); \(\displaystyle \V(K) \in \Z\left[\sqrt{t}, \frac{1}{\sqrt{t}}\right]\). With the above definition, we have the following two properties of the Jones polynomial.
 \begin{enumerate}
@@ -52,11 +52,30 @@ Here, \(\displaystyle t = \frac{1}{A^4}\). \(\V(t, K)\) is a Laurent polynomial 
 	\item \(\displaystyle \frac{1}{t}\V\left(t, \KPF\right) - t \V\left(t, \KPG \right) = \left(\sqrt{t} - \frac{1}{\sqrt{t}}\right)\V\CH\).
 \end{enumerate}
 
-We can define the Jones polynomial axiomatically as a Laurent polynomial in \(\sqrt{t}\) satisfying the above two properties as well. But then we would have to check well-definedness and invariance under the Reidemeister moves. We derive these properties using the definition. The first property follows evaluating the bracket polynomial on the trivial knot. Orientation of a knot does not matter in this case.
+We can define the Jones polynomial axiomatically as a Laurent polynomial in \(\sqrt{t}\) satisfying the above two properties as well. But then we would have to check well-definedness and invariance under the Reidemeister moves. We derive these properties using the definition. The first property follows evaluating the bracket polynomial on the trivial knot. Orientation of a knot does not matter in this case. Just as with the normalised bracket polynomial, we shall drop the variable in which the polynomial is based if it is clear from the context.
 
 \begin{proof}[Proof of the second property]
-	We know that \[\left\langle\KPB\right\rangle = A \left\langle\KPD\right\rangle + B \left\langle\KPE\right\rangle\] and \[\left\langle\KPC\right\rangle = B \left\langle\KPD\right\rangle + A \left\langle\KPE\right\rangle.\] Hence, \[B^{-1}\BB - A^{-1}\BC = \left(\frac{A}{B} - \frac{B}{A}\right)\BE.\] Thus, \[A\BG - A^{-1}\BF = (A^2 - A^{-2})\BH.\]
-
-	Let \(w = \w\CH\) so that \(\w\CG = w - 1\) and \(\w\CF = w + 1\).
+	We know that \[\left\langle\KPB\right\rangle = A \left\langle\KPD\right\rangle + B \left\langle\KPE\right\rangle\] and \[\left\langle\KPC\right\rangle = B \left\langle\KPD\right\rangle + A \left\langle\KPE\right\rangle.\] Hence, \[B^{-1}\BB - A^{-1}\BC = \left(\frac{A}{B} - \frac{B}{A}\right)\BE.\] Thus, \[A\BG - A^{-1}\BF = (A^2 - A^{-2})\BH.\] Let \(w = \w\CH\) so that \(\w\CG = w - 1\) and \(\w\CF = w + 1\). Also, let \(\alpha = -A^3\). Then \[A \alpha \BG \alpha^{-w+1} - A^{-1}\alpha^{-1}\BF\alpha^{-w+1} = (A^2 - A^{-2})\BH\alpha^{-w}.\] Thus, \[-A^4 \kau\CF + A^{-4}\kau\CG = (A^2 - A^{-2})\kau\CH.\] Substituting \(A = t^{-1/4}\) yields the desired result.
 \end{proof}
+
+The Jones polynomial follows a reversing property.
+
+\begin{thm}[Reversing property]
+	Let \(K\) be an oriented link. Let \(K'\) be such that \(K'\) is obtained by reversing the orientation of a component \(K_i \subset K\).
+
+	Let \(\lambda = \lk(K_i, K - K_i)\) denote the total linking number of \(K_i\) with the remaining components of \(K\). Then \[\V(t, K') = t^{-3\lambda} \cdot \V(t, K).\]
+\end{thm}
+
+\begin{proof}
+	We see that \(\w(K') = \w(K) - 4 \lambda\).
+	\begin{align*}
+		\kau(A, K') &= (-A^3)^{-\w(K')} \langle K' \rangle\\
+		&= (-A^3)^{-\w(K) + 4 \lambda} \langle K \rangle.
+	\end{align*}
+	Therefore \(\kau(A, K') = (-A^3)^{4\lambda}\kau(A, K)\). Substituting \(A = t^{-1/4}\) yields the desired result.
+\end{proof}
+
+\begin{exmp}
+	Using the skein relation, we have that \[\frac{1}{t} \V\left(\hspace{-10pt}\KPfigureeight\right) - t\V\Cfigureeightf = \left(\sqrt{t} - \frac{1}{\sqrt{t}}\right) \V\left(\KPL \,\,\KPL\right).\]
+\end{exmp}
 
