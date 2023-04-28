@@ -40,10 +40,10 @@
 
 
 
-
+\section{Jones polynomial}
 
 \begin{defn}[Jones polynomial]
-	The Jones polynomial \(\V(t, K)\) is defined as \[\V(t, K) \coloneq \operatorname{L}\left(\frac{1}{t^{1/4}}, K\right)\] for an oriented link \(K\).
+	The Jones polynomial invariant \(\V(t, K)\) is defined as \[\V(t, K) \coloneq \operatorname{L}\left(\frac{1}{t^{1/4}}, K\right)\] for an oriented link \(K\).
 \end{defn}
 
 Here, \(\displaystyle t = \frac{1}{A^4}\). \(\V(t, K)\) is a Laurent polynomial in \(t^{1/2}\); \(\displaystyle \V(K) \in \Z\left[t^{1/2}, \frac{1}{t^{1/2}}\right]\). With the above definition, we have the following two properties of the Jones polynomial.
@@ -78,4 +78,30 @@ The Jones polynomial follows a reversing property.
 \begin{exmp}
 	Using the skein relation, we have that \[\frac{1}{t} \V\left(\hspace{-10pt}\KPfigureeight\right) - t\V\Cfigureeightf = \left(t^{1/2} - \frac{1}{t^{1/2}}\right) \V\left(\KPL \,\,\KPL\right).\] But since both \hspace{-13pt}\KPfigureeight and \hspace{-13pt}\KPfigureeightf are trivial knots, \[\V\Cfigureeight = \V\Cfigureeightf = \V\CL = 1.\] Thus, \[\V\left(\KPL \,\,\KPL\right) = \frac{t^{-1} - t}{t^{1/2} - 1/t^{1/2}} = \frac{(t^{-1} - t)(t^{1/2} + 1/t^{1/2})}{t - t^{-1}} = -(t^{1/2} + 1/t^{1/2}) = \updelta.\]
 \end{exmp}
+
+The third property is surprising when viewed with respect to the skein relation~\cite{lickorish, mortonjones}. Skein relations of this sort form a general defining feature for various polynomials.
+
+\section{Alexander--Conway polynomial}
+
+\begin{defn}[Alexander--Conway polynomial]
+	Let \(K\) be an oriented link diagram. Then the Alexander--Conway polynomial invariant \(\displaystyle \nabla(z, K) \in \Z[z]\) is defined by the rules:
+	\begin{enumerate}
+		\item \(\nabla\left(z, \KPL\right) = 1\).
+		\item \(\displaystyle \nabla\left(z, \KPF\right) - \nabla\left(z, \KPG\right) = \nabla\left(z, \KPH\right)\).
+	\end{enumerate}
+\end{defn}
+
+This polynomial is a generalisation and reformulation of the original Alexander polynomial.
+
+\section{HOMFLYPT polynomial}
+
+The HOMFLYPT polynomial was discovered independently by two groups, one group consisting of Jim Hoste, Adrian Ocneanu, Kenneth Millett, Peter Freyd, William Lickorish, and David Yetter and the other group consisting of Polish mathematicians Józef Przytycki and Paweł Traczyk.
+
+\begin{defn}[HOMFLYPT polynomial]
+	Let \(K\) be an oriented link diagram. Then the HOMFLYPT polynomial invariant \(\displaystyle \homfly(\alpha, z, K)\) is defined by the rules:
+	\begin{enumerate}
+		\item \(\homfly\left(\alpha, z, \KPL\right) = 1\).
+		\item \(\displaystyle \alpha \homfly\left(\alpha, z, \KPF\right) - \frac{1}{\alpha} \homfly\left(\alpha, z, \KPG\right) = z \homfly\left(\alpha, z, \KPH\right)\).
+	\end{enumerate}
+\end{defn}
 
