@@ -409,6 +409,22 @@
 		\draw[<-, line width=0.6pt] (0,0);
 	}
 }
+\newcommand{\KPthirty}{
+	\KP{
+		\draw[scale=0.6, line width=0.6pt] (0,0) .. controls (0.5,0.2) .. (1,0);
+		\draw[scale=0.6, line width=0.6pt] (0,1) .. controls (0.5,0.8) .. (1,1);
+		\draw[scale=0.6, line width=0.6pt] (0.5,0.5) circle [radius=0.2];
+	}
+}
+\newcommand{\KPintersection}{
+	\KP{
+		\begin{knot}[clip width = 6, ignore endpoint intersections = false, looseness = 1.2]
+			\strand[scale=0.6, line width=0.6pt] (0,0) .. controls (1,0.5) .. (0,1);
+			\strand[scale=0.6, line width=0.6pt] (1,0) .. controls (0,0.5) .. (1,1);
+		\end{knot}
+% 		\draw[scale=0.6, line width=0.6pt] (0.5,0.5) circle [radius=0.2];
+	}
+}
 
 \newcommand{\plusoneo}{
 	\KP{
@@ -586,6 +602,8 @@
 \newcommand{\BJ}{\left\langle\KPJ\right\rangle}
 \newcommand{\BK}{\left\langle\KPK\right\rangle}
 \newcommand{\BL}{\left\langle\KPL\right\rangle}
+\newcommand{\Bintersection}{\Bigl\langle\hspace{-6.2pt}\vcenter{\hbox{\KPintersection}}\hspace{-6.2pt}\Bigr\rangle}
+\newcommand{\Bthirty}{\Bigl\langle\hspace{-3pt}\vcenter{\hbox{\KPthirty}}\hspace{-3pt}\Bigr\rangle}
 
 
 \newcommand{\CA}{\left(\KPA\right)}

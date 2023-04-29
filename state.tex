@@ -7,22 +7,22 @@ In this chapter, we shall a link invariant called the normalised bracket polynom
 \section{State model}
 
 Consider a crossing of an unoriented link as shown in \cref{fig:crossingresolution}. We designate local regions around a crossing a label \(A\) or \(B\) based on the following scheme. Walk along the underpass towards a crossing. The area on the left is assigned the label \(A\) and the area on the right the label \(B\). This assignment is unambiguous. We then `resolve' or `smoothen' or `split' the crossing in two ways, one way which connects the \(A\)-regions and another way which connects the \(B\)-regions. If we resolve a crossing such that \(A\)-regions are connected, then we attach the label \(A\) to the resolved diagram. The same holds for \(B\)-regions. Note that the resolution of the crossing happens only locally, i.e.\@ in an open ball around the crossing which does not intersect other crossings. Such an open ball exists due to the Hausdorff property of the plane.
-
-\begin{figure}
-    \centering
-	\includesvg{crossingresolution.svg}
-	\caption{Resolution of a crossing.}
-	\label{fig:crossingresolution}
-\end{figure}
+%
+% \begin{figure}
+%     \centering
+% 	\includesvg{crossingresolution.svg}
+% 	\caption{Resolution of a crossing.}
+% 	\label{fig:crossingresolution}
+% \end{figure}
 
 We shall do this process recursively for all crossings to get a sets of Jordan curves in a plane with labels attached to them. Refer to \cref{fig:trefoilresolution} where we have carried this process for a trefoil.
-
-\begin{figure}
-    \centering
-	\includesvg[width=\textwidth]{trefoilresolution}
-	\caption{Resolution of all crossings for a trefoil.}
-	\label{fig:trefoilresolution}
-\end{figure}
+%
+% \begin{figure}
+%     \centering
+% 	\includesvg[width=\textwidth]{trefoilresolution}
+% 	\caption{Resolution of all crossings for a trefoil.}
+% 	\label{fig:trefoilresolution}
+% \end{figure}
 
 Each of the individual diagrams shown in curly brackets in \cref{fig:trefoilresolution} is referred to as a state. To each state are the labels \(A\) and \(B\) attached to it. We can construct the original link unambiguously using the states (and labels attached to them). We shall construct invariants of links by `averaging' over these states.
 
@@ -45,10 +45,13 @@ The diagrams in the above theorem should be regarded as local diagrams. We make 
 
 The proof of the above theorem follows from the definition of \(\braket<L>\) and realizing that the states of a diagram are in one-to-one correspondence with the union of the diagrams with resolved crossings. The above identity is very important and we shall use it very often. For an example of a calculation of the bracket polynomial of a link, please refer to \cref{fig:hopflinkbracket}.
 
-\begin{figure}
-    \centering
-	\includesvg[width=\textwidth]{hopflinkbracket.svg}
-	\caption{Bracket polynomial calculation for the Hopf link}
-	\label{fig:hopflinkbracket}
-\end{figure}
+% \begin{figure}
+%     \centering
+% 	\includesvg[width=\textwidth]{hopflinkbracket.svg}
+% 	\caption{Bracket polynomial calculation for the Hopf link}
+% 	\label{fig:hopflinkbracket}
+% \end{figure}
 
+\begin{thm}
+	\[\Bintersection = AB \BE + AB\Bthirty + (A^2 + B^2)\BD.\]
+\end{thm}
