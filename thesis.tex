@@ -1,7 +1,7 @@
 % !TEX TS-program = lualatex
 % !TEX root = ../thesis.tex
 
-\documentclass[10pt, a4paper]{report}
+\documentclass[10pt, a4paper, draft]{report}
 
 \usepackage[left=1.5in, right=1.5in]{geometry}
 
@@ -411,7 +411,58 @@
 		\end{knot}
 	}
 }
-
+\newcommand{\KPthirtytwoone}%
+{
+	\KPbaseline{1.4ex}{%
+		\begin{knot}[scale=1, flip crossing=2, consider self intersections = true,
+			clip width = 5, ignore endpoint intersections=false]
+			\strand[scale=0.6, line width=0.6pt] (0,0.5) to [out=0,in=180] (0.5,1) to [out=0,in=180] (1,0.5);
+			\strand[scale=0.6, line width=0.6pt] (0,1) to (1,0);
+			\strand[scale=0.6, line width=0.6pt] (0,0) to (1,1);
+		\end{knot}
+	}
+}
+\newcommand{\KPthirtytwotwo}%
+{
+	\KPbaseline{-2.4ex}{%
+		\begin{knot}[scale=1, yscale=-1, flip crossing=2, consider self intersections = true,
+			clip width = 5, ignore endpoint intersections=false]
+			\strand[scale=0.6, line width=0.6pt] (0,0.5) to [out=0,in=180] (0.5,1) to [out=0,in=180] (1,0.5);
+			\strand[scale=0.6, line width=0.6pt] (0,1) to (1,0);
+			\strand[scale=0.6, line width=0.6pt] (0,0) to (1,1);
+		\end{knot}
+	}
+}
+\newcommand{\KPthirtytwothree}%
+{
+	\KPbaseline{-2.4ex}{%
+		\begin{knot}[scale=1, yscale=-1, flip crossing=2, consider self intersections = true, clip width = 5, ignore endpoint intersections=false]
+			\draw[line width=0.6pt] (-0.3,-0.3) .. controls (0.05,0) .. (-0.3,0.3);
+			\draw[line width=0.6pt] (0.3,-0.3) .. controls (-0.05,0) .. (0.3,0.3);
+			\strand[scale=0.6, line width=0.6pt] (0,0.5) to [out=0,in=180] (0.5,1) to [out=0,in=180] (1,0.5);
+		\end{knot}
+	}
+}
+\newcommand{\KPthirtytwofour}%
+{
+	\KPbaseline{1.4ex}{%
+		\begin{knot}[scale=1, consider self intersections = false, clip width = 5, ignore endpoint intersections=false]
+			\strand[scale=0.6, line width=0.6pt] (0,1) .. controls (0.5,0.5) .. (1,1);
+			\strand[scale=0.6, line width=0.6pt] (0,0) .. controls (0.5,0.5) .. (1,0);
+			\strand[scale=0.6, line width=0.6pt] (0,0.5) to [out=0,in=180] (0.5,1) to [out=0,in=180] (1,0.5);
+		\end{knot}
+	}
+}
+\newcommand{\KPthirtytwofive}%
+{
+	\KPbaseline{-2.4ex}{%
+		\begin{knot}[scale=1, yscale=-1, consider self intersections = false, clip width = 5, ignore endpoint intersections=false]
+			\strand[scale=0.6, line width=0.6pt] (0,1) .. controls (0.5,0.5) .. (1,1);
+			\strand[scale=0.6, line width=0.6pt] (0,0) .. controls (0.5,0.5) .. (1,0);
+			\strand[scale=0.6, line width=0.6pt] (0,0.5) to [out=0,in=180] (0.5,1) to [out=0,in=180] (1,0.5);
+		\end{knot}
+	}
+}
 \newcommand{\KPfigureeight}{
 	\KP{
 		\begin{knot}[scale=0.3, consider self intersections = true, clip width = 8, ignore endpoint intersections=false]
@@ -433,6 +484,12 @@
 		\draw[scale=0.6, line width=0.6pt] (0,0) .. controls (0.5,0.2) .. (1,0);
 		\draw[scale=0.6, line width=0.6pt] (0,1) .. controls (0.5,0.8) .. (1,1);
 		\draw[scale=0.6, line width=0.6pt] (0.5,0.5) circle [radius=0.2];
+	}
+}
+\newcommand{\KPthirtyonesix}{
+	\KPbaseline{1.4ex}{
+		\draw[scale=0.6, line width=0.6pt] (0,1) .. controls (0.5,0.8) .. (1,1);
+		\draw[scale=0.6, line width=0.6pt] (0.5,0.4) circle [radius=0.3];
 	}
 }
 % \newcommand{\KPthirtyoneone}{
@@ -777,10 +834,10 @@
 	\tableofcontents
 	\pagenumbering{arabic}
 % %
-	\input{introduction.tex}
+% 	\input{introduction.tex}
 	\input{state.tex}
-	\input{generalisations.tex}
-	\input{braids.tex}
+% 	\input{generalisations.tex}
+% 	\input{braids.tex}
 
 
 	%\input{output.tex}

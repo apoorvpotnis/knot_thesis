@@ -34,7 +34,7 @@ Thus, we calculate \(\braket<L|s>\) for each state for the trefoil to get
 \begin{align*}
     \langle L\rangle &= A^3d^{2-1} + A^2Bd^{1-1} + A^2Bd^{2-1} + A^2Bd^{1-1}\\
 					 &\phantom{=\,} + AB^2d^{2-1} + AB^2d^{2-1} + B^3d^{3-1}\\
-	                 &= A^3d + 3A^2Bd^0 + 3AB^2d^1 + B^3d^2
+	\langle L\rangle &= A^3d + 3A^2Bd^0 + 3AB^2d^1 + B^3d^2.
 \end{align*}
 
 \begin{thm}[Skein relation]
@@ -57,11 +57,30 @@ The proof of the above theorem follows from the definition of \(\braket<L>\) and
 \end{thm}
 \begin{proof}
 	\begin{align*}
-		\Bintersection &= A\Bigl\langle\hspace{-3pt}\KPthirtyoneone\hspace{-3pt}\Bigr\rangle + B\Bigl\langle\hspace{-3pt}\KPthirtyonetwo\hspace{-3pt}\Bigr\rangle \\
+		\Bintersection &= A\Bigl\langle\hspace{-3pt}\KPthirtyoneone\hspace{-3pt}\Bigr\rangle + B\Bigl\langle\hspace{-3pt}\KPthirtyonetwo\hspace{-3pt}\Bigr\rangle\\
 		\Bintersection &= A\left[A\Bigl\langle\hspace{-2.5pt}\vcenter{\hbox{\KPthirtyonethree}}\hspace{-2.5pt}\Bigr\rangle + B\Bthirty\right] + \\
 		               &\phantom{=\,\,} B\left[A\Bigl\langle\hspace{-2.5pt}\vcenter{\hbox{\KPthirtyonefour}}\hspace{-2.5pt}\Bigr\rangle + B\Bigl\langle\hspace{-2.5pt}\vcenter{\hbox{\KPthirtyonefive}}\hspace{-2.5pt}\Bigr\rangle\right]\\
 		\Bintersection &= AB \BE + AB\Bthirty + (A^2 + B^2)\BD.
 	\end{align*}
+\end{proof}
+It is also clear that \[\left\langle\hspace{-2pt}\plusoneu\right\rangle = (Ad + B)\langle\lineone\rangle\] and \[\left\langle\hspace{-2pt}\minusoneu\right\rangle = (A + Bd)\langle\lineone\rangle.\] We also see that \[\left\langle\KPthirtyonesix\right\rangle = d\langle\lineone\rangle.\]
+
+Let \(B = A^{-1}\) and \(d = -A^2 - A^{-2}\). We shall always use these substitutions from now on.
+
+We see that \[\Bintersection = \BE.\] This illustrates the invariance under a type II move. But note that \[\left\langle\hspace{-2pt}\plusoneu\right\rangle = (-A^{-3})\langle\lineone\rangle\] and \[\left\langle\hspace{-2pt}\minusoneu\right\rangle = (-A^{3})\langle\lineone\rangle.\] This follows from substituting \(B = A^{-1}\) and \(d = -A^2 - A^{-2}\) in \(Ad + B\) to get \(-A^3\). This illustrates that the bracket polynomial is \textit{not} invariant under a type I move. Adding a twist multiplies the bracket by a factor of \(-A^3\) or \(-A^{-3}\), depending upon the type of the twist. This suggests that if we multiply by a compensatory factor, then we can possibly make it invariant under a type I move as well. We shall do this later using a normalisation factor.
+
+Type II invariance of the bracket and the substitutions ensure that the bracket polynomial is invariant under a type III move as well.
+
+\begin{thm}
+	\[\Bigl\langle\hspace{-6.5pt}\KPthirtytwoone\hspace{-6.5pt}\Bigr\rangle = \Bigl\langle\hspace{-6.5pt}\KPthirtytwotwo\hspace{-6.5pt}\Bigr\rangle.\]
+\end{thm}
+\begin{proof}
+	\begin{align*}
+	    \Bigl\langle\hspace{-6.5pt}\KPthirtytwoone\hspace{-6.5pt}\Bigr\rangle =& A\Bigl\langle\hspace{-6.5pt}\KPthirtytwofour\hspace{-6.5pt}\Bigr\rangle + B
+	\end{align*}
 
 \end{proof}
 
+
+
+\KPthirtytwoone\KPthirtytwotwo
