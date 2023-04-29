@@ -393,6 +393,25 @@
 	},
 }
 
+\newcommand{\KPbaseline}[2]{%
+	\begin{tikzpicture}[baseline=#1,
+		]
+		#2
+	\end{tikzpicture}%
+}
+\newcommand{\KPthirtyoneone}%
+{
+	\KPbaseline{1.4ex}{%
+		\begin{knot}[flip crossing=2, consider self intersections = true,
+			clip width = 5, ignore endpoint intersections=false]
+			\draw[scale=0.6, line width=0.6pt]
+			(0,1) .. controls (0.5,0.8) .. (1,1);
+			\strand[scale=0.6, line width=0.6pt, looseness=1.4]
+			(0,0) to [out=0,in=0] (0.5,0.7) to [out=180,in=180] (1,0);
+		\end{knot}
+	}
+}
+
 \newcommand{\KPfigureeight}{
 	\KP{
 		\begin{knot}[scale=0.3, consider self intersections = true, clip width = 8, ignore endpoint intersections=false]
@@ -410,44 +429,50 @@
 	}
 }
 \newcommand{\KPthirty}{
-	\KP{
+	\KPbaseline{1.4ex}{
 		\draw[scale=0.6, line width=0.6pt] (0,0) .. controls (0.5,0.2) .. (1,0);
 		\draw[scale=0.6, line width=0.6pt] (0,1) .. controls (0.5,0.8) .. (1,1);
 		\draw[scale=0.6, line width=0.6pt] (0.5,0.5) circle [radius=0.2];
 	}
 }
-\newcommand{\KPthirtyoneone}{
-	\KP{
-		\begin{knot}[flip crossing=2, consider self intersections = true, clip width = 5, ignore endpoint intersections=false]
-			\draw[scale=0.6, line width=0.6pt] (0,1) .. controls (0.5,0.8) .. (1,1);
-			\strand[scale=0.6, line width=0.6pt, looseness=1.4] (0,0) to [out=0,in=0] (0.5,0.7) to [out=180,in=180] (1,0);
-		\end{knot}
-	}
-}
+% \newcommand{\KPthirtyoneone}{
+% 	\KP{
+% 		\begin{knot}[flip crossing=2, consider self intersections = true, clip width = 5, ignore endpoint intersections=false]
+% 			\draw[scale=0.6, line width=0.6pt] (0,1) .. controls (0.5,0.8) .. (1,1);
+% 			\strand[scale=0.6, line width=0.6pt, looseness=1.4] (0,0) to [out=0,in=0] (0.5,0.7) to [out=180,in=180] (1,0);
+% 		\end{knot}
+% 	}
+% }
 \newcommand{\KPthirtyonetwo}{
-	\KP{
-		\begin{knot}[consider self intersections = true, clip width = 5, ignore endpoint intersections=false]
-			\strand[scale=0.6, line width=0.6pt, looseness=1.4] (0,0) to [out=0,in=180] (0.8,1) to [out=0,in=180] (1,1);
-			\strand[scale=0.6, line width=0.6pt, looseness=1.4] (0,1) to [out=0,in=180] (0.2,1) to [out=0,in=180] (1,0);
+	\KPbaseline{1.4ex}{
+		\begin{knot}[consider self intersections = false, clip width = 6, ignore endpoint intersections=false]
+			\strand[scale=0.6, line width=0.6pt] (0,0) to [out=0,in=-90] (0.8,0.4) to [out=90,in=-90] (0.6,0.7) to [out=90,in=180] (1,1);
+			\strand[scale=0.6, line width=0.6pt] (0,1) to [out=0,in=90] (0.4,0.7) to [out=-90,in=90] (0.2,0.4) to [out=-90,in=180] (1,0);
 		\end{knot}
 	}
 }
 \newcommand{\KPthirtyonethree}{
-	\KP{
+	\KPbaseline{1.4ex}{
 			\draw[scale=0.6, line width=0.6pt] (0,1) .. controls (0.5,0.8) .. (1,1);
 			\draw[scale=0.6, line width=0.6pt] (0,0) to [out=0,in=-90] (0.3,0.3) to [out=90,in=180] (0.5,0.7)to [out=0,in=90] (0.7,0.3) to [out=-90,in=180] (1,0);
 	}
 }
 \newcommand{\KPthirtyonefour}{
-	\KP{
+	\KPbaseline{1.4ex}{
 		\draw[scale=0.6, line width=0.6pt] (0,0) to [out=0,in=-90] (0.4,0.25) to [out=90,in=-90] (0.2,0.5) to [out=90,in=-90] (0.4,0.75) to [out=90,in=0](0,1);
 		\draw[xscale=-1, xshift=-0.6cm, scale=0.6, line width=0.6pt] (0,0) to [out=0,in=-90] (0.4,0.25) to [out=90,in=-90] (0.2,0.5) to [out=90,in=-90] (0.4,0.75) to [out=90,in=0](0,1);
 % 		\draw[scale=0.6, line width=0.6pt] (0,0) to [out=0,in=-90] (0.3,0.3) to [out=90,in=180] (0.5,0.7)to [out=0,in=90] (0.7,0.3) to [out=-90,in=180] (1,0);
 	}
 }
+\newcommand{\KPthirtyonefive}{
+	\KPbaseline{-1.4ex}{
+		\draw[yscale=-1, scale=0.6, line width=0.6pt] (0,1) .. controls (0.5,0.8) .. (1,1);
+		\draw[yscale=-1, scale=0.6, line width=0.6pt] (0,0) to [out=0,in=-90] (0.3,0.3) to [out=90,in=180] (0.5,0.7)to [out=0,in=90] (0.7,0.3) to [out=-90,in=180] (1,0);
+	}
+}
 
 \newcommand{\KPintersection}{
-	\KP{
+	\KPbaseline{1.4ex}{
 		\begin{knot}[clip width = 5, ignore endpoint intersections = false, looseness = 1.2]
 			\strand[scale=0.6, line width=0.6pt] (0,0) .. controls (1,0.5) .. (0,1);
 			\strand[scale=0.6, line width=0.6pt] (1,0) .. controls (0,0.5) .. (1,1);
