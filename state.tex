@@ -72,3 +72,24 @@ Type II invariance of the bracket and the substitutions ensure that the bracket 
 \begin{proof}
 	We have \[\Bigl\langle\hspace{-6.5pt}\KPthirtytwoone\hspace{-6.5pt}\Bigr\rangle = A\Bigl\langle\hspace{-6.5pt}\KPthirtytwofour\hspace{-6.5pt}\Bigr\rangle + B\Bigl\langle\hspace{-6.5pt}\KPthirtytwofive\hspace{-6.5pt}\Bigr\rangle.\] Using the type II moves, we have \[A\Bigl\langle\hspace{-6.5pt}\KPthirtytwothree\hspace{-6.5pt}\Bigr\rangle + B\Bigl\langle\hspace{-6.5pt}\KPthirtytwosix\hspace{-6.5pt}\Bigr\rangle = \Bigl\langle\hspace{-6.5pt}\KPthirtytwotwo\hspace{-6.5pt}\Bigr\rangle.\]
 \end{proof}
+
+We have thus found a regular isotopy invariant. A general principle is that once we have a regular isotopy invariant, we can suitably normalise it to make it ambient isotopy invariant. We know that writhe is an invariant of regular isotopy. Adding a positive twist increases the writhe by unit value and adding a negative twist decreases the writhe by unit value. As remarked earlier, we multiply the bracket by compensatory factor \(-A^3)^{-\w(K)}\) to define the normalised bracket polynomial. \[\kau(A, K) \coloneq (-A^3)^{-\w(K)} \langle K\rangle.\]
+
+\begin{thm}
+    The normalised bracket polynomial is an invariant of ambient isotopy.
+\end{thm}
+\begin{proof}
+    Since both the writhe and the bracket are regular isotopy invariant, it follows at once that the normalised bracket is regular isotopy invariant as well. We need to check type I move invariance. Recall that \[\Bigl\langle\hspace{-2pt}\plusoneu\Bigr\rangle = (-A^{-3})\langle\lineone\rangle\] and \[\Bigl\langle\hspace{-2pt}\minusoneu\Bigr\rangle = (-A^{3})\langle\lineone\rangle.\] These identities combined with the behaviour of writhe under adding twists ensures type I invariance.
+\end{proof}
+
+\begin{thm}
+	Let \(K^*\) denote the mirror image of the oriented link \(K\). Then we have that \(\langle K^*\rangle (A) = \langle K\rangle(A^{-1})\) and \(\kau(A, K^*) = \kau(A^{-1}, K)\).
+\end{thm}
+\begin{proof}
+	Note that the link diagram of the mirror image of a link is obtained by switching all the crossings. This means that all the \(A\)'s and the \(A^{-1}\)'s get exchanged as well.
+\end{proof}
+
+We calculate the bracket polynomial for various knots and links in the appendix. In particular, we calculate the normalised bracket polynomial for a trefoil and and its mirror image. For the trefoil shown in \cref{fig:variousknots}, which is the left-handed trefoil knot, the normalised bracket polynomial turns out to be \(A^4 + A^{12} - A^{16}\) and the normalised bracket polynomial for its mirror image turns out to be \(A^{-4} + A^{-12} - A^{-16}\), as expected. But since the polynomials are different, we can conclude that a trefoil is \textit{not} ambient isotopic to its mirror image. While this proof is elementary, the fact that the trefoil is chiral was originally proved by Max Dehn in 1914 using the newly discovered fundamental group~\cite[p.~200]{dehn}.
+
+
+
