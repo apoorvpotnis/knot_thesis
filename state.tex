@@ -9,24 +9,47 @@ In this chapter, we shall a link invariant called the normalised bracket polynom
 Consider a crossing of an unoriented link as shown in \cref{fig:crossingresolution}. We designate local regions around a crossing a label \(A\) or \(B\) based on the following scheme. Walk along the underpass towards a crossing. The area on the left is assigned the label \(A\) and the area on the right the label \(B\). This assignment is unambiguous. We then `resolve' or `smoothen' or `split' the crossing in two ways, one way which connects the \(A\)-regions and another way which connects the \(B\)-regions. If we resolve a crossing such that \(A\)-regions are connected, then we attach the label \(A\) to the resolved diagram. The same holds for \(B\)-regions. Note that the resolution of the crossing happens only locally, i.e.\@ in an open ball around the crossing which does not intersect other crossings. Such an open ball exists due to the Hausdorff property of the plane.
 
 \begin{figure}
-    \centering
-	\includesvg{crossingresolution.svg}
-	\caption{Resolution of a crossing.}
-	\label{fig:crossingresolution}
+	\centering
+	\begin{tikzcd}
+		{}& \KPAB \arrow[thick, dl]\arrow[thick, dr]& \\
+		\KPAD   &  &  \KPAE
+	\end{tikzcd}
+	\caption{Resolution of a crossing with labels}\label{fig:crossingresolution}
 \end{figure}
 
-We shall do this process recursively for all crossings to get a sets of Jordan curves in a plane with labels attached to them. Refer to \cref{fig:trefoilresolution} where we have carried this process for a trefoil.
+% \begin{figure}
+%     \centering
+% 	\includesvg{crossingresolution.svg}
+% 	\caption{Resolution of a crossing.}
+% 	\label{fig:crossingresolution}
+% \end{figure}
+
+We shall do this process recursively for all crossings to get a sets of Jordan curves in a plane with labels attached to them. Refer to \cref{fig:trefoilres} where we have carried this process for a trefoil.
 
 \begin{figure}
     \centering
-	\includesvg[width=\textwidth]{trefoilresolution}
+	\includesvg[width=\textwidth]{trefoilres.svg}
 	\caption{Resolution of all crossings for a trefoil.}
-	\label{fig:trefoilresolution}
+	\label{fig:trefoilres}
 \end{figure}
 
-Each of the individual diagrams shown in curly brackets in \cref{fig:trefoilresolution} is referred to as a state. To each state are the labels \(A\) and \(B\) attached to it. We can construct the original link unambiguously using the states (and labels attached to them). We shall construct invariants of links by `averaging' over these states.
+Each of the individual diagrams shown in curly brackets in \cref{fig:trefoilres} is referred to as a state. To each state are the labels \(A\) and \(B\) attached to it. We can construct the original link unambiguously using the states (and labels attached to them). We shall construct invariants of links by `averaging' over these states.
 
-By averaging, we mean the following. Let \(L\) be a link and \(\sigma\) denote a particular state obtained after resolving all the crossings recursively. We denote the commutative product of the labels associated to that state by \(\braket<K|\sigma>\). For example, \[\left\langle\TREFOIL \Bigg\vert\includesvg[width=0.9cm]{produtoflabels.svg}\right\rangle = A^2B.\] Let \(\norm{\sigma}\) denote one less than the number of loops in \(\sigma\). Thus, for the above state, we have \(\norm{\sigma} = 1-1=0\).
+By averaging, we mean the following. Let \(L\) be a link and \(\sigma\) denote a particular state obtained after resolving all the crossings recursively. We denote the commutative product of the labels associated to that state by \(\braket<K|\sigma>\). For example, let \(K\) denote a right-handed trefoil, as shown in \cref{fig:trefoilres} and \(\sigma\) denote the following state.
+\begin{figure}[H]
+    \centering
+	\begin{tikzpicture}
+		\draw[line width=0.6pt, densely dashed, blue] (-30:0.4) -- (-30:1);
+		\draw[line width=0.6pt, densely dashed, blue] (-150:0.4) -- (-150:1);
+		\draw[line width=0.6pt, densely dashed, blue] (90:0.4) -- (90:1);
+		\draw[line width=0.6pt, red] (0,0) circle [radius=1];
+		\draw[line width=0.6pt, red] (0,0) circle [radius=0.4];
+		\node (a) at (-10:0.7) {\(A\)};
+		\node (a) at (-130:0.7) {\(A\)};
+		\node (b) at (110:0.7) {\(A\)};
+% 		\node (d) at (-1.5,0) {\(\sigma = \)};
+	\end{tikzpicture}
+\end{figure} We then have \[\left\langle\TREFOIL \Bigg\vert\hspace{2pt}\AAA\right\rangle = A^3.\] Let \(\norm{\sigma}\) denote one less than the number of loops in \(\sigma\). Thus, for the above state, we have \(\norm{\sigma} = 1-1=0\).
 
 We define the bracket polynomial \(\langle L\rangle\) of a link \(L\) as follows. \[\langle L \rangle = \sum_\sigma\braket<L|\sigma> d^{\norm{\sigma}},\] where \(A\), \(B\) and \(d\) are commuting variables. The bracket polynomial is thus a function of \(A\), \(B\) and \(d\). \(\sigma\) runs over all the states of \(K\).
 
@@ -41,7 +64,7 @@ Thus, we calculate \(\braket<L|s>\) for each state for the trefoil to get
     \[\BB = A\BD + A^{-1}\BE.\]
 \end{thm}
 
-The diagrams in the above theorem should be regarded as local diagrams. We make changes to a diagram locally near the crossing. There exists an open topological ball around each crossing such that the ball does not intersect any other crossing and the diagram remains the same outside this ball.
+The diagrams in the above theorem should be regarded as local diagrams. We make changes to a diagram locally near the crossing. There exists an open topological ball around each crossing such that the ball does not intersect any other crossing and the diagram remains identical outside this ball.
 
 The proof of the above theorem follows from the definition of \(\braket<L>\) and realizing that the states of a diagram are in one-to-one correspondence with the union of the diagrams with resolved crossings. The above identity is very important and we shall use it very often. For an example of a calculation of the bracket polynomial of a link, please refer to \cref{fig:hopflinkbracket}.
 
@@ -89,7 +112,7 @@ We have thus found a regular isotopy invariant. A general principle is that once
 	Note that the link diagram of the mirror image of a link is obtained by switching all the crossings. This means that all the \(A\)'s and the \(A^{-1}\)'s get exchanged as well.
 \end{proof}
 
-We calculate the bracket polynomial for various knots and links in the appendix. In particular, we calculate the normalised bracket polynomial for a trefoil and and its mirror image. For the trefoil shown in \cref{fig:variousknots}, which is the left-handed trefoil knot, the normalised bracket polynomial turns out to be \(A^4 + A^{12} - A^{16}\) and the normalised bracket polynomial for its mirror image turns out to be \(A^{-4} + A^{-12} - A^{-16}\), as expected. But since the polynomials are different, we can conclude that a trefoil is \textit{not} ambient isotopic to its mirror image. While this proof is elementary, the fact that the trefoil is chiral was originally proved by Max Dehn in 1914 using the newly discovered fundamental group~\cite[p.~200]{dehn}.
+We calculate the bracket polynomial for various knots and links in the appendix. In particular, we calculate the normalised bracket polynomial for a trefoil and and its mirror image. For the trefoil shown in \cref{fig:variousknots}, which is the left-handed trefoil knot, the normalised bracket polynomial turns out to be \(A^4 + A^{12} - A^{16}\) and the normalised bracket polynomial for its mirror image turns out to be \(A^{-4} + A^{-12} - A^{-16}\), as expected. But since the polynomials are different, we can conclude that a trefoil is \textit{not} ambient isotopic to its mirror image. The normalised bracket polynomial for the Whitehead figure eight knot turns out to be \(A^8 - A^4 + 1 - A^{-4} + A^{-6}\), which is symmetric in the powers of \(A\), indicating that the mirror image of the figure eight knot is identical to the original one. While this proof of the chirality of trefoil is elementary, this fact was originally proved by Max Dehn in 1914 using the newly discovered fundamental group~\cite[p.~200]{dehn}.
 
 
 
