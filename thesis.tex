@@ -1,7 +1,7 @@
 % !TEX TS-program = lualatex
 % !TEX root = ../thesis.tex
 
-\documentclass[10pt, a4paper, draft]{report}
+\documentclass[10pt, a4paper]{report}
 
 \usepackage[left=1.5in, right=1.5in]{geometry}
 
@@ -43,7 +43,7 @@
 				\textbf{\MakeUppercase{\LARGE{\thesistitle}}} \\
 				\ \\
 				\ \\
-				\normalsize{\textbf{A REPORT}} \\
+				\normalsize{\textbf{A thesis}} \\
 				\normalsize{\textit{submitted in partial fulfillment of the requirements}} \\
 				\normalsize{\textit{for the award of the dual degree of}} \\
 				\ \\
@@ -437,9 +437,9 @@
 {
 	\KPbaseline{-2.4ex}{%
 		\begin{knot}[scale=1, yscale=-1, flip crossing=2, consider self intersections = true, clip width = 5, ignore endpoint intersections=false]
-			\draw[line width=0.6pt] (-0.3,-0.3) .. controls (0.05,0) .. (-0.3,0.3);
-			\draw[line width=0.6pt] (0.3,-0.3) .. controls (-0.05,0) .. (0.3,0.3);
 			\strand[scale=0.6, line width=0.6pt] (0,0.5) to [out=0,in=180] (0.5,1) to [out=0,in=180] (1,0.5);
+			\strand[scale=0.6, line width=0.6pt] (0,1) .. controls (0.5,0.5) .. (1,1);
+			\strand[scale=0.6, line width=0.6pt] (0,0) .. controls (0.5,0.5) .. (1,0);
 		\end{knot}
 	}
 }
@@ -457,9 +457,19 @@
 {
 	\KPbaseline{-2.4ex}{%
 		\begin{knot}[scale=1, yscale=-1, consider self intersections = false, clip width = 5, ignore endpoint intersections=false]
-			\strand[scale=0.6, line width=0.6pt] (0,1) .. controls (0.5,0.5) .. (1,1);
-			\strand[scale=0.6, line width=0.6pt] (0,0) .. controls (0.5,0.5) .. (1,0);
-			\strand[scale=0.6, line width=0.6pt] (0,0.5) to [out=0,in=180] (0.5,1) to [out=0,in=180] (1,0.5);
+			\strand[scale=0.6, line width=0.6pt] (0,1) .. controls (0.5,0.5) .. (0,0);
+			\strand[scale=0.6, line width=0.6pt] (1,1) .. controls (0.5,0.5) .. (1,0);
+			\strand[scale=0.6, line width=0.6pt] (0,0.5) to [out=0,in=180] (0.5,0) to [out=0,in=180] (1,0.5);
+		\end{knot}
+	}
+}
+\newcommand{\KPthirtytwosix}%
+{
+	\KPbaseline{1.4ex}{%
+		\begin{knot}[scale=1, consider self intersections = false, clip width = 5, ignore endpoint intersections=false]
+			\strand[scale=0.6, line width=0.6pt] (0,1) .. controls (0.5,0.5) .. (0,0);
+			\strand[scale=0.6, line width=0.6pt] (1,1) .. controls (0.5,0.5) .. (1,0);
+			\strand[scale=0.6, line width=0.6pt] (0,0.5) to [out=0,in=180] (0.5,0) to [out=0,in=180] (1,0.5);
 		\end{knot}
 	}
 }
@@ -834,10 +844,10 @@
 	\tableofcontents
 	\pagenumbering{arabic}
 % %
-% 	\input{introduction.tex}
+	\input{introduction.tex}
 	\input{state.tex}
-% 	\input{generalisations.tex}
-% 	\input{braids.tex}
+	\input{generalisations.tex}
+	\input{braids.tex}
 
 
 	%\input{output.tex}
