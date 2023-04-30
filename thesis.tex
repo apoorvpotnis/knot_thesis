@@ -1,13 +1,13 @@
 % !TEX TS-program = lualatex
 % !TEX root = ../thesis.tex
 
-\documentclass[12pt, a4paper]{report}
+\documentclass[10pt, a4paper]{report}
 
-% \usepackage[left=1.5in, right=1.5in]{geometry}
+\usepackage[left=1.5in, right=1.5in]{geometry}
 
 \usepackage{setspace}
 % \onehalfspacing
-\doublespacing
+% \doublespacing
 
 \usepackage[toc, page]{appendix}
 \providecommand{\appendixname}{Appendices}
@@ -44,7 +44,7 @@
 				\textbf{\MakeUppercase{\LARGE{\thesistitle}}} \\
 				\ \\
 				\ \\
-				\normalsize{\textbf{A thesis}} \\
+				\normalsize{\textbf{A THESIS}} \\
 				\normalsize{\textit{submitted in partial fulfillment of the requirements}} \\
 				\normalsize{\textit{for the award of the dual degree of}} \\
 				\ \\
@@ -798,6 +798,7 @@
 	}%
 }
 
+\usepackage{fancyhdr,wallpaper}
 
 % \usetikzlibrary{decorations.pathreplacing}
 % \tikzset{%
@@ -817,6 +818,9 @@
 % 			decorate
 % 		}}}
 
+\usepackage{pdfpages}
+
+
 \begin{document}
 
 	\maketitle
@@ -824,9 +828,17 @@
 	\pagenumbering{roman}
 
 	% ------------------------------
+	% ------------------------------
+	\thispagestyle{fancy}
+	%\pagestyle{fancy}
+	\fancyhf{}
+	\ThisULCornerWallPaper{.99}{letter_head_MS_Thesis.pdf}
+	\setlength{\wpYoffset}{1.90cm}
+	\vspace{1cm}
+	\newgeometry{top=49mm}
 	\head{Certificate}
 
-	This is to certify that {\bf \studentname}, BS-MS (\subject), has worked on the project entitled {\bf `\thesistitle'} under my supervision and guidance. The content of this report is original and has not been submitted elsewhere for the award of any academic or professional degree.
+	This is to certify that {\bf \studentname}, BS-MS (\subject), has worked on the project entitled {\bf `\thesistitle'} under my supervision and guidance.
 
 	\vspace{10em}
 
@@ -897,15 +909,20 @@
 
 	\tableofcontents
 	\pagenumbering{arabic}
-% %
+% % %
 	\input{introduction.tex}
 	\input{state.tex}
 	\input{generalisations.tex}
 	\input{braids.tex}
+		\input{alternating.tex}
+	\chapter{Appendix}
+	\includepdf[pages={3-9}]{Knot thesis.pdf}
+
+
 
 
 	%\input{output.tex}
 
-  	\printbibliography
+%   	\printbibliography
 
 \end{document}
